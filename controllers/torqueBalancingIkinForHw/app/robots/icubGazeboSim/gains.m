@@ -33,10 +33,8 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
     gain.ICOM                 = diag([  0    0   0]);
     gain.DCOM                 = 0*sqrt(gain.PCOM);
 
-%     gain.PAngularMomentum     = 10 ;
-%     gain.DAngularMomentum     = 2*sqrt(gain.PAngularMomentum);
-    gain.PAngularMomentum     = 0 ;
-    gain.DAngularMomentum     = 5;
+    gain.PAngularMomentum     = 1;
+    gain.DAngularMomentum     = 2*sqrt(gain.PAngularMomentum);
 
     % Impedances acting in the null space of the desired contact forces 
 
@@ -128,7 +126,7 @@ gain.footSize                = [ -0.07 0.07   ;   % xMin, xMax
 fZmin                        = 10;
 
 %% Inverse kinematics gains
-gain.ikin.Kpfeet     = 5;
+gain.ikin.Kpfeet     = 10;
 gain.ikin.Kdfeet     = 2*sqrt(gain.ikin.Kpfeet);
 gain.ikin.KpCoM      = gain.PCOM;
 gain.ikin.KdCoM      = 2*sqrt(gain.ikin.KpCoM);

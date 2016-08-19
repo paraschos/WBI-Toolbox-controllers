@@ -22,7 +22,7 @@ function [tauModel,Sigma,NA,f_HDot, ...
           errorCoM,qTilde,f]    =  ...
               balancingController(constraints,ROBOT_DOF_FOR_SIMULINK,ConstraintsMatrix,bVectorConstraints,...
               q,qDes,v, M, h , H,intHw,w_H_l_sole, w_H_r_sole, JL,JR, dJLv,dJRv, xcom,J_CoM, desired_x_dx_ddx_CoM,...
-              kpCoM,kdCoM,impedances,angMomDes,intErrorCoM,ki_int_qtilde,reg,gain)
+              kpCoM,kdCoM,impedances,HwDes,dotHwDes,intErrorCoM,ki_int_qtilde,reg,gain)
     %BALANCING CONTROLLER
 
     %% DEFINITION OF CONTROL AND DYNAMIC VARIABLES
@@ -165,7 +165,7 @@ function [tauModel,Sigma,NA,f_HDot, ...
     
     % Desired rate-of-change of the robot momentum
     HDotDes         = [ m*xDDcomStar ;
-                        -gainDAngularMomentum*(H(4:end)-angMomDes)-gainPAngularMomentum*intHw];
+                        dotHwDes-gainDAngularMomentum*(H(4:end)-HwDes)-gainPAngularMomentum*intHw];
 
     % Contact wrenches realizing the desired rate-of-change of the robot
     % momentum HDotDes when standing on two feet. Note that f_HDot is
