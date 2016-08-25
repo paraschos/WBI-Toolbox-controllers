@@ -25,5 +25,4 @@ R_rfoot_init     = fwdkin_rfootInit(1:3,1:3);
 %% Feet orientation errors
 LfootOri_error        = lFootOri-lFootOri_init;
 RfootOri_error        = rFootOri-rFootOri_init;
-
 end

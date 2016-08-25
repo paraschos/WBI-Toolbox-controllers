@@ -32,7 +32,6 @@ sm.joints.thresholdNotInContact  =  3;
 sm.joints.thresholdInContact     = 80;
 
 sm.stateAt0               = 1;
-
 sm.DT                     = 1;
 
 end              

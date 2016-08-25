@@ -1,5 +1,6 @@
 function  [KpMom,KpNull,KdMom,KdNull,KS,KD,KSopt,KDopt,ANull,BNull,Ax,Bx,KSdes,KDdes]...
           = linearizeAndTuning(xCoM,M,JG,Jc,w_H_l_sole,w_H_r_sole,LEFT_RIGHT_FOOT_IN_CONTACT,gain,reg,ROBOT_DOF_FOR_SIMULINK)
+      
 %LINEARIZATION AND GAIN TUNING
 
 % ------------Initialization----------------

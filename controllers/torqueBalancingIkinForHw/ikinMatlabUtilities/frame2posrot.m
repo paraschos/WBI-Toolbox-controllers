@@ -17,7 +17,6 @@ function [pos,dcm] = frame2posrot(qT)
 
 pos        = qT(1:3);
 quaternion = qT(4:end);
-
 % Assuming q = [q_real; q_vec]
 dcm = quaternion2dcm(quaternion);
 

@@ -30,8 +30,8 @@ end
 %% PARAMETERS FOR ONLY ONE FOOT ON THE GROUND
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 1)
 
-gain.ikin.kp                 = diag([50    50  50]);
-gain.ikin.kd                 = 2*sqrt(gain.ikin.kp);
+gain.ikin.kp            = diag([50    50  50]);
+gain.ikin.kd            = 2*sqrt(gain.ikin.kp);
 
 % Impedances acting in the null space of the desired contact forces 
   

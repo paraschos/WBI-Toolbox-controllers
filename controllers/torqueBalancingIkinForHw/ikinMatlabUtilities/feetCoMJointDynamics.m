@@ -12,5 +12,4 @@ CoMDynamics     = desired_x_dx_ddx_CoM(:,3)-gain.ikin.KpCoM*(xCoM-desired_x_dx_d
 
 %% Joint error dynamics
 jointsDynamics  = desired_qj_dqj_ddqj(:,3)-gain.ikin.impedances*(qj-desired_qj_dqj_ddqj(:,1))-gain.ikin.dampings*(dqj-desired_qj_dqj_ddqj(:,2));
-
 end

@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.3120"
+    ComputedModelVersion    "1.3121"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -55,11 +55,11 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"2087"
 	Extents			[1267.0, 599.0]
-	ZoomFactor		[0.56367226061204345]
-	Offset			[56.119964973730248, 110.16287215411558]
+	ZoomFactor		[0.490085012098232]
+	Offset			[-1056.8008474576272, 2360.88153563862]
       }
     }
   }
@@ -69,9 +69,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Aug 02 17:04:21 2016"
-  RTWModifiedTimeStamp	  392058230
-  ModelVersionFormat	  "1.%<AutoIncrement:3120>"
+  LastModifiedDate	  "Thu Aug 25 13:56:27 2016"
+  RTWModifiedTimeStamp	  394034176
+  ModelVersionFormat	  "1.%<AutoIncrement:3121>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1106,7 +1106,7 @@ Model {
   System {
     Name		    "torqueBalancingTuning"
     Location		    [65, 24, 1366, 768]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1134,7 +1134,7 @@ Model {
       System {
 	Name			"DesValues"
 	Location		[65, 24, 1366, 768]
-	Open			off
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -34147,7 +34147,7 @@ Model {
       Name		      "synchronizer"
       SID		      "2423"
       Ports		      []
-      Position		      [1642, 173, 1762, 223]
+      Position		      [1867, 173, 1987, 223]
       ZOrder		      546
       ForegroundColor	      "red"
       BackgroundColor	      "green"
@@ -40440,10 +40440,7 @@ Stateflow {
     firstTransition	    308
     firstJunction	    307
     viewObj		    269
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    52
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -41430,10 +41427,7 @@ Stateflow {
     firstTransition	    319
     firstJunction	    318
     viewObj		    310
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

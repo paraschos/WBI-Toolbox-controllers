@@ -23,7 +23,6 @@ qw = sqrt(1 + r00 + r11 + r22)/2;
 qx = (r21 - r12)/( 4 *qw);
 qy = (r02 - r20)/( 4 *qw);
 qz = (r10 - r01)/( 4 *qw);
-
 quaternions = [qw; qx; qy; qz];
 
 % Final state converted as a 7+n element vector

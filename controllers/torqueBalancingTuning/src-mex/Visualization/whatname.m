@@ -1,6 +1,6 @@
 function name = whatname(name_group,k)
 %% whatname
-%  It assigns titles to graphics according to robot's joints distribution.
+%  It assigns titles to graphics according to robot joints distribution.
 %  The inputs are the robot link name (torso, r_arm, l_arm,...) and the interested 
 %  degree of freedom.
 

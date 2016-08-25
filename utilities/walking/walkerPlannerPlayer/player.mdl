@@ -1,15 +1,17 @@
 Model {
   Name			  "player"
-  Version		  8.6
-  MdlSubVersion		  0
-  SavedCharacterEncoding  "US-ASCII"
+  Version		  8.7
+  MdlSubVersion		  1
+  SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.26"
+    ComputedModelVersion    "1.27"
     NumModelReferences	    0
     NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
   }
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -21,6 +23,7 @@ Model {
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
   InitFcn		  "init;"
+  LastSavedArchitecture	  "glnxa64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -30,7 +33,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [100.0, 23.0, 1001.0, 552.0]
+      Location		      [65.0, 24.0, 1301.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -54,9 +57,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[967.0, 379.0]
-	ZoomFactor		[1.0]
-	Offset			[0.0, 0.0]
+	Extents			[1267.0, 599.0]
+	ZoomFactor		[1.7955974842767295]
+	Offset			[37.246355420862528, 41.203152364273194]
       }
     }
   }
@@ -64,11 +67,11 @@ Model {
   Creator		  "makaveli"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "makaveli"
+  LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Dec 28 08:39:18 2015"
-  RTWModifiedTimeStamp	  373192757
-  ModelVersionFormat	  "1.%<AutoIncrement:26>"
+  LastModifiedDate	  "Thu Aug 25 14:23:56 2016"
+  RTWModifiedTimeStamp	  394035834
+  ModelVersionFormat	  "1.%<AutoIncrement:27>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -76,6 +79,10 @@ Model {
   WideLines		  off
   ShowLineDimensions	  off
   ShowPortDataTypes	  off
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  off
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
   ShowDesignRanges	  off
   ShowLoopsOnError	  on
   IgnoreBidirectionalLines off
@@ -84,6 +91,7 @@ Model {
   ShowSignalResolutionIcons on
   ShowViewerIcons	  on
   SortedOrder		  off
+  VariantCondition	  off
   ExecutionContextIcon	  off
   ShowLinearizationAnnotations on
   ShowVisualizeInsertedRTB on
@@ -94,6 +102,7 @@ Model {
   ToolBar		  on
   StatusBar		  on
   BrowserShowLibraryLinks off
+  FunctionConnectors	  off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
   PauseTimes		  "5"
@@ -155,13 +164,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      7
-      Version		      "1.15.1"
+      Version		      "1.16.2"
       Array {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
 	  $ObjectID		  8
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
 	  AbsTol		  "auto"
@@ -198,7 +207,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  9
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -230,11 +239,13 @@ Model {
 	  OutputTimes		  "[]"
 	  ReturnWorkspaceOutputsName "out"
 	  Refine		  "1"
+	  LoggingToFile		  off
+	  LoggingFileName	  "out.mat"
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  10
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -291,7 +302,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  11
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -367,6 +378,8 @@ Model {
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
 	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
 	  BlockIODiagnostic	  "none"
 	  SFUnusedDataAndEventsDiag "warning"
 	  SFUnexpectedBacktrackingDiag "warning"
@@ -378,10 +391,13 @@ Model {
 	  SFTransitionActionBeforeConditionDiag	"warning"
 	  SFOutputUsedAsStateInMooreChartDiag "error"
 	  IntegerSaturationMsg	  "warning"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  12
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -418,10 +434,12 @@ Model {
 	  TargetHWDeviceType	  "Specified"
 	  TargetUnknown		  off
 	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  13
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  EnableRefExpFcnMdlSchedulingChecks on
 	  CheckModelReferenceTargetMessage "error"
@@ -437,7 +455,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  14
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  SFSimEcho		  on
 	  SimCtrlC		  on
 	  SimIntegrity		  on
@@ -449,7 +467,7 @@ Model {
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  15
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    13
@@ -469,6 +487,7 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
+	  HardwareBoard		  "None"
 	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
@@ -518,7 +537,7 @@ Model {
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      16
-	      Version		      "1.15.1"
+	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
 		Dimension		24
@@ -590,7 +609,7 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      17
-	      Version		      "1.15.1"
+	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
 		Dimension		12
@@ -610,7 +629,6 @@ Model {
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
-	      TargetPreCompLibLocation ""
 	      GenFloatMathFcnCalls    "NOT IN USE"
 	      TargetLangStandard      "C89/C90 (ANSI)"
 	      CodeReplacementLibrary  "None"
@@ -675,9 +693,12 @@ Model {
 	}
 	SlCovCC.ConfigComp {
 	  $ObjectID		  18
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
 	  RecordCoverage	  off
 	  CovPath		  "/"
 	  CovSaveName		  "covdata"
@@ -690,6 +711,9 @@ Model {
 	  CovSaveSingleToWorkspaceVar on
 	  CovCumulativeVarName	  "covCumulativeData"
 	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
 	  CovReportOnPause	  on
 	  CovModelRefEnable	  "off"
 	  CovExternalEMLEnable	  off
@@ -757,7 +781,7 @@ Model {
   MaskDefaults {
     SelfModifiable	    "off"
     IconFrame		    "on"
-    IconOpaque		    "on"
+    IconOpaque		    "opaque"
     RunInitForIconRedraw    "off"
     IconRotate		    "none"
     PortRotate		    "default"
@@ -807,7 +831,7 @@ Model {
   }
   System {
     Name		    "player"
-    Location		    [100, 23, 1101, 575]
+    Location		    [65, 24, 1366, 768]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -819,7 +843,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "180"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "16"
     Block {
@@ -830,7 +854,7 @@ Model {
       Position		      [490, 116, 575, 154]
       ZOrder		      28
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
-      LibraryVersion	      "1.345"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Write"
       SourceType	      "YARP Write"
       portName		      "comPort"
@@ -845,7 +869,7 @@ Model {
       Position		      [490, 196, 575, 234]
       ZOrder		      30
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
-      LibraryVersion	      "1.345"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Write"
       SourceType	      "YARP Write"
       portName		      "constraintsPort"
@@ -856,7 +880,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain"
       SID		      "16"
-      Position		      [415, 270, 465, 300]
+      Position		      [415, 285, 465, 315]
       ZOrder		      42
       Gain		      "pi/180"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -868,13 +892,13 @@ Model {
       Name		      "Real Time Synchronizer"
       SID		      "1"
       Ports		      []
-      Position		      [240, 49, 365, 86]
+      Position		      [240, 59, 365, 96]
       ZOrder		      24
       ForegroundColor	      "[0.916667, 0.916667, 0.916667]"
       BackgroundColor	      "gray"
       ShowName		      off
       Commented		      "on"
-      LibraryVersion	      "1.345"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Real Time Synchronizer"
       SourceType	      "Real Time Synchronizer"
       period		      "Ts"
@@ -963,11 +987,11 @@ Model {
       Name		      "Simulator Synchronizer"
       SID		      "2"
       Ports		      []
-      Position		      [430, 49, 560, 86]
+      Position		      [465, 59, 595, 96]
       ZOrder		      25
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
       ShowName		      off
-      LibraryVersion	      "1.345"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Simulator Synchronizer"
       SourceType	      "Simulator Synchronizer"
       period		      "Ts"
@@ -999,10 +1023,10 @@ Model {
       Name		      "qDes"
       SID		      "4"
       Ports		      [1]
-      Position		      [490, 266, 575, 304]
+      Position		      [490, 281, 575, 319]
       ZOrder		      29
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
-      LibraryVersion	      "1.345"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Write"
       SourceType	      "YARP Write"
       portName		      "qDesPort"
@@ -1060,7 +1084,7 @@ Model {
       Points		      [107, 0]
       Branch {
 	ZOrder			11
-	Points			[0, -30]
+	Points			[0, -15]
 	DstBlock		"Gain"
 	DstPort			1
       }
@@ -1082,7 +1106,7 @@ Model {
 }
 #Finite State Machines
 #
-#   Stateflow 80000006
+#   Stateflow 80000009
 #
 #
 Stateflow {
@@ -1092,7 +1116,7 @@ Stateflow {
     created		    "23-Dec-2015 17:27:47"
     isLibrary		    0
     firstTarget		    2
-    sfVersion		    80000006
+    sfVersion		    80000009
   }
   target {
     id			    2

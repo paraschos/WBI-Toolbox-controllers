@@ -11,5 +11,4 @@ iKinComCorr     = CoMRefsDes(:,3)-gain.ikin.kp*(xCoM-CoMRefsDes(:,1))-gain.ikin.
 
 %% Posture errors
 iKinPostCorr    = posturesDes(:,3)-gain.ikin.impedances*(qj-posturesDes(:,1))-gain.ikin.dampings*(dqj-posturesDes(:,2));
-
 end

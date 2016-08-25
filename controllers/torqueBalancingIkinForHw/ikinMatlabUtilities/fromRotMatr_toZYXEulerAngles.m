@@ -8,6 +8,7 @@ function [T_bar,angles] = fromRotMatr_toZYXEulerAngles(rot_matr)
 %
 %  angles   [3x1] Z-Y-X Euler angles
 %
+
 %% Euler angles conversion
 phi   =  atan2(rot_matr(3,2),rot_matr(3,3));
 theta = -asin(rot_matr(3,1));

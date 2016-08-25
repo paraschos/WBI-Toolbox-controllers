@@ -18,7 +18,7 @@ if strcmpi(SM.SM_TYPE, 'YOGA')
     forceFrictionCoefficient     = 1/3;  
     
     %Smoothing time for time varying impedances
-    gain.SmoothingTimeGainScheduling              = 2;  
+    gain.SmoothingTimeGainScheduling  = 2;  
 
     %Smoothing time for time-varying constraints
     CONFIG.smoothingTimeTranDynamics  = 0.02;
@@ -259,6 +259,5 @@ for i = 1:size(sm.joints.pointsR,1)
 	sm.joints.pointsR(i,end-5:end)    =  sm.joints.pointsR(i,end-11:end-6);
 	sm.joints.pointsR(i,end-11:end-6) =  rightLeg;
 end	 
-
 
 clear q1 q2 q3 q4;

@@ -36,7 +36,6 @@ block.SetPreCompOutPortInfoToDynamic;
 % %3 % [Aeq,beq]                   
 % %4 % [x0;lb;ub]                  
 
-
 % Definition of port sizes for QP 2 feet
 block.InputPort(1).Dimensions        = [ 1  2];   % LEFT_RIGHT_FOOT_IN_CONTACT
 block.InputPort(2).Dimensions        = [12 12];   % HessianMatrixQP2Feet               
@@ -135,9 +134,7 @@ function SetInputPortSamplingMode(block, idx, fd)
 %%
 % function InitializeConditions(block)
 
-
 % end InitializeConditions
-
 
 %%
 %% Start:

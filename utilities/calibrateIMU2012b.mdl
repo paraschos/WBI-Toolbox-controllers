@@ -1,13 +1,12 @@
 Model {
   Name			  "calibrateIMU2012b"
   Version		  8.0
-  MdlSubVersion		  0
-  SavedCharacterEncoding  "US-ASCII"
+  SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.19"
+    ComputedModelVersion    "1.20"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -54,7 +53,7 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[980.0, 347.0]
+	Extents			[960.0, 327.0]
 	ZoomFactor		[2.5729729729729729]
 	Offset			[89.558823529411768, 49.568277310924373]
       }
@@ -64,11 +63,11 @@ Model {
   Creator		  "DanielePucci"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "DanielePucci"
+  LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon May 09 12:00:36 2016"
-  RTWModifiedTimeStamp	  384696036
-  ModelVersionFormat	  "1.%<AutoIncrement:19>"
+  LastModifiedDate	  "Thu Aug 25 14:31:28 2016"
+  RTWModifiedTimeStamp	  394036288
+  ModelVersionFormat	  "1.%<AutoIncrement:20>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -591,7 +590,6 @@ Model {
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
-	      TargetPreCompLibLocation ""
 	      CodeReplacementLibrary  "C89/C90 (ANSI)"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
@@ -786,8 +784,8 @@ Model {
       MaxDataPoints	      5000
       SaveToWorkspace	      off
       SaveName		      ScopeData1
-      YMin		      -0.58146~-5
-      YMax		      0.55477~5
+      YMin		      -0.27073~-5
+      YMax		      0.28409~5
       SampleInput	      off
       SampleTime	      -1
       ZoomMode		      on
@@ -799,7 +797,17 @@ Model {
 	axes1			"%<SignalLabel>"
 	axes2			"%<SignalLabel>"
       }
-      Location		      [1 203 1654 1075]
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.156862745098039 0.156862745098039 0.156862745098039]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[0.686274509803922 0.686274509803922 0.686274509803922]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      Location		      [76 106 1366 767]
     }
     Block {
       BlockType		      Reference
@@ -811,7 +819,7 @@ Model {
       ForegroundColor	      "[0.916667, 0.916667, 0.916667]"
       BackgroundColor	      "gray"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Real Time Synchronizer"
       SourceType	      "Real Time Synchronizer"
       period		      "0.01"
@@ -834,11 +842,11 @@ Model {
       Name		      "Yarp Read"
       SID		      "17"
       Ports		      [0, 1]
-      Position		      [95, 61, 155, 109]
+      Position		      [125, 61, 185, 109]
       ZOrder		      515
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
       SourceType	      "YARP Read"
       portName		      "'/icub/inertial'"

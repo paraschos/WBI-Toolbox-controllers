@@ -13,8 +13,8 @@ gain.ikin.kdfeet                 = 2*sqrt(gain.ikin.kpfeet);
 %% PARAMETERS FOR TWO FEET ON THE GROUND
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
 
-gain.ikin.kp                 = diag([50   100  50]);
-gain.ikin.kd                 = diag([  0    0   0]);        
+gain.ikin.kp                    = diag([50   100  50]);
+gain.ikin.kd                    = diag([  0    0   0]);        
     
 % Impedances acting in the null space of the desired contact forces 
 

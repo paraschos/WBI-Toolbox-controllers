@@ -15,7 +15,6 @@ splittedParts = containers.Map();
 %% Import data from text file.
 delimiter = ',';
 startRow = 2;
-
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 
 %% Open the text file.

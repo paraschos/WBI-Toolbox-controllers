@@ -6,5 +6,4 @@ Jc      = [Constraints(1)*JcLeftFoot;
 pinvJb  = (Jc(:,1:6)'*Jc(:,1:6) + reg.pinvDampVb*eye(6))\Jc(:,1:6)';  
   
 Nu_base = -pinvJb*Jc(:,7:end)*dq;
-
 end

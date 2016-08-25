@@ -21,7 +21,8 @@ The user can find the full description here: [torqueBalancing README](controller
 This folder contains two modifications of the original torqueBalancing code. These versions are deprecated and will be removed soon.
 
 ### torqueBalancingOnSeesaw
-This is a peculiar version of momentum-based balancing controller, specifically developed for balancing the robot on a seesaw. The readme is at the following link: [torqueBalancingOnSeesaw README](controllers/torqueBalancingOnSeesaw/README.md).
+This is a peculiar version of momentum-based balancing controller, specifically developed for balancing the robot on a seesaw. The readme is 
+at the following link: [torqueBalancingOnSeesaw README](controllers/torqueBalancingOnSeesaw/README.md).
 
 ###  wholeBodyImpedanceControl
 A simple impedance controller for the robot balancing. 

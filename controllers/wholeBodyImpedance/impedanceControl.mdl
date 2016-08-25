@@ -1,15 +1,17 @@
 Model {
   Name			  "impedanceControl"
-  Version		  8.6
-  MdlSubVersion		  0
-  SavedCharacterEncoding  "US-ASCII"
+  Version		  8.7
+  MdlSubVersion		  1
+  SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.253"
+    ComputedModelVersion    "1.255"
     NumModelReferences	    0
     NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
   }
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -21,6 +23,7 @@ Model {
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
   InitFcn		  "cd(fileparts(which(bdroot)));\ninit_impedanceControl;"
+  LastSavedArchitecture	  "glnxa64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -30,7 +33,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [0.0, 23.0, 1905.0, 1035.0]
+      Location		      [65.0, 24.0, 1301.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -52,21 +55,21 @@ Model {
 	Dimension		2
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1871.0, 862.0]
-	  ZoomFactor		  [1.037748050131311]
-	  Offset		  [51.509249525230643, 60.677610383884996]
+	  Extents		  [1267.0, 593.0]
+	  ZoomFactor		  [0.69761365385884266]
+	  Offset		  [44.931585451977412, 51.97964903652138]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "182"
-	  Extents		  [1871.0, 862.0]
-	  ZoomFactor		  [2.2934919986777889]
-	  Offset		  [-13.447978838849679, -214.42304496744438]
+	  Extents		  [1267.0, 593.0]
+	  ZoomFactor		  [1.5416851974715475]
+	  Offset		  [-16.471596927966118, -187.0720126172821]
 	}
 	PropName		"EditorsInfo"
       }
@@ -76,11 +79,11 @@ Model {
   Creator		  "daniele"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "DanielePucci"
+  LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon May 09 17:13:53 2016"
-  RTWModifiedTimeStamp	  384714188
-  ModelVersionFormat	  "1.%<AutoIncrement:253>"
+  LastModifiedDate	  "Thu Aug 25 14:18:19 2016"
+  RTWModifiedTimeStamp	  394035497
+  ModelVersionFormat	  "1.%<AutoIncrement:255>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -88,6 +91,10 @@ Model {
   WideLines		  off
   ShowLineDimensions	  off
   ShowPortDataTypes	  off
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  off
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
   ShowDesignRanges	  off
   ShowLoopsOnError	  on
   IgnoreBidirectionalLines off
@@ -96,6 +103,7 @@ Model {
   ShowSignalResolutionIcons on
   ShowViewerIcons	  on
   SortedOrder		  on
+  VariantCondition	  off
   ExecutionContextIcon	  off
   ShowLinearizationAnnotations on
   ShowVisualizeInsertedRTB on
@@ -106,6 +114,7 @@ Model {
   ToolBar		  on
   StatusBar		  on
   BrowserShowLibraryLinks off
+  FunctionConnectors	  off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
   PauseTimes		  "5"
@@ -167,13 +176,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      8
-      Version		      "1.15.1"
+      Version		      "1.16.2"
       Array {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
 	  $ObjectID		  9
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  StartTime		  "0.0"
 	  StopTime		  "CONFIG.SIMULATION_TIME"
 	  AbsTol		  "auto"
@@ -210,7 +219,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  10
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -242,11 +251,13 @@ Model {
 	  OutputTimes		  "[]"
 	  ReturnWorkspaceOutputsName "out"
 	  Refine		  "1"
+	  LoggingToFile		  off
+	  LoggingFileName	  "out.mat"
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  11
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -303,7 +314,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  12
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -379,6 +390,8 @@ Model {
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
 	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
 	  BlockIODiagnostic	  "none"
 	  SFUnusedDataAndEventsDiag "warning"
 	  SFUnexpectedBacktrackingDiag "warning"
@@ -390,10 +403,13 @@ Model {
 	  SFTransitionActionBeforeConditionDiag	"warning"
 	  SFOutputUsedAsStateInMooreChartDiag "error"
 	  IntegerSaturationMsg	  "warning"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  13
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -430,10 +446,12 @@ Model {
 	  TargetHWDeviceType	  "Specified"
 	  TargetUnknown		  off
 	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  14
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  EnableRefExpFcnMdlSchedulingChecks on
 	  CheckModelReferenceTargetMessage "error"
@@ -449,7 +467,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  15
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  SFSimEcho		  on
 	  SimCtrlC		  on
 	  SimIntegrity		  on
@@ -461,7 +479,7 @@ Model {
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  16
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    15
@@ -483,6 +501,7 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
+	  HardwareBoard		  "None"
 	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
@@ -532,7 +551,7 @@ Model {
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      17
-	      Version		      "1.15.1"
+	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
 		Dimension		23
@@ -603,7 +622,7 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      18
-	      Version		      "1.15.1"
+	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
 		Dimension		13
@@ -624,7 +643,6 @@ Model {
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
-	      TargetPreCompLibLocation ""
 	      GenFloatMathFcnCalls    "NOT IN USE"
 	      TargetLangStandard      "C89/C90 (ANSI)"
 	      CodeReplacementLibrary  "None"
@@ -689,9 +707,12 @@ Model {
 	}
 	SlCovCC.ConfigComp {
 	  $ObjectID		  19
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
 	  RecordCoverage	  off
 	  CovPath		  "/"
 	  CovSaveName		  "covdata"
@@ -704,6 +725,9 @@ Model {
 	  CovSaveSingleToWorkspaceVar on
 	  CovCumulativeVarName	  "covCumulativeData"
 	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
 	  CovReportOnPause	  on
 	  CovModelRefEnable	  "Off"
 	  CovExternalEMLEnable	  off
@@ -771,7 +795,7 @@ Model {
   MaskDefaults {
     SelfModifiable	    "off"
     IconFrame		    "on"
-    IconOpaque		    "on"
+    IconOpaque		    "opaque"
     RunInitForIconRedraw    "off"
     IconRotate		    "none"
     PortRotate		    "default"
@@ -831,6 +855,7 @@ Model {
       OutDataTypeStr	      "Inherit: auto"
       LockScale		      off
       BusOutputAsStruct	      off
+      Unit		      "inherit"
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
@@ -848,6 +873,7 @@ Model {
       OutDataTypeStr	      "Inherit: auto"
       LockScale		      off
       BusOutputAsStruct	      off
+      Unit		      "inherit"
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
@@ -932,6 +958,7 @@ Model {
       MaskHideContents	      off
       SFBlockType	      "NONE"
       GeneratePreprocessorConditionals off
+      TreatAsGroupedWhenPropagatingVariantConditions on
       ContentPreviewEnabled   off
       IsWebBlock	      off
     }
@@ -957,7 +984,7 @@ Model {
   }
   System {
     Name		    "impedanceControl"
-    Location		    [0, 23, 1905, 1058]
+    Location		    [65, 24, 1366, 768]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -969,7 +996,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "104"
+    ZoomFactor		    "70"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "296"
     Block {
@@ -1073,7 +1100,7 @@ Model {
       ZOrder		      384
       BackgroundColor	      "[0.513700, 0.851000, 0.670600]"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/wholeBodyStates/Get Estimate"
       SourceType	      "Get Estimate"
       ContentPreviewEnabled   off
@@ -1092,7 +1119,7 @@ Model {
       ZOrder		      385
       BackgroundColor	      "[0.513700, 0.674500, 1.000000]"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/wholeBodyStates/Get Estimate"
       SourceType	      "Get Estimate"
       ContentPreviewEnabled   off
@@ -1111,7 +1138,7 @@ Model {
       ZOrder		      590
       BackgroundColor	      "[0.827500, 0.576500, 0.603900]"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/wholeBodyStates/Get Estimate"
       SourceType	      "Get Estimate"
       ContentPreviewEnabled   off
@@ -1132,12 +1159,12 @@ Model {
       Name		      "Real Time Synchronizer"
       SID		      "174"
       Ports		      []
-      Position		      [658, 204, 783, 241]
+      Position		      [768, 219, 893, 256]
       ZOrder		      591
       ForegroundColor	      "[0.916667, 0.916667, 0.916667]"
       BackgroundColor	      "gray"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Real Time Synchronizer"
       SourceType	      "Real Time Synchronizer"
       period		      "0.01"
@@ -1151,7 +1178,7 @@ Model {
       ZOrder		      383
       BackgroundColor	      "[0.827500, 0.576500, 0.603900]"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/wholeBodyActuators/Set References"
       SourceType	      "Set References"
       ContentPreviewEnabled   off
@@ -1268,7 +1295,7 @@ Model {
       "'LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Pl"
       "acement',1),'DisplayLayoutDimensions',[3 1],'TimeRangeSamples','20','TimeRangeFrames','20'),extmgr.Configuration"
       "('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measu"
-      "rements',true,'Version','2015b')),'Version','2015b','Location',[1 95 1281 776])"
+      "rements',true,'Version','2015b')),'Version','2016a','Location',[1 95 1281 776])"
       NumInputPorts	      "3"
     }
     Block {
@@ -1283,7 +1310,7 @@ Model {
       Variant		      off
       System {
 	Name			"WholeBodyDebug"
-	Location		[0, 23, 1905, 1058]
+	Location		[65, 24, 1366, 768]
 	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1295,7 +1322,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"229"
+	ZoomFactor		"154"
 	Block {
 	  BlockType		  Inport
 	  Name			  "torqueDesired"
@@ -1317,7 +1344,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "torqueError"
 	  SID			  "185"
-	  Position		  [435, -72, 465, -58]
+	  Position		  [425, -72, 455, -58]
 	  ZOrder		  601
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -1968,7 +1995,7 @@ Model {
 	  "3529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.07450980"
 	  "39215686 0.650980392156863]),'DisplayLayoutDimensions',[3 1],'DisplayContentCache',[],'TimeRangeSamples','60','Time"
 	  "RangeFrames','60'),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY')"
-	  ",extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version','2015b','Position',[15 10 1633 838]"
+	  ",extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version','2016a','Position',[15 10 1633 838]"
 	  ")"
 	  NumInputPorts		  "3"
 	}
@@ -2007,8 +2034,8 @@ Model {
 	  "0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.058"
 	  "8235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'DisplayLayoutDimensions',[3 1],'DisplayContentCache',[]"
 	  ",'TimeRangeSamples','60','TimeRangeFrames','60'),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',f"
-	  "alse,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version','2015"
-	  "b','Position',[113 18 1801 932])"
+	  "alse,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version','2016"
+	  "a','Position',[113 18 1801 932])"
 	  NumInputPorts		  "3"
 	}
 	Block {
@@ -2047,7 +2074,7 @@ Model {
 	  "588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'DisplayLayoutDimensions',[3 1],'DisplayContentCache',"
 	  "[],'TimeRangeSamples','60','TimeRangeFrames','60'),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop'"
 	  ",false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version','20"
-	  "15b','Position',[15 10 1264 690])"
+	  "16a','Position',[15 10 1264 690])"
 	  NumInputPorts		  "3"
 	}
 	Line {
@@ -2220,7 +2247,7 @@ Model {
 	  Ports			  [4, 1]
 	  Position		  [180, 237, 320, 338]
 	  ZOrder		  589
-	  LibraryVersion	  "1.355"
+	  LibraryVersion	  "1.364"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Dynamics/Get Bias Forces"
 	  SourceType		  "Get Generalized Bias Forces"
 	  ContentPreviewEnabled	  off
@@ -2336,7 +2363,7 @@ Model {
       "7647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<Sign"
       "alLabel>'),'TimeRangeSamples','20','TimeRangeFrames','20','DisplayContentCache',[]),extmgr.Configuration('Tools'"
       ",'Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements'"
-      ",true,'Version','2015b')),'Version','2015b','Location',[1 95 1281 776])"
+      ",true,'Version','2015b')),'Version','2016a','Location',[1 95 1281 776])"
     }
     Block {
       BlockType		      SubSystem
@@ -2452,7 +2479,7 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [380, 454, 520, 521]
 	  ZOrder		  375
-	  LibraryVersion	  "1.355"
+	  LibraryVersion	  "1.364"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Dynamics/Mass Matrix"
 	  SourceType		  "Mass Matrix"
 	  ContentPreviewEnabled	  off
@@ -2565,7 +2592,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "139"
+	    SIDHighWatermark	    "142"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "M"
@@ -2577,24 +2604,24 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "108::138"
+	      SID		      "108::141"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      8
+	      ZOrder		      11
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "108::137"
+	      SID		      "108::140"
 	      Tag		      "Stateflow S-Function impedanceControl 2"
 	      Ports		      [1, 2]
 	      Position		      [180, 100, 230, 160]
-	      ZOrder		      7
+	      ZOrder		      10
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[1 2]"
 	      SFunctionDeploymentMode off
-	      EnableBusSupport	      on
+	      EnableBusSupport	      off
 	      Port {
 		PortNumber		2
 		Name			"Mj"
@@ -2605,9 +2632,9 @@ Model {
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "108::139"
+	      SID		      "108::142"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      9
+	      ZOrder		      12
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -2618,7 +2645,7 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      5
+	      ZOrder		      9
 	      SrcBlock		      "M"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -2626,7 +2653,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "Mj"
-	      ZOrder		      6
+	      ZOrder		      10
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -2634,14 +2661,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      7
+	      ZOrder		      11
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      8
+	      ZOrder		      12
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -2657,7 +2684,7 @@ Model {
 	  Position		  [545, 17, 605, 63]
 	  ZOrder		  374
 	  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
-	  LibraryVersion	  "1.355"
+	  LibraryVersion	  "1.364"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 	  SourceType		  "Holder"
 	  ContentPreviewEnabled	  off
@@ -2741,7 +2768,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [130, 20, 295, 80]
 	      ZOrder		      569
-	      LibraryVersion	      "1.355"
+	      LibraryVersion	      "1.364"
 	      SourceBlock	      "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 	      SourceType	      "Forward Kinematics"
 	      ContentPreviewEnabled   off
@@ -2758,7 +2785,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [130, 105, 295, 165]
 	      ZOrder		      572
-	      LibraryVersion	      "1.355"
+	      LibraryVersion	      "1.364"
 	      SourceBlock	      "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 	      SourceType	      "Forward Kinematics"
 	      ContentPreviewEnabled   off
@@ -2869,7 +2896,7 @@ Model {
 	  "647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedCha"
 	  "nnelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1),'DisplayLayoutDimensions',[3 1],'"
 	  "TimeRangeSamples','70','TimeRangeFrames','70'),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',fal"
-	  "se),extmgr.Configuration('Tools','Measurements',true)),'Version','2015b','Location',[7 83 955 760])"
+	  "se),extmgr.Configuration('Tools','Measurements',true)),'Version','2016a','Location',[7 83 955 760])"
 	  NumInputPorts		  "3"
 	}
 	Block {
@@ -3287,7 +3314,7 @@ Model {
 }
 #Finite State Machines
 #
-#   Stateflow 80000006
+#   Stateflow 80000009
 #
 #
 Stateflow {
@@ -3297,7 +3324,7 @@ Stateflow {
     created		    "12-Mar-2015 18:23:09"
     isLibrary		    0
     firstTarget		    9
-    sfVersion		    80000006
+    sfVersion		    80000009
   }
   chart {
     id			    2
@@ -3354,6 +3381,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -3374,6 +3404,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }

@@ -1,9 +1,9 @@
 %% OVERWRITING SOME OF THE PARAMETERS CONTAINED IN gains.m WHEN USING FSM
 if strcmpi(SM.SM_TYPE, 'YOGA')
     CONFIG.SMOOTH_DES_COM      = 1;    % If equal to one, the desired streamed values 
-                            % of the center of mass are smoothed internally 
+                                 % of the center of mass are smoothed internally 
     CONFIG.SMOOTH_DES_Q        = 1;    % If equal to one, the desired streamed values 
-                            % of the postural tasks are smoothed internally 
+                                 % of the postural tasks are smoothed internally 
 
     reg.pinvDamp = 1;
     sat.torque   = 50;

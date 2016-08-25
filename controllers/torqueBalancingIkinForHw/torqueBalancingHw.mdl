@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.3162"
+    ComputedModelVersion    "1.3164"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -33,7 +33,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [65.0, 24.0, 1375.0, 876.0]
+      Location		      [1431.0, 24.0, 1855.0, 1056.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -56,10 +56,10 @@ Model {
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
 	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"4123"
-	Extents			[1341.0, 731.0]
-	ZoomFactor		[0.48999999999999994]
-	Offset			[0.0, -11.571428571428555]
+	LoadSaveID		"2087"
+	Extents			[1821.0, 911.0]
+	ZoomFactor		[0.66873597263329509]
+	Offset			[-1049.1693935617679, 2205.6142175081914]
       }
     }
   }
@@ -67,11 +67,11 @@ Model {
   Creator		  "daniele"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "DanielePucci"
+  LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Aug 19 13:14:41 2016"
-  RTWModifiedTimeStamp	  393513279
-  ModelVersionFormat	  "1.%<AutoIncrement:3162>"
+  LastModifiedDate	  "Thu Aug 25 13:44:10 2016"
+  RTWModifiedTimeStamp	  394033429
+  ModelVersionFormat	  "1.%<AutoIncrement:3164>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1090,7 +1090,7 @@ Model {
   }
   System {
     Name		    "torqueBalancingHw"
-    Location		    [65, 24, 1366, 768]
+    Location		    [1431, 24, 3286, 1080]
     Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1102,7 +1102,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "49"
+    ZoomFactor		    "82"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "4447"
     Block {
@@ -1118,8 +1118,8 @@ Model {
       Variant		      off
       System {
 	Name			"DesValues"
-	Location		[65, 24, 1440, 900]
-	Open			off
+	Location		[1431, 24, 3286, 1080]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1130,7 +1130,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"49"
+	ZoomFactor		"67"
 	Block {
 	  BlockType		  Reference
 	  Name			  "Centroidal Momentum"
@@ -1369,8 +1369,8 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Integration Based Inverse Kinematics"
-	    Location		    [65, 24, 1440, 900]
-	    Open		    on
+	    Location		    [1431, 24, 3286, 1080]
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -1381,7 +1381,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "49"
+	    ZoomFactor		    "82"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "qInit"
@@ -28888,7 +28888,7 @@ Model {
       Variant		      off
       System {
 	Name			"M(q) h(q,dq) g(q)"
-	Location		[65, 24, 1366, 768]
+	Location		[1431, 24, 3286, 1080]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -28900,7 +28900,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"167"
+	ZoomFactor		"259"
 	Block {
 	  BlockType		  Inport
 	  Name			  "w_H_b"
@@ -29190,7 +29190,7 @@ Model {
       Name		      "Saturation"
       SID		      "2353"
       Ports		      [1, 1]
-      Position		      [1495, 295, 1545, 345]
+      Position		      [1495, 290, 1545, 340]
       ZOrder		      545
       ShowName		      off
       InputPortMap	      "u0"
@@ -29202,7 +29202,7 @@ Model {
       Name		      "Set References"
       SID		      "2354"
       Ports		      [1]
-      Position		      [1665, 295, 1740, 345]
+      Position		      [1665, 290, 1740, 340]
       ZOrder		      549
       BackgroundColor	      "[0.827500, 0.576500, 0.603900]"
       ShowName		      off
@@ -29227,7 +29227,7 @@ Model {
       Variant		      off
       System {
 	Name			"controller_QP"
-	Location		[65, 24, 1366, 768]
+	Location		[1431, 24, 3286, 1080]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -29239,7 +29239,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"125"
+	ZoomFactor		"53"
 	Block {
 	  BlockType		  Inport
 	  Name			  "impedances"
@@ -33510,7 +33510,7 @@ Model {
       Name		      "synchronizer"
       SID		      "2423"
       Ports		      []
-      Position		      [1642, 203, 1762, 253]
+      Position		      [1642, 198, 1762, 248]
       ZOrder		      546
       ForegroundColor	      "red"
       BackgroundColor	      "green"
@@ -42340,8 +42340,8 @@ Stateflow {
       "ts(1)*JLfoot ; constraints(2)*JRfoot];\nJCoM       = J_CoM(1:3,:);\nJPosture   = [zeros(ndof,6),eye(ndof)]; \ndJ"
       "FeetNu   = [constraints(1)*dJnuLf; constraints(2)*dJnuRf];\ndJCoMNu    = dJnuCoM(1:3);\n\n%% reference accelerat"
       "ion for floating base and joints.\ndnuDes    =  accelerationsReferencesGenerator_NOPOSTURE(JFeet,JCoM,JPosture,d"
-      "JFeetNu,dJCoMNu,feetDynamics,CoMDynamics,jointsDynamics);\n% dnuDes    =  accelerationsReferencesGenerator(JFeet"
-      ",JCoM,JPosture,dJFeetNu,dJCoMNu,feetDynamics,CoMDynamics,jointsDynamics);\n\nend\n\n"
+      "JFeetNu,dJCoMNu,feetDynamics,CoMDynamics,jointsDynamics);\n% dnuDes  =  accelerationsReferencesGenerator(JFeet,J"
+      "CoM,JPosture,dJFeetNu,dJCoMNu,feetDynamics,CoMDynamics,jointsDynamics);\n\nend\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
       fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
       "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', true)"

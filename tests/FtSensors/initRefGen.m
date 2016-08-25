@@ -1,6 +1,6 @@
 clear;% all;
 clc;
-ROBOT_DOF=23;
+ROBOT_DOF = 23;
 
 CONFIG.Ts = 0.01;
 

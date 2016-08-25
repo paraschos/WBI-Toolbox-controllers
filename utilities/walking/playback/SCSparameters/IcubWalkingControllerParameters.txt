@@ -675,7 +675,6 @@ public class IcubWalkingControllerParameters implements WalkingControllerParamet
       double zeta = runningOnRealRobot ? 0.6 : 0.8;
       double maxAcceleration = runningOnRealRobot ? 18.0 : 18.0;
       double maxJerk = runningOnRealRobot ? 270.0 : 270.0;
-
       gains.setKp(kp);
       gains.setZeta(zeta);
       gains.setMaximumAcceleration(maxAcceleration);

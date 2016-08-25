@@ -14,7 +14,7 @@ function [CoMDes,qDes,constraints, currentState,impedances,w_H_b] = ...
     
     
 %     w_H_fixedLink  = eye(4);
-%     
+    
 %     fixedLink   =  1; % 1 = left, 2 = right
     
     CoMDes      = CoM_0;

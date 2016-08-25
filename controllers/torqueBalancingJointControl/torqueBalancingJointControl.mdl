@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.3127"
+    ComputedModelVersion    "1.3128"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -55,11 +55,11 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"3613"
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
 	Extents			[1267.0, 599.0]
-	ZoomFactor		[0.92096774193548392]
-	Offset			[460.74890713933894, 122.79859894921191]
+	ZoomFactor		[0.953076923076923]
+	Offset			[165.31073446327684, 24.254640839386582]
       }
     }
   }
@@ -69,9 +69,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Aug 18 11:53:11 2016"
-  RTWModifiedTimeStamp	  393421989
-  ModelVersionFormat	  "1.%<AutoIncrement:3127>"
+  LastModifiedDate	  "Thu Aug 25 13:53:16 2016"
+  RTWModifiedTimeStamp	  394033994
+  ModelVersionFormat	  "1.%<AutoIncrement:3128>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1033,7 +1033,7 @@ Model {
   System {
     Name		    "torqueBalancingJointControl"
     Location		    [65, 24, 1366, 768]
-    Open		    off
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -3541,7 +3541,7 @@ Model {
 		  System {
 		    Name		    "ikin_forwardKin"
 		    Location		    [65, 24, 1366, 768]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -9154,7 +9154,7 @@ Model {
       Name		      "synchronizer"
       SID		      "2423"
       Ports		      []
-      Position		      [1262, 48, 1382, 98]
+      Position		      [1357, 48, 1477, 98]
       ZOrder		      546
       ForegroundColor	      "red"
       BackgroundColor	      "green"
@@ -11588,10 +11588,7 @@ Stateflow {
     firstTransition	    15
     firstJunction	    14
     viewObj		    2
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    13
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

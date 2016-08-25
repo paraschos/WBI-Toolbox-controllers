@@ -40,5 +40,4 @@ dTNu          = Mc\(CNu-C_cNu_c);
 
 Jcc           = Jc*invT;
 dJcDq_c       = dJcDq - Jc*invT*dTNu;
-
 end

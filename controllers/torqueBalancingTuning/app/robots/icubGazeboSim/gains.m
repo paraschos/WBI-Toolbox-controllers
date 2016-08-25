@@ -27,7 +27,7 @@ postures = 0;
 gain.SmoothingTimeImp  = 1; 
 gain.SmoothingTimeGainScheduling = 0.02;
 
-%% PARAMETERS FOR TWO FEET ON THE GROUND
+%% PARAMETERS FOR TWO FEET ON GROUND
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
     gain.PCOM                 = diag([50    50  50]);
     gain.ICOM                 = diag([  0    0   0]);
@@ -60,7 +60,7 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
                                            
 end
 
-%% PARAMETERS FOR ONLY ONE FOOT ON THE GROUND
+%% PARAMETERS FOR ONLY ONE FOOT ON GROUND
 
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 1)
 
@@ -110,8 +110,6 @@ end
 
 
 %% constraints for QP for balancing on both feet - friction cone - z-moment - in terms of f (not f0!)
-
-
 % Friction cone parameters
 numberOfPoints               = 4; % The friction cone is approximated by using linear interpolation of the circle. 
                                   % So, numberOfPoints defines the number of points used to interpolate the circle in each cicle's quadrant 

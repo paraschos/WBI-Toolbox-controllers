@@ -21,5 +21,4 @@ end
 
 
  desired_x_dx_ddx_CoM = [xCoMDes dxCoMDes ddxCoMDes];
- 
 end

@@ -11,7 +11,7 @@ assert(dataLength == length(qDesInput) && dataLength == length(constraintsInput)
 
 com = struct;
 com.time = 0:Ts:(dataLength - 1)* Ts;
-com.signals.dimensions = 9;
+com.signals.dimensions =  9;
 com.signals.values = comInput;
 
 qDes = struct;

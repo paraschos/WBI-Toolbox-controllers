@@ -35,6 +35,5 @@ function [qDes,desired_x_dx_ddx_CoM] = refGen(xCom0,q0,t,references)
 
     desired_x_dx_ddx_CoM = [xcomDes;xDcomDes;xDDcomDes];
 
-
 end
 

@@ -11,5 +11,4 @@ dquat_base     = quaternionDerivative(quat_base,omegaWorld,1);
 
 % calculate the base pose derivative
 baseDer        = [nuDes_base(1:3);dquat_base];
-
 end

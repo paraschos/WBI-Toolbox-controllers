@@ -6,10 +6,10 @@ PORTS.WBDT_RIGHTLEG_EE = '/wholeBodyDynamics/right_leg/cartesianEndEffectorWrenc
 CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT  = [1 1];
 
 CONFIG.SMOOTH_DES_COM      = 0;    % If equal to one, the desired streamed values 
-                            % of the center of mass are smoothed internally 
+                                % of the center of mass are smoothed internally 
                             
 CONFIG.SMOOTH_DES_Q        = 0;    % If equal to one, the desired streamed values 
-                            % of the postural tasks are smoothed internally 
+                                % of the postural tasks are smoothed internally 
                             
 references.smoothingTimeMinJerkComDesQDes    = 3.0;
 

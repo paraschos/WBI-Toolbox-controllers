@@ -3,9 +3,9 @@ ROBOT_DOF = 23;
 CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT  = [1 1];
 
 CONFIG.SMOOTH_DES_COM      = 0;    % If equal to one, the desired streamed values 
-                            % of the center of mass are smoothed internally 
+                                % of the center of mass are smoothed internally 
 CONFIG.SMOOTH_DES_Q        = 0;    % If equal to one, the desired streamed values 
-                            % of the postural tasks are smoothed internally 
+                                % of the postural tasks are smoothed internally 
                             
 references.smoothingTimeMinJerkComDesQDes    = 3.0;
 
@@ -20,7 +20,7 @@ postures = 0;
 gain.SmoothingTimeImp  = 1;  
 
 %%
-%           PARAMETERS FOR TWO FEET ONE GROUND
+%           PARAMETERS FOR TWO FEET ON GROUND
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
     gain.PCOM                 = diag([50    50  50]);
     gain.ICOM                 = diag([  0    0   0]);
@@ -53,7 +53,7 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
                                            
 end
 
-% PARAMETERS FOR ONLY ONE FOOT ONE GROUND
+% PARAMETERS FOR ONLY ONE FOOT ON GROUND
 
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 1)
     %%

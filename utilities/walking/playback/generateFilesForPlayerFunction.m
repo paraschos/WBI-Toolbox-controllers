@@ -1,5 +1,5 @@
 function [] = generateFilesForPlayerScript(FILE_NAME)
-%     clear all
+%   clear all
     close all
     clc
     

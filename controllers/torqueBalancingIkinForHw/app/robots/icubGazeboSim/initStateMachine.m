@@ -4,7 +4,6 @@ if strcmpi(SM.SM_TYPE, 'YOGA')
                                        % of the center of mass are smoothed internally 
     CONFIG.SMOOTH_DES_Q        = 1;    % If equal to one, the desired streamed values 
                                        % of the postural tasks are smoothed internally 
-
     reg.pinvDamp               = 1;
     reg.impedances             = 0.1;
     reg.dampings               = 0;

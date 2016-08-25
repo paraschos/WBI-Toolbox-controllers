@@ -20,5 +20,4 @@ quaternion = qT(4:end);
 
 % Assuming q = [q_real; q_vec]
 dcm = quaternion2dcm(quaternion);
-
 end

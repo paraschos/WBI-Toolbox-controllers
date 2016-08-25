@@ -24,7 +24,7 @@ postures = 0;
 gain.SmoothingTimeImp  = 1;  
 
 %%
-%           PARAMETERS FOR TWO FEET ONE GROUND
+%           PARAMETERS FOR TWO FEET ON GROUND
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
     gain.PCOM                 = diag([50    50  50]);
     gain.ICOM                 = diag([  0    0   0]);
@@ -57,7 +57,7 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
                                            
 end
 
-% PARAMETERS FOR ONLY ONE FOOT ONE GROUND
+% PARAMETERS FOR ONLY ONE FOOT ON GROUND
 
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 1)
     %%

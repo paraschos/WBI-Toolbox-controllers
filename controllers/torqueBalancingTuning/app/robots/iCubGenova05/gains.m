@@ -108,7 +108,6 @@ end
 
 %% constraints for QP for balancing on both feet - friction cone - z-moment - in terms of f (not f0!)
 
-
 % Friction cone parameters
 numberOfPoints               = 4; % The friction cone is approximated by using linear interpolation of the circle. 
                                   % So, numberOfPoints defines the number of points used to interpolate the circle in each cicle's quadrant 
@@ -124,6 +123,23 @@ gain.footSize  = [ -0.07  0.12   ;  % xMin, xMax
 %                                  -0.04 0.04  ];   % yMin, yMax
 fZmin                        = 10;
 
+%% Activate the gain tuning procedure
+gain.activateGainTuning          = 1;
+gain.tStep                       = 20;
+
+% initial conditions for the integrator
+gain.CI_PCoM                     = log(diag(gain.PCOM));
+gain.CI_Pang                     = log(gain.PAngularMomentum.*ones(3,1));
+gain.CI_imp                      = log(gain.impedances);
+gain.CI_DCoM                     = log(2*sqrt(diag(gain.PCOM)));
+gain.CI_Dang                     = log(2*sqrt(gain.PAngularMomentum).*ones(3,1));
+gain.CI_damp                     = log(2*sqrt(gain.impedances));
+
+% desired state matrix (in terms of KS, KD)
+gain.KSdes                       = diag(gain.impedances);
+gain.KDdes                       = 2*sqrt(gain.KSdes);
+
+%% Tolerances
 reg.pinvTol     = 1e-5;
 reg.pinvDamp    = 0.01;
 reg.pinvDampVb  = 0.001;

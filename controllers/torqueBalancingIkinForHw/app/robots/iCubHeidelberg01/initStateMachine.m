@@ -26,7 +26,6 @@ if strcmpi(SM.SM_TYPE, 'YOGA')
 
     gain.PAngularMomentum  = 1 ;
 
-
     % state ==  1  TWO FEET BALANCING
     % state ==  2  COM TRANSITION TO LEFT FOOT
     % state ==  3  LEFT FOOT BALANCING 

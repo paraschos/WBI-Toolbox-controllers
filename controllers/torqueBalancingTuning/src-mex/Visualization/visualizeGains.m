@@ -13,7 +13,7 @@ dampingOptVis     = dampingOpt.signals.values(:,:,end);
 KSoptVis          = KSopt.signals.values(:,:,end);
 KDoptVis          = KDopt.signals.values(:,:,end);
 KSfinVis          = KSfin.signals.values(:,:,end);
-% % KDfinVis          = KDfin.signals.values(:,:,end);
+%KDfinVis         = KDfin.signals.values(:,:,end);
 KSdesVis          = KSdes.signals.values(:,:,end);
 KDdesVis          = KDdes.signals.values(:,:,end);
 
@@ -78,7 +78,6 @@ title('Obtained intMomentum gains')
 figure(10)
 surf(MomGainVis)
 title('Obtained Momentum gains')
-
 
 set(0,'DefaultFigureWindowStyle','Normal');
 

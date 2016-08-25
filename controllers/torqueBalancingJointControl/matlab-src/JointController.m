@@ -1,4 +1,5 @@
 function [tau,fc]   =  JointController(constraints, M, h, Jc, dJcNu,impedances, dampings, inverseKinRef, qj,Nu,reg)
+
 %% Joint Error
 qTilde           = qj - inverseKinRef(:,1);
 dqTilde          = Nu(7:end) - inverseKinRef(:,2);

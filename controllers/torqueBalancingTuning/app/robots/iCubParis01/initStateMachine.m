@@ -80,7 +80,6 @@ sm.DT                            = 1;
 sm.waitingTimeAfterYoga          = 0;
 
 
-
 sm.com.states      = [0.0,  0.01,0.511;   %% state ==  1  TWO FEET BALANCING NOT USED
                       0.0, -0.01,0.0;     %% state ==  2  COM TRANSITION TO LEFT FOOT: THIS REFERENCE IS USED AS A DELTA W.R.T. THE POSITION OF THE LEFT FOOT
                       0.0, -0.01,0.511;   %% state ==  3  LEFT FOOT BALANCING 

@@ -22,6 +22,5 @@ G_6I=evalDHMatrix(      0,     6.6*1e-3,      pi/2,      0);
 imu_H_neckBase = G_34*G_45*G_56*G_6I;
 
 imu_H_imuAssumingNeckToZero = imu_H_neckBase/(imuAssumingNeckToZero_H_neckBase);
-
 end
 

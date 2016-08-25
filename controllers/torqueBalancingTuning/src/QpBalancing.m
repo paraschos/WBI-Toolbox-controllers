@@ -138,7 +138,6 @@ function SetInputPortSamplingMode(block, idx, fd)
 
 % end InitializeConditions
 
-
 %%
 %% Start:
 %%   Functionality    : Called once at start of model execution. If you

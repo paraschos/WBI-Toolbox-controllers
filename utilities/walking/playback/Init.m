@@ -2,7 +2,7 @@
 trajectories = TrajectoryLoader([pwd,filesep,'softTouchDown.csv']);
 
 %% parameters
-Ts = 0.006;
+Ts  = 0.006;
 endTime = trajectories(end,1);
 robotName  = 'icubGazeboSim';
 localName = 'simulink'; 

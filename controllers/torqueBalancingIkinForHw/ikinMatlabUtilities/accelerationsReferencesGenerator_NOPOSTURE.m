@@ -20,5 +20,4 @@ dnu_joint  = 0*(pinv(JPosture*NullFeet*NullCoM, pinv_toll)*(jointsDynamics -JPos
 
 %% Desired floating base and joints reference accelerations
 dnuDes     = dnu_feet + NullFeet*(dnu_com + NullCoM*dnu_joint);
-
 end

@@ -1,5 +1,4 @@
 function BaseDer   = BaseDerivative(NuBase_Ref, baseQuat)
-
 % apply the conversion of reference frame between base and wolrd
 omegaBase      = NuBase_Ref(4:end);
 [~,RBase]      = frame2posrot(baseQuat);

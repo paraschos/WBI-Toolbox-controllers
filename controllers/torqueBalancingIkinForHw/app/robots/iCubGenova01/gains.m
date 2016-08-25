@@ -5,9 +5,9 @@ ROBOT_DOF = 23;
 CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT  = [1 1];
 
 CONFIG.SMOOTH_DES_COM      = 0;    % If equal to one, the desired streamed values 
-                            % of the center of mass are smoothed internally 
+                                   % of the center of mass are smoothed internally 
 CONFIG.SMOOTH_DES_Q        = 0;    % If equal to one, the desired streamed values 
-                            % of the postural tasks are smoothed internally 
+                                   % of the postural tasks are smoothed internally 
                             
 references.smoothingTimeComAndJoints    = 3.0;
 
@@ -50,8 +50,7 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
                         
     intLeftLeg          = [0   0    0    0    0  0]; 
 
-    intRightLeg         = [0   0     0  0    0  0];   
-    
+    intRightLeg         = [0   0     0  0    0  0];     
                                            
 end
 
@@ -105,7 +104,6 @@ end
 
 
 %% constraints for QP for balancing on both feet - friction cone - z-moment - in terms of f (not f0!)
-
 
 % Friction cone parameters
 numberOfPoints               = 4; % The friction cone is approximated by using linear interpolation of the circle. 

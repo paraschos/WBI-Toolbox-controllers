@@ -1,9 +1,9 @@
 CONFIG.DEMO_MOVEMENTS      = false; % Either true or false 
 
-references.com.points                  = 0;
-references.com.noOscillationTime       = 10;    % that the robot waits before starting the left-and-righ
- 
-references.joints.points               = 0;
+references.com.points                  =  0;
+references.com.noOscillationTime       =  10;    % that the robot waits before starting the left-and-righ
+
+references.joints.points               =  0;
 
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2 )
     if (CONFIG.DEMO_MOVEMENTS)

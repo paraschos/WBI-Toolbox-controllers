@@ -20,8 +20,7 @@ if CONFIG.USE_SM
     gain.impedances  = [10   10   20, 10   10    10    8, 10   10    10    8, 30   30   20    20     10  10, 30   50   30    60      5   5    % state ==  1  WATING FOR REFERENCES
                         10   10   20, 10   10    10    8, 10   10    10    8, 30   30   20    20     10  10, 30   50   30    60      5   5    % state ==  2  TWO FEET BALANCING
                         10   10   20, 10   10    10    8, 10   10    10    8, 30   30   20    20     10  10, 30   50   30    60      5   5    % state ==  3  LEFT FOOT BALANCING
-                        10   10   20, 10   10    10    8, 10   10    10    8, 30   50   30    60      5   5, 30   30   20    20     10  10];  % state ==  4  RIGHT FOOT BALANCING
-                        
+                        10   10   20, 10   10    10    8, 10   10    10    8, 30   50   30    60      5   5, 30   30   20    20     10  10];  % state ==  4  RIGHT FOOT BALANCING                       
 
 gain.dampings           = 0.0*sqrt(gain.impedances(4,:));
 
@@ -29,7 +28,7 @@ end
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                      
          
 %% %%%%%%%%%%%%%%%%    FINITE STATE MACHINE SPECIFIC PARAMETERS
-sm.com.threshold                 =   0.005;
+sm.com.threshold                 =  0.005;
 sm.wrench.threshold              = 70;
 sm.joints = struct;
 sm.joints.thresholdNotInContact =  3;

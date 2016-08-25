@@ -5,7 +5,6 @@ lFootPos         = fwdkin_lfoot(1:3,4);
 rFootPos         = fwdkin_rfoot(1:3,4);
 lFootPos_init    = fwdkin_lfootInit(1:3,4);
 rFootPos_init    = fwdkin_rfootInit(1:3,4);
-
 CoMPos           = fwdkin_CoM(1:3,4);
 LfootPos_error   = lFootPos-lFootPos_init;
 RfootPos_error   = rFootPos-rFootPos_init;

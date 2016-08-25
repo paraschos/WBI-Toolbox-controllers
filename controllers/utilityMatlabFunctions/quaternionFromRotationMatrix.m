@@ -44,5 +44,4 @@ end
 
 q = [q0; q1; q2; q3];
 q = q ./ norm(q);
-
 end

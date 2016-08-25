@@ -22,7 +22,7 @@ CONFIG.smoothingTimeTranDynamics             = 0.05;
 
 ROBOT_DOF_FOR_SIMULINK = eye(ROBOT_DOF);
 gain.qTildeMax         = 20*pi/180;
-postures = 0;  
+postures               = 0;  
 
 gain.SmoothingTimeImp  = 1; 
 gain.SmoothingTimeGainScheduling = 0.02;
@@ -54,8 +54,7 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
     intArms             = [0   0    0    0];                    
     intLeftLeg          = [0   0    0   0   0  0];
     intRightLeg         = [0   0    0   0   0  0];   
-    
-                                      
+                                          
 end
 
 %% PARAMETERS FOR ONLY ONE FOOT ON THE GROUND

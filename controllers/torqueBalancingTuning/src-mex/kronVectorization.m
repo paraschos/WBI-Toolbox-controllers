@@ -38,8 +38,8 @@ indexDiagMatr = reshape(indexDiag,[6,6]);
 diagonalIndex = sort(diag(indexDiagMatr));
 kronMom       = kronMom(:,diagonalIndex);
 
-MKron       = [kronMom kronNull];
-xdes        = Kdes(:);
+MKron         = [kronMom kronNull];
+xdes          = Kdes(:);
 
 %% First task generator
 indexTotal  = 1:ndof^2;

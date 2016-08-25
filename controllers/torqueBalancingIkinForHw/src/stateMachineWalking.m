@@ -1,7 +1,6 @@
 function [CoMDes,qDes,constraints, currentState,impedances,w_H_b] = ...
     stateMachineWalking(connection,CoM_0, q0, w_CoM, CoMIn, qIn, constraintsIn, wrench_rightFoot,wrench_leftFoot,l_sole_H_b, r_sole_H_b, sm,gain)
     %#codegen
-        
     persistent state;
     persistent fixedLink;
     persistent w_H_fixedLink;
@@ -13,8 +12,7 @@ function [CoMDes,qDes,constraints, currentState,impedances,w_H_b] = ...
     end
     
     
-%     w_H_fixedLink  = eye(4);
-%     
+%     w_H_fixedLink  = eye(4);     
 %     fixedLink   =  1; % 1 = left, 2 = right
     
     CoMDes      = CoM_0;

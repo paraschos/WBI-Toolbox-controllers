@@ -15,7 +15,7 @@ references.smoothingTimeMinJerkComDesQDes    = 3.0;
 
 sat.torque = 34;
 
-CONFIG.smoothingTimeTranDynamics    = 0.05;
+CONFIG.smoothingTimeTranDynamics  = 0.05;
 
 ROBOT_DOF_FOR_SIMULINK = eye(ROBOT_DOF);
 gain.qTildeMax         = 20*pi/180;

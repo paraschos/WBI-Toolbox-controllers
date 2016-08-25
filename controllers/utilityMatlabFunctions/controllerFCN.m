@@ -29,5 +29,4 @@ tauE     =  S'*Jct*(LambdaJcMinv*h - (JcMinvJct + smoothReg)\JcDNu);
 tau      = invNj*(Mj*(qDesDD) -diag(impedances)*qTilde -diag(dampings)*qTildeD -tauE);
 
 fc       = eye(size(Jc,1))/(JcMinvJct + smoothReg)*(JcMinv*h - JcMinv*S*tau -JcDNu);
-
 end

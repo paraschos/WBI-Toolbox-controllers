@@ -79,8 +79,7 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 1)
 
     impRightLeg         = [ 30   30  30      30     40   40
                              0    0   0       0      0   0];
-
-%%    
+   
 end
 
 sat.integral              = 0;

@@ -118,7 +118,7 @@ PORTS.Q_DES     = ['/' WBT_modelName '/qDes:i'];
 PORTS.WBDT_LEFTLEG_EE  = '/wholeBodyDynamicsTree/left_leg/cartesianEndEffectorWrench:o';
 PORTS.WBDT_RIGHTLEG_EE = '/wholeBodyDynamicsTree/right_leg/cartesianEndEffectorWrench:o';
 
-CONFIG.USE_QP_SOLVER     = false; 
+CONFIG.USE_QP_SOLVER     = true; 
 
 CONFIG.Ts                = 0.01; %  Controller period [s]
 

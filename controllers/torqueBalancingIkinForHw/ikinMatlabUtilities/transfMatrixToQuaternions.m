@@ -27,6 +27,6 @@ qz = (r10 -r01)/(4*qw);
 quaternions = [qw; qx; qy; qz];
 
 % Final state converted as a 7+n element vector
-qInit   =[ q_base(13:15); quaternions; qInitQuat(17:end)];
+qInit   =  [ q_base(13:15); quaternions; qInitQuat(17:end)];
 
 end

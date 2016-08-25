@@ -32,7 +32,7 @@ clear; clc;
 setenv('YARP_ROBOT_NAME','icubGazeboSim');
 
 % Simulation time in seconds
-CONFIG.SIMULATION_TIME     = inf;   
+CONFIG.SIMULATION_TIME    = inf;   
 
 %% PRELIMINARY CONFIGURATIONS 
 % SM.SM_TYPE: defines the kind of state machines that can be chosen.
@@ -116,7 +116,7 @@ PORTS.WBDT_RIGHTLEG_EE = '/wholeBodyDynamicsTree/right_leg/cartesianEndEffectorW
 
 CONFIG.USE_QP_SOLVER     = true; 
 
-CONFIG.Ts                = 0.01; %  Controller period [s]
+CONFIG.Ts                = 0.01;  % Controller period [s]
 
 CONFIG.ON_GAZEBO         = false;
 baseToWorldRotationPort  = ['/' WBT_modelName '/floatingBaseRotationMatrix:i'];

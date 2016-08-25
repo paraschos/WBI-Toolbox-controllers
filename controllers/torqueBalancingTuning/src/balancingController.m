@@ -23,6 +23,7 @@ function [tauModel,Sigma,NA,f_HDot, ...
               balancingController(constraints,ROBOT_DOF_FOR_SIMULINK,ConstraintsMatrix,bVectorConstraints,...
               q,qDes,v, M, h , H,intHw,w_H_l_sole, w_H_r_sole, JL,JR, dJLv,dJRv, xcom,J_CoM, desired_x_dx_ddx_CoM,...
               intMomGainOpt,MomGainOpt,impedancesOpt,dampingOpt,intErrorCoM,ki_int_qtilde,reg,gain)
+          
     %BALANCING CONTROLLER
 
     %% DEFINITION OF CONTROL AND DYNAMIC VARIABLES
@@ -52,9 +53,7 @@ function [tauModel,Sigma,NA,f_HDot, ...
     
     %%
     gainsICOM       = zeros(3,1);
-
     ROBOT_DOF       = size(ROBOT_DOF_FOR_SIMULINK,1);
-
     gravAcc         = 9.81;
     
     % Mass of the robot.

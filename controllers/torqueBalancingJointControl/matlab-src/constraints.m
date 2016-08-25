@@ -1,5 +1,4 @@
-function [ConstraintsMatrix,bVectorConstraints] = constraints(staticFrictionCoefficient,numberOfPoints,torsionalFrictionCoefficient,footSize,fZmin)
-    
+function [ConstraintsMatrix,bVectorConstraints] = constraints(staticFrictionCoefficient,numberOfPoints,torsionalFrictionCoefficient,footSize,fZmin) 
     %% Compute friction cones contraints approximation with straight lines
 
     %split the pi/2 angle into numberOfPoints - 1;

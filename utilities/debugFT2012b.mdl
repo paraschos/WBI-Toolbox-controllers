@@ -1,13 +1,12 @@
 Model {
   Name			  "debugFT2012b"
   Version		  8.0
-  MdlSubVersion		  0
-  SavedCharacterEncoding  "US-ASCII"
+  SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.24"
+    ComputedModelVersion    "1.26"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [67.0, 184.0, 1563.0, 720.0]
+      Location		      [65.0, 58.0, 1321.0, 724.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -54,9 +53,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1529.0, 547.0]
-	ZoomFactor		[1.1356673960612691]
-	Offset			[-1117.4302595134875, -98.327552986512529]
+	Extents			[1267.0, 531.0]
+	ZoomFactor		[1.0]
+	Offset			[-1193.8849801300578, -112.54335260115607]
       }
     }
   }
@@ -64,11 +63,11 @@ Model {
   Creator		  "DanielePucci"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "DanielePucci"
+  LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu May 05 17:25:37 2016"
-  RTWModifiedTimeStamp	  384369937
-  ModelVersionFormat	  "1.%<AutoIncrement:24>"
+  LastModifiedDate	  "Thu Aug 25 14:31:06 2016"
+  RTWModifiedTimeStamp	  394036266
+  ModelVersionFormat	  "1.%<AutoIncrement:26>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -591,7 +590,6 @@ Model {
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
-	      TargetPreCompLibLocation ""
 	      CodeReplacementLibrary  "C89/C90 (ANSI)"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
@@ -748,7 +746,7 @@ Model {
   }
   System {
     Name		    "debugFT2012b"
-    Location		    [67, 184, 1630, 904]
+    Location		    [65, 58, 1386, 782]
     Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -760,7 +758,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "114"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "42"
     Block {
@@ -910,20 +908,20 @@ Model {
       ZOrder		      536
       NumInputPorts	      "4"
       Open		      off
-      TimeRange		      auto
+      TimeRange		      60
       TickLabels	      OneTimeTick
       ShowLegends	      off
-      LimitDataPoints	      on
+      LimitDataPoints	      off
       MaxDataPoints	      5000
       SaveToWorkspace	      off
       SaveName		      ScopeData1
-      YMin		      -10~-5~-5~-5
-      YMax		      10~5~5~5
+      YMin		      -0.82779~-0.02821~-1.24939~-0.03433
+      YMax		      1.09268~0.03263~1.11267~0.0343
       SampleInput	      off
       SampleTime	      -1
       ZoomMode		      on
       Grid		      on
-      DataFormat	      Array
+      DataFormat	      StructureWithTime
       Decimation	      1
       List {
 	ListType		AxesTitles
@@ -942,7 +940,7 @@ Model {
 	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
 	MarkerStyles		"none|none|none|none|none|none"
       }
-      Location		      [680 330 1240 750]
+      Location		      [409 -122 1710 541]
     }
     Block {
       BlockType		      Scope
@@ -985,7 +983,7 @@ Model {
 	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
 	MarkerStyles		"none|none|none|none|none|none"
       }
-      Location		      [1 375 1281 1075]
+      Location		      [1 -217 1863 763]
     }
     Block {
       BlockType		      Scope
@@ -1028,19 +1026,19 @@ Model {
 	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
 	MarkerStyles		"none|none|none|none|none|none"
       }
-      Location		      [1 375 1281 1075]
+      Location		      [66 78 1367 767]
     }
     Block {
       BlockType		      Reference
       Name		      "Real Time Synchronizer"
       SID		      "16"
       Ports		      []
-      Position		      [-530, -86, -405, -49]
+      Position		      [-630, -41, -505, -4]
       ZOrder		      514
       ForegroundColor	      "[0.916667, 0.916667, 0.916667]"
       BackgroundColor	      "gray"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Real Time Synchronizer"
       SourceType	      "Real Time Synchronizer"
       period		      "0.01"
@@ -1138,7 +1136,7 @@ Model {
       ZOrder		      519
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
       SourceType	      "YARP Read"
       portName		      "'/icub/right_foot/analog:o'"
@@ -1163,7 +1161,7 @@ Model {
       ZOrder		      521
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
       SourceType	      "YARP Read"
       portName		      "'/icub/left_foot/analog:o'"
@@ -1188,7 +1186,7 @@ Model {
       ZOrder		      528
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
       SourceType	      "YARP Read"
       portName		      "'/icub/right_leg/analog:o'"
@@ -1213,7 +1211,7 @@ Model {
       ZOrder		      530
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
       SourceType	      "YARP Read"
       portName		      "'/icub/left_leg/analog:o'"
@@ -1238,7 +1236,7 @@ Model {
       ZOrder		      537
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
       SourceType	      "YARP Read"
       portName		      "'/icub/right_arm/analog:o'"
@@ -1263,7 +1261,7 @@ Model {
       ZOrder		      539
       ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
       SourceType	      "YARP Read"
       portName		      "'/icub/left_arm/analog:o'"
@@ -1288,7 +1286,7 @@ Model {
       ZOrder		      524
       BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
       SourceType	      "Holder"
     }
@@ -1301,7 +1299,7 @@ Model {
       ZOrder		      526
       BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
       SourceType	      "Holder"
     }
@@ -1314,7 +1312,7 @@ Model {
       ZOrder		      533
       BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
       SourceType	      "Holder"
     }
@@ -1327,7 +1325,7 @@ Model {
       ZOrder		      535
       BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
       SourceType	      "Holder"
     }
@@ -1340,7 +1338,7 @@ Model {
       ZOrder		      542
       BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
       SourceType	      "Holder"
     }
@@ -1353,7 +1351,7 @@ Model {
       ZOrder		      544
       BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
       ShowName		      off
-      LibraryVersion	      "1.348"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
       SourceType	      "Holder"
     }
@@ -1634,7 +1632,7 @@ Model {
 }
 #Finite State Machines
 #
-#   Stateflow 80000006
+#   Stateflow 80000009
 #
 #
 Stateflow {

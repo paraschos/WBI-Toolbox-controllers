@@ -1,4 +1,5 @@
 function [dotLambda,dotR,Xopt,V,Vdot]  =  gainConstr(Lambda,R,Xini,ndofMatrix,KL,KO)
+
 %% config parameters
 ndof         = size(ndofMatrix,1);
 omegaDof     = (ndof*(ndof-1))/2;

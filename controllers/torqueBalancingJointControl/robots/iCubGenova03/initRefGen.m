@@ -1,4 +1,4 @@
-
+%codegen
 referenceParams.noOscillationTime        = 0;        % time that the robot waits before starting the left-and-righ
 referenceParams.directionOfOscillation   = [0;0;0];
 referenceParams.amplitudeOfOscillation   =  0.0;  

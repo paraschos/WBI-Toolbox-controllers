@@ -1,13 +1,12 @@
 Model {
   Name			  "impedanceControl2012b"
   Version		  8.0
-  MdlSubVersion		  0
-  SavedCharacterEncoding  "US-ASCII"
+  SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.254"
+    ComputedModelVersion    "1.255"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [0.0, 23.0, 1905.0, 1035.0]
+      Location		      [65.0, 24.0, 1301.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -55,9 +54,9 @@ Model {
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1871.0, 862.0]
-	  ZoomFactor		  [1.037748050131311]
-	  Offset		  [51.509249525230643, 60.677610383884996]
+	  Extents		  [1267.0, 593.0]
+	  ZoomFactor		  [0.69761365385884266]
+	  Offset		  [44.931585451977412, 51.97964903652138]
 	}
 	Object {
 	  $ObjectID		  6
@@ -66,7 +65,7 @@ Model {
 	  LoadSaveID		  "182"
 	  Extents		  [1871.0, 862.0]
 	  ZoomFactor		  [2.2934919986777889]
-	  Offset		  [-13.447978838849679, -214.42304496744438]
+	  Offset		  [-13.494853838849679, -214.42304496744438]
 	}
 	PropName		"EditorsInfo"
       }
@@ -76,11 +75,11 @@ Model {
   Creator		  "daniele"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "DanielePucci"
+  LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon May 09 17:03:36 2016"
-  RTWModifiedTimeStamp	  384714216
-  ModelVersionFormat	  "1.%<AutoIncrement:254>"
+  LastModifiedDate	  "Thu Aug 25 14:18:12 2016"
+  RTWModifiedTimeStamp	  394035491
+  ModelVersionFormat	  "1.%<AutoIncrement:255>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -605,7 +604,6 @@ Model {
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
-	      TargetPreCompLibLocation ""
 	      CodeReplacementLibrary  "C89/C90 (ANSI)"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
@@ -868,6 +866,7 @@ Model {
       MinMaxOverflowLogging   "UseLocalSettings"
       SFBlockType	      "NONE"
       GeneratePreprocessorConditionals off
+      TreatAsGroupedWhenPropagatingVariantConditions on
     }
     Block {
       BlockType		      Sum
@@ -891,7 +890,7 @@ Model {
   }
   System {
     Name		    "impedanceControl2012b"
-    Location		    [0, 23, 1905, 1058]
+    Location		    [65, 24, 1366, 768]
     Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -903,7 +902,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "104"
+    ZoomFactor		    "70"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "296"
     Block {
@@ -1007,7 +1006,7 @@ Model {
       ZOrder		      384
       BackgroundColor	      "[0.513700, 0.851000, 0.670600]"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/wholeBodyStates/Get Estimate"
       SourceType	      "Get Estimate"
       estimateType	      "Joints Position"
@@ -1025,7 +1024,7 @@ Model {
       ZOrder		      385
       BackgroundColor	      "[0.513700, 0.674500, 1.000000]"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/wholeBodyStates/Get Estimate"
       SourceType	      "Get Estimate"
       estimateType	      "Joints Velocity"
@@ -1043,7 +1042,7 @@ Model {
       ZOrder		      590
       BackgroundColor	      "[0.827500, 0.576500, 0.603900]"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/wholeBodyStates/Get Estimate"
       SourceType	      "Get Estimate"
       estimateType	      "Joints Torque"
@@ -1063,12 +1062,12 @@ Model {
       Name		      "Real Time Synchronizer"
       SID		      "174"
       Ports		      []
-      Position		      [658, 204, 783, 241]
+      Position		      [768, 219, 893, 256]
       ZOrder		      591
       ForegroundColor	      "[0.916667, 0.916667, 0.916667]"
       BackgroundColor	      "gray"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/Utilities/Real Time Synchronizer"
       SourceType	      "Real Time Synchronizer"
       period		      "0.01"
@@ -1082,7 +1081,7 @@ Model {
       ZOrder		      383
       BackgroundColor	      "[0.827500, 0.576500, 0.603900]"
       ShowName		      off
-      LibraryVersion	      "1.355"
+      LibraryVersion	      "1.364"
       SourceBlock	      "WBToolboxLibrary/wholeBodyActuators/Set References"
       SourceType	      "Set References"
       controlType	      "Torque"
@@ -1210,7 +1209,7 @@ Model {
       Variant		      off
       System {
 	Name			"WholeBodyDebug"
-	Location		[0, 23, 1905, 1058]
+	Location		[0, 24, 1905, 1059]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1881,7 +1880,17 @@ Model {
 	    axes2		    "%<SignalLabel>"
 	    axes3		    "%<SignalLabel>"
 	  }
-	  Location		  [15 232 1648 1070]
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.156862745098039 0.156862745098039 0.156862745098039]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[0.686274509803922 0.686274509803922 0.686274509803922]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  Location		  [15 -80 1648 758]
 	}
 	Block {
 	  BlockType		  Scope
@@ -1913,7 +1922,17 @@ Model {
 	    axes2		    "%<SignalLabel>"
 	    axes3		    "%<SignalLabel>"
 	  }
-	  Location		  [113 130 1914 1062]
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.156862745098039 0.156862745098039 0.156862745098039]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[0.686274509803922 0.686274509803922 0.686274509803922]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  Location		  [113 -182 1914 750]
 	}
 	Block {
 	  BlockType		  Scope
@@ -1955,7 +1974,7 @@ Model {
 	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
 	    MarkerStyles	    "none|none|none|none|none|none"
 	  }
-	  Location		  [15 380 1279 1070]
+	  Location		  [15 68 1279 758]
 	}
 	Line {
 	  SrcBlock		  "torqueMeasured"
@@ -2121,7 +2140,7 @@ Model {
 	  Ports			  [4, 1]
 	  Position		  [180, 237, 320, 338]
 	  ZOrder		  589
-	  LibraryVersion	  "1.355"
+	  LibraryVersion	  "1.364"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Dynamics/Get Bias Forces"
 	  SourceType		  "Get Generalized Bias Forces"
 	  robotName		  "WBT_robotName"
@@ -2356,7 +2375,7 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [380, 454, 520, 521]
 	  ZOrder		  375
-	  LibraryVersion	  "1.355"
+	  LibraryVersion	  "1.364"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Dynamics/Mass Matrix"
 	  SourceType		  "Mass Matrix"
 	  robotName		  "WBT_robotName"
@@ -2483,24 +2502,24 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "108::138"
+	      SID		      "108::141"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      8
+	      ZOrder		      11
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "108::137"
+	      SID		      "108::140"
 	      Tag		      "Stateflow S-Function impedanceControl2012b 2"
 	      Ports		      [1, 2]
 	      Position		      [180, 100, 230, 160]
-	      ZOrder		      7
+	      ZOrder		      10
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[1 2]"
 	      SFunctionDeploymentMode off
-	      EnableBusSupport	      on
+	      EnableBusSupport	      off
 	      Port {
 		PortNumber		2
 		Name			"Mj"
@@ -2511,9 +2530,9 @@ Model {
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "108::139"
+	      SID		      "108::142"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      9
+	      ZOrder		      12
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -2565,7 +2584,7 @@ Model {
 	  Position		  [545, 17, 605, 63]
 	  ZOrder		  374
 	  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
-	  LibraryVersion	  "1.355"
+	  LibraryVersion	  "1.364"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 	  SourceType		  "Holder"
 	}
@@ -2648,7 +2667,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [130, 20, 295, 80]
 	      ZOrder		      569
-	      LibraryVersion	      "1.355"
+	      LibraryVersion	      "1.364"
 	      SourceBlock	      "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 	      SourceType	      "Forward Kinematics"
 	      frameName		      "'l_sole'"
@@ -2664,7 +2683,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [130, 105, 295, 165]
 	      ZOrder		      572
-	      LibraryVersion	      "1.355"
+	      LibraryVersion	      "1.364"
 	      SourceBlock	      "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 	      SourceType	      "Forward Kinematics"
 	      frameName		      "'root_link'"
@@ -3141,7 +3160,7 @@ Model {
 }
 #Finite State Machines
 #
-#   Stateflow 80000006
+#   Stateflow 80000009
 #
 #
 Stateflow {

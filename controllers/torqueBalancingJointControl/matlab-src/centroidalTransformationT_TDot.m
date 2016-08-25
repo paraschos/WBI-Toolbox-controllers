@@ -32,6 +32,5 @@ inv_dMb = -Mb\dMb/Mb;
 dJs     = dX*(Mb\Mbj) + X*inv_dMb*Mbj;
  
 dT      = [dX,dJs;
-           zeros(ndof,6),zeros(ndof)];
-        
+           zeros(ndof,6),zeros(ndof)];      
 end

@@ -1,6 +1,6 @@
-ROBOT_DOF   = 23;
+ROBOT_DOF     = 23;
 % WBT_wbiList = 'ROBOT_UPPER_BODY';
-WBT_wbiList = 'ROBOT_TORQUE_CONTROL_JOINTS_WITHOUT_PRONOSUP';
+WBT_wbiList   = 'ROBOT_TORQUE_CONTROL_JOINTS_WITHOUT_PRONOSUP';
 
 robotName   = 'icub';
 Ts          = 0.01;

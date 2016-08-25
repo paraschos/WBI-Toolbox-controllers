@@ -1,5 +1,6 @@
 function generateCppTrajectoryFiles()
 %%Additional definitions
+
 varname=@(x) inputname(1);
 
 %%Load parts

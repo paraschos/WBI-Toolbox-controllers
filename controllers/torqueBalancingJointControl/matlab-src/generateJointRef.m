@@ -6,5 +6,4 @@ dqjRef  = NuRef_ikin(7:end);
 qjRef   = qRef_ikin(8:end);
 
 inverseKinRef = [qjRef dqjRef ddqjRef];
-
 end

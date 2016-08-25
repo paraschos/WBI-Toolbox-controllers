@@ -8,13 +8,13 @@ function [T_bar,angles] = parametrization(rot_matr)
 %
 %  angles   [3x1] Z-Y-X Euler angles
 %
+
 %% Euler angles conversion
 phi   =  atan2(rot_matr(3,2),rot_matr(3,3));
 theta = -asin(rot_matr(3,1));
 psi   =  atan2(rot_matr(2,1),rot_matr(1,1));
 
 angles = [phi theta psi];
-
 %Matrix which links the angular velocity with the derivative of Euler
 %angles
 

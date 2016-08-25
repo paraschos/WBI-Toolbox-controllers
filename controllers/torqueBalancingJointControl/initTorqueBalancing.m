@@ -2,6 +2,8 @@ clear;
 clc;
 
 % setenv('YARP_ROBOT_NAME','iCubGenova02');
+% setenv('YARP_ROBOT_NAME','iCubGenova03');
+% setenv('YARP_ROBOT_NAME','iCubGenova05');
   setenv('YARP_ROBOT_NAME','icubGazeboSim');
 
 CONFIG.SIMULATION_TIME             = inf;      % Simulation time in seconds

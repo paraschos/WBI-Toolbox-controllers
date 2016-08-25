@@ -10,7 +10,6 @@ function [dcm] = quaternion2dcm(quat)
 % notice that we are using real/imaginary serialization
 qt_b_mod_s = quat(1);
 qt_b_mod_r = quat(2:end);
-
 % For more background on this formula, please check
 % https://www-sop.inria.fr/act_recherche/formulaire/uploads/phd-425.pdf
 % Page 101, Formula 3.8

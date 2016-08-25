@@ -1,7 +1,7 @@
 %% OVERWRITING SOME OF THE PARAMETERS CONTAINED IN gains.m WHEN USING FSM
 if strcmpi(SM.SM_TYPE, 'WALKING')
     reg.pinvDamp    = 0.0001;
-    sat.torque = 50;
+    sat.torque      = 50;
 
     references.joints.smoothingTime    = 5;
     references.com.smoothingTime       = references.joints.smoothingTime;

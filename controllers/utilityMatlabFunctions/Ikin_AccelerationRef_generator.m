@@ -16,5 +16,4 @@ dotNu_com    =  pinv(Jcom*Nc, PINV_TOL)*(iKinComCorr - dJcomNu - Jcom*dotNu_feet
 dotNu_post   = pinv(Jp*Nc*Ncom, PINV_TOL)*(iKinPostCorr - Jp*dotNu_feet -Jp*Nc*dotNu_com);
 
 dotNu_ikin   = dotNu_feet + Nc*(dotNu_com + Ncom*dotNu_post);
-
 end

@@ -43,7 +43,6 @@ else
          0.2091  0.2940    0.0001   -0.1738   -0.1062    0.0781 ];
 
 
-
     references.joints.points = [ references.com.noOscillationTime,  q1;
                                  references.com.noOscillationTime+  references.joints.smoothingTime, q2;
                                  references.com.noOscillationTime+4*references.joints.smoothingTime, q3;

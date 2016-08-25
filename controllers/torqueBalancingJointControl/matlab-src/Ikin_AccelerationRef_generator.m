@@ -18,5 +18,4 @@ dotNu_com    =  pinv(JCoM*NullFeet, PINV_TOL)*(iKinComCorr - dJCoMNu - JCoM*dotN
 dotNu_post   = pinv(JPosture*NullFeet*NullCoM, PINV_TOL)*(iKinPostCorr - JPosture*dotNu_feet -JPosture*NullFeet*dotNu_com);
 
 dotNu_ikin   = dotNu_feet + NullFeet*(dotNu_com + NullCoM*dotNu_post);
-
 end

@@ -1,5 +1,4 @@
 function qRef_ikin = BasePoseToTransMatrix(qRef_ikin_no_converted)
-
 % define the base pose in quaternions
 qBase = qRef_ikin_no_converted(1:7);
 

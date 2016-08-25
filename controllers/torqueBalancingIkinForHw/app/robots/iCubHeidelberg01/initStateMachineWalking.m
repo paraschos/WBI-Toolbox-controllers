@@ -37,8 +37,6 @@ sm.DT                     = 1;
 
 end              
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                      
-         
-
 
 sm.joints.smoothingTime    = references.joints.smoothingTime;
 sm.com.smoothingTime       = references.com.smoothingTime;

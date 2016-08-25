@@ -26,20 +26,17 @@ if strcmpi(SM.SM_TYPE, 'WALKING')
 gain.dampings           = 0.0*sqrt(gain.impedances(4,:));
 
 %% %%%%%%%%%%%%%%%%    FINITE STATE MACHINE SPECIFIC PARAMETERS
-sm.com.threshold                 =   0.02;
+sm.com.threshold                =  0.02;
 sm.wrench.threshold             = 120;
 sm.joints.thresholdNotInContact =  3;
 sm.joints.thresholdInContact    = 80;
 
 sm.stateAt0               = 1;
-
 sm.DT                     = 1;
 
 end              
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                      
          
-
-
 sm.joints.smoothingTime    = references.joints.smoothingTime;
 sm.com.smoothingTime       = references.com.smoothingTime;
 

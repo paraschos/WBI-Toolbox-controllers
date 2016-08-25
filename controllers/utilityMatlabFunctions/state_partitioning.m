@@ -17,5 +17,4 @@ robot_pos                = x(robot_pos_initial_index : robot_pos_initial_index +
 
 ss_vel                   = x(seesaw_vel_initial_index : seesaw_vel_initial_index + seesaw_vel_len - 1);
 robot_vel                = x(robot_vel_initial_index : robot_vel_initial_index + robot_vel_len - 1);
-
 end

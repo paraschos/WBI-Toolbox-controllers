@@ -2,6 +2,7 @@ function [Mc,C_cNu_c, gc, Jcc, dJcDq_c, Nu_c] = fromFloatingToCentroidalDynamics
 % centroidalConversion 
 % converts dynamic equation parameters to the
 % corresponding values in centroidal frame of reference
+
 ndof          = size(g,1)-6;
 
 invT          = eye(ndof+6)/T;

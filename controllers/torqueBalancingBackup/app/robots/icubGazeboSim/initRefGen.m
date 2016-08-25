@@ -8,8 +8,8 @@ references.joints.points               = 0;
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2 )
     if (CONFIG.DEMO_MOVEMENTS)
         references.com.directionOfOscillation  = [0;1;0];
-        references.com.amplitudeOfOscillation  = 0.02;
-        references.com.frequencyOfOscillation  = 0.2;
+        references.com.amplitudeOfOscillation  = 0.025;
+        references.com.frequencyOfOscillation  = 0.25;
     else
         references.com.directionOfOscillation  = [0;0;0];
         references.com.amplitudeOfOscillation  = 0.0;  %referenceParams(1) = amplitude of ascillations in meters referenceParams(2) = frequency of ascillations in hertz
@@ -17,7 +17,7 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2 )
     end
 else
 
-    q1 = [-0.0790    0.2279    0.4519 ...   
+    q1 = [-0.0790  0.2279    0.4519 ...   
         -1.1621    0.6663    0.4919    0.9947  ...  
         -1.0717    1.2904   -0.2447    1.0948  ...   
          0.3850    0.4889   -0.0001   -0.2958   -0.0990    0.0249 ...
@@ -40,7 +40,6 @@ else
         -0.6524  0.8722    0.0012    0.6122  ...
          0.3850  0.4889   -0.0001   -0.2958   -0.0990    0.0249 ...
          0.2091  0.2940    0.0001   -0.1738   -0.1062    0.0781 ];
-
 
 
     references.joints.points = [ references.com.noOscillationTime,  q1;

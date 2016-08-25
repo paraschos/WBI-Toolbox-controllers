@@ -44,3 +44,4 @@ wImu_H_wImuAssumingNeckToZero = correctIMU(neck);
 wImu_H_root = wImu_H_wImuAssumingNeckToZero * wImu_H_root;
 
 w_H_root        = wImu_H_link_0\wImu_H_root; % link_0_H_root
+end

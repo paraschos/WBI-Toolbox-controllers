@@ -65,5 +65,4 @@ function [ConstraintsMatrix,bVectorConstraints] = constraints(staticFrictionCoef
     bVectorConstraints = [zeros(size(Aineq,1), 1); zeros(7,1)];
 
     bVectorConstraints(3 + size(Aineq,1)) = -fZmin; 
-
 end

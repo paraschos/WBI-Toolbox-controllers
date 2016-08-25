@@ -11,3 +11,4 @@ figure(figureHandle);
 plot(x, y, color)
 drawnow;
 hold on
+end

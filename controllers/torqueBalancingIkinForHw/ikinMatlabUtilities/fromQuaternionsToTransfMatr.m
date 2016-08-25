@@ -1,5 +1,4 @@
 function qDes = fromQuaternionsToTransfMatr(qDesQuat)
-
 % define the base pose in quaternions
 qBase = qDesQuat(1:7);
 

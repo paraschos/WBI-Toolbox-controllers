@@ -1,4 +1,3 @@
- %#codegen
 function rollPitchYaw = rollPitchYawFromRotation(R)
 % From http://www.geometrictools.com/Documentation/EulerAngles.pdf
 rollPitchYaw = zeros(3,1);

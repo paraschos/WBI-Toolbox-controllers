@@ -40,7 +40,6 @@ if strcmpi(SM.SM_TYPE, 'YOGA')
     gain.ICOM  = gain.PCOM*0;
     gain.DCOM  = 2*sqrt(gain.PCOM)*0;   
  
-    
     gain.PAngularMomentum  = 0.25 ;
     gain.DAngularMomentum  = 2*sqrt(gain.PAngularMomentum);
 

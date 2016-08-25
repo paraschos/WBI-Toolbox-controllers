@@ -4,6 +4,7 @@
 
 %% parameters
 %Ts = 0.02;
+
 %endTime = inf;
 %robotName  = 'icubGazeboSim';
 %localName = 'simulink'; 

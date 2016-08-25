@@ -68,7 +68,6 @@ for i =1:block.NumOutputPorts
     block.OutputPort(i).Complexity  = 'Real';
 end
 
-
 % Register parameters
 block.NumDialogPrms     = 0;
 
@@ -135,9 +134,7 @@ function SetInputPortSamplingMode(block, idx, fd)
 %%
 % function InitializeConditions(block)
 
-
 % end InitializeConditions
-
 
 %%
 %% Start:
