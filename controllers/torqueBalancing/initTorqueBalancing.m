@@ -28,8 +28,9 @@ clear; clc;
 % setenv('YARP_ROBOT_NAME','iCubGenova01');
 % setenv('YARP_ROBOT_NAME','iCubGenova02');
 % setenv('YARP_ROBOT_NAME','iCubDarmstadt01');
-setenv('YARP_ROBOT_NAME','icubGazeboSim');
+% setenv('YARP_ROBOT_NAME','icubGazeboSim');
 % setenv('YARP_ROBOT_NAME','iCubGenova05');
+setenv('YARP_ROBOT_NAME','bigman');
 
 % Simulation time in seconds
 CONFIG.SIMULATION_TIME     = inf;   
@@ -50,22 +51,20 @@ CONFIG.SIMULATION_TIME     = inf;
 %               robots/YARP_ROBOT_NAME/initRegGen.m
 % 
 % 'WALKING': under development.
-SM.SM_TYPE                 = 'YOGA';
+SM.SM_TYPE                    = 'COORDINATOR';
 
 % CONFIG.SCOPES: if set to true, all visualizers for debugging are active
-CONFIG.SCOPES.ALL          = false;
+CONFIG.SCOPES.ALL             = true;
 % You can also activate only some specific debugging scopes
-CONFIG.SCOPES.BASE_EST_IMU = false;
-CONFIG.SCOPES.EXTWRENCHES  = false;
-CONFIG.SCOPES.GAIN_SCHE_INFO=false;
-CONFIG.SCOPES.MAIN         = false;
-CONFIG.SCOPES.QP           = false;
-
-
+CONFIG.SCOPES.BASE_EST_IMU    = false;
+CONFIG.SCOPES.EXTWRENCHES     = false;
+CONFIG.SCOPES.GAIN_SCHE_INFO  = false;
+CONFIG.SCOPES.MAIN            = false;
+CONFIG.SCOPES.QP              = false;
+ 
 % CONFIG.CHECK_LIMITS: if set to true, the controller will stop as soon as 
 % any of the joint limit is touched. 
-CONFIG.CHECK_LIMITS        = false;
-
+CONFIG.CHECK_LIMITS           = false;
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CONFIGURATIONS COMPLETED: loading gains and parameters for the specific robot
@@ -73,7 +72,8 @@ CONFIG.CHECK_LIMITS        = false;
 %% DO NOT MODIFY THE FOLLOWING VARIABLES, THEY ARE AUTOMATICALLY 
 %% CHANGED WHEN SIMULATING THE ROBOT ON GAZEBO, 
 WBT_modelName            = 'matlabTorqueBalancing';
-
+root_link_name           = 'root_link';
+imu_link_name            = 'imu_frame';
 
 % CONFIG.USE_IMU4EST_BASE: if set to false, the base frame is estimated by 
 % assuming that either the left or the right foot stay stuck on the ground. 
@@ -99,7 +99,6 @@ CONFIG.PITCH_IMU_FILTER    = true;
 % equal to false, recall that the neck is assumed to be in (0,0,0)
 CONFIG.CORRECT_NECK_IMU    = true;
 
-
 % CONFIG.ONSOFTCARPET: the third year CoDyCo review meeting consisted also
 % of a validation scenarion in which the robot had to balance on a soft
 % carpet. Hence, when CONFIG.ONSOFTCARPET = true, other sets of gains are
@@ -108,11 +107,9 @@ CONFIG.ONSOFTCARPET        = false;
 
 % CONFIG.USE_QP_SOLVER: if set to true, a QP solver is used to account for 
 % inequality constraints of contact wrenches
-
 PORTS.IMU       = '/icub/inertial';
 
 PORTS.COM_DES   = ['/' WBT_modelName '/comDes:i'];
-
 PORTS.Q_DES     = ['/' WBT_modelName '/qDes:i'];
 
 PORTS.WBDT_LEFTLEG_EE  = '/wholeBodyDynamicsTree/left_leg/cartesianEndEffectorWrench:o';

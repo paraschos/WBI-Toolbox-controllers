@@ -1,15 +1,17 @@
 Model {
   Name			  "torqueBalancing"
-  Version		  8.6
-  MdlSubVersion		  0
-  SavedCharacterEncoding  "US-ASCII"
+  Version		  8.7
+  MdlSubVersion		  1
+  SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.3093"
+    ComputedModelVersion    "1.3108"
     NumModelReferences	    0
     NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
   }
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -21,6 +23,7 @@ Model {
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
   InitFcn		  "cd(fileparts(which(bdroot)));\ninitTorqueBalancing;"
+  LastSavedArchitecture	  "glnxa64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -30,7 +33,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [0.0, 23.0, 2560.0, 1413.0]
+      Location		      [65.0, 24.0, 1375.0, 876.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -52,11 +55,11 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
-	Extents			[2526.0, 1240.0]
-	ZoomFactor		[1.272452068617558]
-	Offset			[149.92823156225211, 123.99762093576533]
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"2098"
+	Extents			[1341.0, 731.0]
+	ZoomFactor		[0.96549663928304708]
+	Offset			[-724.94757503094058, 155.43835086633663]
       }
     }
   }
@@ -66,9 +69,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "DanielePucci"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Aug 17 16:19:04 2016"
-  RTWModifiedTimeStamp	  390162344
-  ModelVersionFormat	  "1.%<AutoIncrement:3093>"
+  LastModifiedDate	  "Thu Sep 15 18:09:44 2016"
+  RTWModifiedTimeStamp	  395863780
+  ModelVersionFormat	  "1.%<AutoIncrement:3108>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -76,6 +79,10 @@ Model {
   WideLines		  off
   ShowLineDimensions	  on
   ShowPortDataTypes	  off
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  off
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
   ShowDesignRanges	  off
   ShowLoopsOnError	  on
   IgnoreBidirectionalLines off
@@ -84,6 +91,7 @@ Model {
   ShowSignalResolutionIcons on
   ShowViewerIcons	  on
   SortedOrder		  on
+  VariantCondition	  off
   ExecutionContextIcon	  off
   ShowLinearizationAnnotations on
   ShowVisualizeInsertedRTB on
@@ -94,6 +102,7 @@ Model {
   ToolBar		  on
   StatusBar		  on
   BrowserShowLibraryLinks on
+  FunctionConnectors	  off
   BrowserLookUnderMasks	  on
   SimulationMode	  "normal"
   PauseTimes		  "5"
@@ -156,13 +165,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      7
-      Version		      "1.15.1"
+      Version		      "1.16.2"
       Array {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
 	  $ObjectID		  8
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  StartTime		  "0.0"
 	  StopTime		  "CONFIG.SIMULATION_TIME "
 	  AbsTol		  "auto"
@@ -199,7 +208,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  9
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -231,11 +240,13 @@ Model {
 	  OutputTimes		  "[]"
 	  ReturnWorkspaceOutputsName "out"
 	  Refine		  "1"
+	  LoggingToFile		  off
+	  LoggingFileName	  "out.mat"
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  10
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -292,7 +303,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  11
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -368,6 +379,8 @@ Model {
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
 	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
 	  BlockIODiagnostic	  "none"
 	  SFUnusedDataAndEventsDiag "warning"
 	  SFUnexpectedBacktrackingDiag "warning"
@@ -379,10 +392,13 @@ Model {
 	  SFTransitionActionBeforeConditionDiag	"warning"
 	  SFOutputUsedAsStateInMooreChartDiag "error"
 	  IntegerSaturationMsg	  "warning"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  12
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -419,10 +435,12 @@ Model {
 	  TargetHWDeviceType	  "Specified"
 	  TargetUnknown		  off
 	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  13
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  EnableRefExpFcnMdlSchedulingChecks on
 	  CheckModelReferenceTargetMessage "error"
@@ -438,7 +456,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  14
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  SFSimEcho		  on
 	  SimCtrlC		  on
 	  SimIntegrity		  on
@@ -450,7 +468,7 @@ Model {
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  15
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    15
@@ -472,6 +490,7 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
+	  HardwareBoard		  "None"
 	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
@@ -521,7 +540,7 @@ Model {
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      16
-	      Version		      "1.15.1"
+	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
 		Dimension		22
@@ -591,7 +610,7 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      17
-	      Version		      "1.15.1"
+	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
 		Dimension		14
@@ -613,7 +632,6 @@ Model {
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
-	      TargetPreCompLibLocation ""
 	      GenFloatMathFcnCalls    "NOT IN USE"
 	      TargetLangStandard      "C89/C90 (ANSI)"
 	      CodeReplacementLibrary  "None"
@@ -678,9 +696,12 @@ Model {
 	}
 	SlCovCC.ConfigComp {
 	  $ObjectID		  18
-	  Version		  "1.15.1"
+	  Version		  "1.16.2"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
 	  RecordCoverage	  off
 	  CovPath		  "/"
 	  CovSaveName		  "covdata"
@@ -693,6 +714,9 @@ Model {
 	  CovSaveSingleToWorkspaceVar on
 	  CovCumulativeVarName	  "covCumulativeData"
 	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
 	  CovReportOnPause	  on
 	  CovModelRefEnable	  "Off"
 	  CovExternalEMLEnable	  off
@@ -760,7 +784,7 @@ Model {
   MaskDefaults {
     SelfModifiable	    "off"
     IconFrame		    "on"
-    IconOpaque		    "on"
+    IconOpaque		    "opaque"
     RunInitForIconRedraw    "off"
     IconRotate		    "none"
     PortRotate		    "default"
@@ -869,6 +893,7 @@ Model {
       OutDataTypeStr	      "Inherit: auto"
       LockScale		      off
       BusOutputAsStruct	      off
+      Unit		      "inherit"
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
@@ -926,6 +951,7 @@ Model {
       OutDataTypeStr	      "Inherit: auto"
       LockScale		      off
       BusOutputAsStruct	      off
+      Unit		      "inherit"
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
@@ -1017,6 +1043,7 @@ Model {
       MaskHideContents	      off
       SFBlockType	      "NONE"
       GeneratePreprocessorConditionals off
+      TreatAsGroupedWhenPropagatingVariantConditions on
       ContentPreviewEnabled   off
       IsWebBlock	      off
     }
@@ -1057,8 +1084,8 @@ Model {
   }
   System {
     Name		    "torqueBalancing"
-    Location		    [0, 23, 2560, 1436]
-    Open		    on
+    Location		    [65, 24, 1440, 900]
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1069,9 +1096,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "127"
+    ZoomFactor		    "71"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "3696"
+    SIDHighWatermark	    "3699"
     Block {
       BlockType		      SubSystem
       Name		      "DesValues"
@@ -1085,7 +1112,7 @@ Model {
       Variant		      off
       System {
 	Name			"DesValues"
-	Location		[0, 23, 1280, 796]
+	Location		[65, 24, 1440, 900]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1097,7 +1124,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"49"
+	ZoomFactor		"80"
 	Block {
 	  BlockType		  Reference
 	  Name			  "Compare\nTo Zero"
@@ -1106,7 +1133,7 @@ Model {
 	  Position		  [-200, 2570, -170, 2600]
 	  ZOrder		  613
 	  ShowName		  off
-	  LibraryVersion	  "1.358"
+	  LibraryVersion	  "1.386"
 	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
 	  SourceType		  "Compare To Zero"
 	  ContentPreviewEnabled	  off
@@ -1122,7 +1149,7 @@ Model {
 	  Position		  [-200, 2835, -170, 2865]
 	  ZOrder		  614
 	  ShowName		  off
-	  LibraryVersion	  "1.358"
+	  LibraryVersion	  "1.386"
 	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
 	  SourceType		  "Compare To Zero"
 	  ContentPreviewEnabled	  off
@@ -1138,7 +1165,7 @@ Model {
 	  Position		  [-230, 3100, -200, 3130]
 	  ZOrder		  615
 	  ShowName		  off
-	  LibraryVersion	  "1.358"
+	  LibraryVersion	  "1.386"
 	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
 	  SourceType		  "Compare To Zero"
 	  ContentPreviewEnabled	  off
@@ -1187,7 +1214,7 @@ Model {
 	  Position		  [-315, 2836, -255, 2864]
 	  ZOrder		  605
 	  ShowName		  off
-	  LibraryVersion	  "1.358"
+	  LibraryVersion	  "1.386"
 	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
 	  SourceType		  "Bitwise Operator"
 	  logicop		  "AND"
@@ -1252,7 +1279,7 @@ Model {
 	  ZOrder		  638
 	  BackgroundColor	  "[0.513700, 0.851000, 0.670600]"
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyStates/Get Estimate"
 	  SourceType		  "Get Estimate"
 	  ContentPreviewEnabled	  off
@@ -1273,8 +1300,8 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Internal coordinator"
-	    Location		    [101, 110, 2409, 1275]
-	    Open		    off
+	    Location		    [65, 24, 1440, 900]
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -1285,7 +1312,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "165"
+	    ZoomFactor		    "97"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "jointAngles"
@@ -1354,7 +1381,7 @@ Model {
 	      Position		      [-565, 595, -390, 615]
 	      ZOrder		      694
 	      ShowName		      off
-	      Value		      "gain.PCOM(1,:)"
+	      Value		      "diag(gain.PCOM)"
 	    }
 	    Block {
 	      BlockType		      Constant
@@ -1363,7 +1390,17 @@ Model {
 	      Position		      [-565, 625, -390, 645]
 	      ZOrder		      695
 	      ShowName		      off
-	      Value		      "gain.DCOM(1,:)"
+	      Value		      "diag(gain.DCOM)"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      SID		      "3699"
+	      Position		      [65, 605, 95, 635]
+	      ZOrder		      697
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Mux
@@ -1407,7 +1444,7 @@ Model {
 	      ZOrder		      577
 	      BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
 	      SourceType	      "Holder"
 	      ContentPreviewEnabled   off
@@ -1417,11 +1454,11 @@ Model {
 	      Name		      "holder\n1"
 	      SID		      "2110"
 	      Ports		      [1, 1]
-	      Position		      [35, 597, 95, 643]
+	      Position		      [-15, 597, 45, 643]
 	      ZOrder		      579
 	      BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
 	      SourceType	      "Holder"
 	      ContentPreviewEnabled   off
@@ -1434,7 +1471,7 @@ Model {
 	      Position		      [-560, 398, -510, 412]
 	      ZOrder		      679
 	      ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
 	      SourceType	      "YARP Read"
 	      portName		      "PORTS.IMU"
@@ -1512,7 +1549,7 @@ Model {
 		  Position		  [-65, 42, 15, 78]
 		  ZOrder		  563
 		  BackgroundColor	  "[0.513700, 0.674500, 1.000000]"
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyStates/Get Estimate"
 		  SourceType		  "Get Estimate"
 		  ContentPreviewEnabled	  off
@@ -1529,7 +1566,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [-230, -120, -65, -65]
 		  ZOrder		  558
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 		  SourceType		  "Jacobian"
 		  ContentPreviewEnabled	  off
@@ -1546,7 +1583,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [-230, -55, -65, 0]
 		  ZOrder		  559
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 		  SourceType		  "Jacobian"
 		  ContentPreviewEnabled	  off
@@ -1585,7 +1622,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "JcLeftFoot"
@@ -1624,20 +1661,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "2126::3694"
+		    SID			    "2126::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    63
+		    ZOrder		    66
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "2126::3693"
+		    SID			    "2126::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 7"
 		    Ports		    [4, 2]
 		    Position		    [180, 102, 230, 203]
-		    ZOrder		    62
+		    ZOrder		    65
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "reg"
 		    PortCounts		    "[4 2]"
@@ -1653,9 +1690,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "2126::3695"
+		    SID			    "2126::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    64
+		    ZOrder		    67
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -1666,28 +1703,28 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    22
+		    ZOrder		    29
 		    SrcBlock		    "JcLeftFoot"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    23
+		    ZOrder		    30
 		    SrcBlock		    "JcRightFoot"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    24
+		    ZOrder		    31
 		    SrcBlock		    "activeFeetConstraints"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    25
+		    ZOrder		    32
 		    SrcBlock		    "qD"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -1695,7 +1732,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "y"
-		    ZOrder		    26
+		    ZOrder		    33
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -1703,14 +1740,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    27
+		    ZOrder		    34
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    35
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -1912,7 +1949,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "xCom0"
@@ -1942,20 +1979,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "2134::3694"
+		    SID			    "2134::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    97
+		    ZOrder		    100
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "2134::3693"
+		    SID			    "2134::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 10"
 		    Ports		    [3, 3]
 		    Position		    [180, 100, 230, 180]
-		    ZOrder		    96
+		    ZOrder		    99
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "references"
 		    PortCounts		    "[3 3]"
@@ -1977,9 +2014,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "2134::3695"
+		    SID			    "2134::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    98
+		    ZOrder		    101
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -1999,21 +2036,21 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    22
+		    ZOrder		    29
 		    SrcBlock		    "xCom0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    23
+		    ZOrder		    30
 		    SrcBlock		    "q0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    24
+		    ZOrder		    31
 		    SrcBlock		    "t"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -2021,7 +2058,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "qDes"
-		    ZOrder		    25
+		    ZOrder		    32
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -2030,7 +2067,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "desired_x_dx_ddx_CoM"
-		    ZOrder		    26
+		    ZOrder		    33
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    3
@@ -2038,14 +2075,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    27
+		    ZOrder		    34
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    35
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -2138,7 +2175,7 @@ Model {
 	      }
 	      System {
 		Name			"w_H_root_link4"
-		Location		[0, 23, 1920, 1076]
+		Location		[65, 24, 1440, 900]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -2245,7 +2282,7 @@ Model {
 		  ZOrder		  663
 		  ForegroundColor	  "[0.490196, 0.000000, 0.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/Yarp Read"
 		  SourceType		  "YARP Read"
 		  portName		  "[WBT_robotName, '/head/state:o']"
@@ -2432,7 +2469,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -2490,20 +2527,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3595::3694"
+		    SID			    "3595::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    94
+		    ZOrder		    97
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3595::3693"
+		    SID			    "3595::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 2"
 		    Ports		    [6, 2]
 		    Position		    [180, 102, 230, 243]
-		    ZOrder		    93
+		    ZOrder		    96
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "CONFIG"
 		    PortCounts		    "[6 2]"
@@ -2519,9 +2556,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3595::3695"
+		    SID			    "3595::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    95
+		    ZOrder		    98
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -2532,42 +2569,42 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    37
 		    SrcBlock		    "imu_H_link"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    29
+		    ZOrder		    38
 		    SrcBlock		    "imu_H_link_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    30
+		    ZOrder		    39
 		    SrcBlock		    "link_H_root"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    31
+		    ZOrder		    40
 		    SrcBlock		    "inertial_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    32
+		    ZOrder		    41
 		    SrcBlock		    "inertial"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    5
 		    }
 		    Line {
-		    ZOrder		    33
+		    ZOrder		    42
 		    SrcBlock		    "neck"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -2575,7 +2612,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "w_H_root"
-		    ZOrder		    34
+		    ZOrder		    43
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -2583,14 +2620,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    35
+		    ZOrder		    44
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    36
+		    ZOrder		    45
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -2607,7 +2644,7 @@ Model {
 		  ZOrder		  610
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -2621,7 +2658,7 @@ Model {
 		  ZOrder		  611
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -2633,11 +2670,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, -75, 295, -15]
 		  ZOrder		  569
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'imu_frame'"
+		  frameName		  "imu_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -2687,7 +2724,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 10, 295, 70]
 		  ZOrder		  572
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -2710,11 +2747,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 95, 295, 155]
 		  ZOrder		  606
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'root_link'"
+		  frameName		  "root_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -3066,7 +3103,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [115, 230, 280, 290]
 		  ZOrder		  578
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -3342,18 +3379,8 @@ Model {
 	      ZOrder		      21
 	      SrcBlock		      "holder\n1"
 	      SrcPort		      1
-	      Points		      [12, 0; 0, 25]
-	      Branch {
-		ZOrder			22
-		Points			[0, 110]
-		DstBlock		"Mux"
-		DstPort			1
-	      }
-	      Branch {
-		ZOrder			23
-		DstBlock		"refGen"
-		DstPort			1
-	      }
+	      DstBlock		      "Gain"
+	      DstPort		      1
 	    }
 	    Line {
 	      ZOrder		      24
@@ -3462,6 +3489,23 @@ Model {
 	      DstBlock		      "kdCom"
 	      DstPort		      1
 	    }
+	    Line {
+	      ZOrder		      43
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      Points		      [12, 0; 0, 25]
+	      Branch {
+		ZOrder			22
+		Points			[0, 110]
+		DstBlock		"Mux"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			23
+		DstBlock		"refGen"
+		DstPort			1
+	      }
+	    }
 	  }
 	}
 	Block {
@@ -3507,7 +3551,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "3695"
+	    SIDHighWatermark	    "3698"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "w_H_b_vectorised"
@@ -3528,20 +3572,20 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "3059::3694"
+	      SID		      "3059::3697"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      19
+	      ZOrder		      22
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "3059::3693"
+	      SID		      "3059::3696"
 	      Tag		      "Stateflow S-Function torqueBalancing 3"
 	      Ports		      [2, 3]
 	      Position		      [180, 100, 230, 180]
-	      ZOrder		      18
+	      ZOrder		      21
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[2 3]"
 	      SFunctionDeploymentMode off
@@ -3562,9 +3606,9 @@ Model {
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "3059::3695"
+	      SID		      "3059::3698"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      20
+	      ZOrder		      23
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -3584,7 +3628,7 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      19
+	      ZOrder		      25
 	      SrcBlock		      "w_H_b_vectorised"
 	      SrcPort		      1
 	      Points		      [120, 0]
@@ -3592,7 +3636,7 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      20
+	      ZOrder		      26
 	      SrcBlock		      "foot_p_b"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -3600,7 +3644,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "w_H_b"
-	      ZOrder		      21
+	      ZOrder		      27
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -3609,7 +3653,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "rollPitchYaw"
-	      ZOrder		      22
+	      ZOrder		      28
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      3
@@ -3617,14 +3661,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      23
+	      ZOrder		      29
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      24
+	      ZOrder		      30
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -3640,7 +3684,7 @@ Model {
 	  Position		  [865, 2515, 1005, 2555]
 	  ZOrder		  598
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/Minimum Jerk Trajectory Generator"
 	  SourceType		  "Minimum Jerk Trajectory Generator"
 	  externalSettlingTime	  on
@@ -3658,7 +3702,7 @@ Model {
 	  Position		  [865, 2415, 1005, 2455]
 	  ZOrder		  597
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/Minimum Jerk Trajectory Generator"
 	  SourceType		  "Minimum Jerk Trajectory Generator"
 	  externalSettlingTime	  on
@@ -3764,7 +3808,7 @@ Model {
 	  Position		  [-970, 2404, -910, 2446]
 	  ZOrder		  599
 	  ForegroundColor	  "[0.490196, 0.000000, 0.000000]"
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/Yarp Read"
 	  SourceType		  "YARP Read"
 	  portName		  "PORTS.COM_DES"
@@ -3782,7 +3826,7 @@ Model {
 	  Position		  [-975, 2499, -905, 2546]
 	  ZOrder		  600
 	  ForegroundColor	  "[0.490196, 0.000000, 0.000000]"
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/Yarp Read"
 	  SourceType		  "YARP Read"
 	  portName		  "PORTS.Q_DES"
@@ -3934,7 +3978,7 @@ Model {
 	      BackgroundColor	      "lightBlue"
 	      DropShadow	      on
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -3982,7 +4026,7 @@ Model {
 	      ZOrder		      640
 	      BackgroundColor	      "lightBlue"
 	      DropShadow	      on
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -4726,7 +4770,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "State Machine"
-	    Location		    [0, 23, 1280, 796]
+	    Location		    [65, 24, 1440, 900]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -4738,7 +4782,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "79"
+	    ZoomFactor		    "85"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "jointAngles"
@@ -4816,7 +4860,7 @@ Model {
 	      Position		      [475, 335, 575, 355]
 	      ZOrder		      594
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Minimum Jerk Trajectory Generator"
 	      SourceType	      "Minimum Jerk Trajectory Generator"
 	      externalSettlingTime    off
@@ -5161,7 +5205,7 @@ Model {
 	      ZOrder		      583
 	      BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
 	      SourceType	      "Holder"
 	      ContentPreviewEnabled   off
@@ -5175,7 +5219,21 @@ Model {
 	      ZOrder		      584
 	      BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
+	      SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
+	      SourceType	      "Holder"
+	      ContentPreviewEnabled   off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "holder\n3"
+	      SID		      "3698"
+	      Ports		      [1, 1]
+	      Position		      [460, 252, 520, 278]
+	      ZOrder		      696
+	      BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
+	      ShowName		      off
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
 	      SourceType	      "Holder"
 	      ContentPreviewEnabled   off
@@ -5188,7 +5246,7 @@ Model {
 	      Position		      [-485, 428, -435, 442]
 	      ZOrder		      654
 	      ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
 	      SourceType	      "YARP Read"
 	      portName		      "PORTS.IMU"
@@ -5207,7 +5265,7 @@ Model {
 	      ZOrder		      598
 	      ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
 	      SourceType	      "YARP Read"
 	      portName		      "PORTS.WBDT_LEFTLEG_EE"
@@ -5215,7 +5273,7 @@ Model {
 	      blocking		      off
 	      timestamp		      off
 	      autoconnect	      on
-	      errorOnConnection	      on
+	      errorOnConnection	      off
 	      Port {
 		PortNumber		1
 		Name			"wL_WBDT"
@@ -5282,7 +5340,7 @@ Model {
 		  Position		  [-65, 42, 15, 78]
 		  ZOrder		  563
 		  BackgroundColor	  "[0.513700, 0.674500, 1.000000]"
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyStates/Get Estimate"
 		  SourceType		  "Get Estimate"
 		  ContentPreviewEnabled	  off
@@ -5299,7 +5357,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [-230, -120, -65, -65]
 		  ZOrder		  558
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 		  SourceType		  "Jacobian"
 		  ContentPreviewEnabled	  off
@@ -5316,7 +5374,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [-230, -55, -65, 0]
 		  ZOrder		  559
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 		  SourceType		  "Jacobian"
 		  ContentPreviewEnabled	  off
@@ -5355,7 +5413,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "JcLeftFoot"
@@ -5394,20 +5452,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "2214::3694"
+		    SID			    "2214::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    63
+		    ZOrder		    66
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "2214::3693"
+		    SID			    "2214::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 12"
 		    Ports		    [4, 2]
 		    Position		    [180, 102, 230, 203]
-		    ZOrder		    62
+		    ZOrder		    65
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "reg"
 		    PortCounts		    "[4 2]"
@@ -5423,9 +5481,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "2214::3695"
+		    SID			    "2214::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    64
+		    ZOrder		    67
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -5436,28 +5494,28 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    22
+		    ZOrder		    29
 		    SrcBlock		    "JcLeftFoot"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    23
+		    ZOrder		    30
 		    SrcBlock		    "JcRightFoot"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    24
+		    ZOrder		    31
 		    SrcBlock		    "activeFeetConstraints"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    25
+		    ZOrder		    32
 		    SrcBlock		    "qD"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -5465,7 +5523,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "y"
-		    ZOrder		    26
+		    ZOrder		    33
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -5473,14 +5531,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    27
+		    ZOrder		    34
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    35
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -5605,7 +5663,7 @@ Model {
 	      ZOrder		      599
 	      ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
 	      SourceType	      "YARP Read"
 	      portName		      "PORTS.WBDT_RIGHTLEG_EE"
@@ -5613,7 +5671,7 @@ Model {
 	      blocking		      off
 	      timestamp		      off
 	      autoconnect	      on
-	      errorOnConnection	      on
+	      errorOnConnection	      off
 	      Port {
 		PortNumber		1
 		Name			"wR_WBDT"
@@ -5659,7 +5717,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3695"
+		SIDHighWatermark	"3698"
 		SIDPrevWatermark	"9"
 		Block {
 		  BlockType		  Inport
@@ -5753,20 +5811,20 @@ Model {
 		Block {
 		  BlockType		  Demux
 		  Name			  " Demux "
-		  SID			  "2220::3694"
+		  SID			  "2220::3697"
 		  Ports			  [1, 1]
 		  Position		  [270, 460, 320, 500]
-		  ZOrder		  93
+		  ZOrder		  96
 		  Outputs		  "1"
 		}
 		Block {
 		  BlockType		  S-Function
 		  Name			  " SFunction "
-		  SID			  "2220::3693"
+		  SID			  "2220::3696"
 		  Tag			  "Stateflow S-Function torqueBalancing 13"
 		  Ports			  [10, 10]
 		  Position		  [180, 100, 230, 320]
-		  ZOrder		  92
+		  ZOrder		  95
 		  FunctionName		  "sf_sfun"
 		  Parameters		  "gain,sm"
 		  PortCounts		  "[10 10]"
@@ -5830,9 +5888,9 @@ Model {
 		Block {
 		  BlockType		  Terminator
 		  Name			  " Terminator "
-		  SID			  "2220::3695"
+		  SID			  "2220::3698"
 		  Position		  [460, 471, 480, 489]
-		  ZOrder		  94
+		  ZOrder		  97
 		}
 		Block {
 		  BlockType		  Outport
@@ -5915,70 +5973,70 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  64
+		  ZOrder		  85
 		  SrcBlock		  "wrench_rightFoot"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  65
+		  ZOrder		  86
 		  SrcBlock		  "wrench_leftFoot"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  66
+		  ZOrder		  87
 		  SrcBlock		  "CoM_0"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  3
 		}
 		Line {
-		  ZOrder		  67
+		  ZOrder		  88
 		  SrcBlock		  "q0"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  4
 		}
 		Line {
-		  ZOrder		  68
+		  ZOrder		  89
 		  SrcBlock		  "l_sole_CoM"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  5
 		}
 		Line {
-		  ZOrder		  69
+		  ZOrder		  90
 		  SrcBlock		  "r_sole_CoM"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  6
 		}
 		Line {
-		  ZOrder		  70
+		  ZOrder		  91
 		  SrcBlock		  "qj"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  7
 		}
 		Line {
-		  ZOrder		  71
+		  ZOrder		  92
 		  SrcBlock		  "t"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  8
 		}
 		Line {
-		  ZOrder		  72
+		  ZOrder		  93
 		  SrcBlock		  "l_sole_H_b"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  9
 		}
 		Line {
-		  ZOrder		  73
+		  ZOrder		  94
 		  SrcBlock		  "r_sole_H_b"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
@@ -5986,7 +6044,7 @@ Model {
 		}
 		Line {
 		  Name			  "w_H_b"
-		  ZOrder		  74
+		  ZOrder		  95
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  2
@@ -5995,7 +6053,7 @@ Model {
 		}
 		Line {
 		  Name			  "CoMDes"
-		  ZOrder		  75
+		  ZOrder		  96
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  3
@@ -6004,7 +6062,7 @@ Model {
 		}
 		Line {
 		  Name			  "qDes"
-		  ZOrder		  76
+		  ZOrder		  97
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  4
@@ -6013,7 +6071,7 @@ Model {
 		}
 		Line {
 		  Name			  "constraints"
-		  ZOrder		  77
+		  ZOrder		  98
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  5
@@ -6022,7 +6080,7 @@ Model {
 		}
 		Line {
 		  Name			  "impedances"
-		  ZOrder		  78
+		  ZOrder		  99
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  6
@@ -6031,7 +6089,7 @@ Model {
 		}
 		Line {
 		  Name			  "kpCom"
-		  ZOrder		  79
+		  ZOrder		  100
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  7
@@ -6040,7 +6098,7 @@ Model {
 		}
 		Line {
 		  Name			  "kdCom"
-		  ZOrder		  80
+		  ZOrder		  101
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  8
@@ -6049,7 +6107,7 @@ Model {
 		}
 		Line {
 		  Name			  "currentState"
-		  ZOrder		  81
+		  ZOrder		  102
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  9
@@ -6058,7 +6116,7 @@ Model {
 		}
 		Line {
 		  Name			  "jointsSmoothingTime"
-		  ZOrder		  82
+		  ZOrder		  103
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  10
@@ -6066,14 +6124,14 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  83
+		  ZOrder		  104
 		  SrcBlock		  " Demux "
 		  SrcPort		  1
 		  DstBlock		  " Terminator "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  84
+		  ZOrder		  105
 		  SrcBlock		  " SFunction "
 		  SrcPort		  1
 		  Points		  [20, 0]
@@ -6291,7 +6349,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -6303,20 +6361,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3384::3694"
+		    SID			    "3384::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    19
+		    ZOrder		    22
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3384::3693"
+		    SID			    "3384::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 21"
 		    Ports		    [1, 2]
 		    Position		    [180, 100, 230, 160]
-		    ZOrder		    18
+		    ZOrder		    21
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[1 2]"
 		    SFunctionDeploymentMode off
@@ -6331,9 +6389,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3384::3695"
+		    SID			    "3384::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    20
+		    ZOrder		    23
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -6344,7 +6402,7 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    13
+		    ZOrder		    17
 		    SrcBlock		    "R"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -6352,7 +6410,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "rollPitchYaw"
-		    ZOrder		    14
+		    ZOrder		    18
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -6360,14 +6418,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    15
+		    ZOrder		    19
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    16
+		    ZOrder		    20
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -6623,7 +6681,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -6635,20 +6693,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3392::3694"
+		    SID			    "3392::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    19
+		    ZOrder		    22
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3392::3693"
+		    SID			    "3392::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 22"
 		    Ports		    [1, 2]
 		    Position		    [180, 100, 230, 160]
-		    ZOrder		    18
+		    ZOrder		    21
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[1 2]"
 		    SFunctionDeploymentMode off
@@ -6663,9 +6721,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3392::3695"
+		    SID			    "3392::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    20
+		    ZOrder		    23
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -6676,7 +6734,7 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    13
+		    ZOrder		    17
 		    SrcBlock		    "R"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -6684,7 +6742,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "rollPitchYaw"
-		    ZOrder		    14
+		    ZOrder		    18
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -6692,14 +6750,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    15
+		    ZOrder		    19
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    16
+		    ZOrder		    20
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -6955,7 +7013,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -6967,20 +7025,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3376::3694"
+		    SID			    "3376::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    19
+		    ZOrder		    22
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3376::3693"
+		    SID			    "3376::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 26"
 		    Ports		    [1, 2]
 		    Position		    [180, 100, 230, 160]
-		    ZOrder		    18
+		    ZOrder		    21
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[1 2]"
 		    SFunctionDeploymentMode off
@@ -6995,9 +7053,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3376::3695"
+		    SID			    "3376::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    20
+		    ZOrder		    23
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -7008,7 +7066,7 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    13
+		    ZOrder		    17
 		    SrcBlock		    "R"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -7016,7 +7074,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "rollPitchYaw"
-		    ZOrder		    14
+		    ZOrder		    18
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -7024,14 +7082,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    15
+		    ZOrder		    19
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    16
+		    ZOrder		    20
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -7287,7 +7345,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -7299,20 +7357,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3400::3694"
+		    SID			    "3400::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    19
+		    ZOrder		    22
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3400::3693"
+		    SID			    "3400::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 23"
 		    Ports		    [1, 2]
 		    Position		    [180, 100, 230, 160]
-		    ZOrder		    18
+		    ZOrder		    21
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[1 2]"
 		    SFunctionDeploymentMode off
@@ -7327,9 +7385,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3400::3695"
+		    SID			    "3400::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    20
+		    ZOrder		    23
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -7340,7 +7398,7 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    13
+		    ZOrder		    17
 		    SrcBlock		    "R"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -7348,7 +7406,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "rollPitchYaw"
-		    ZOrder		    14
+		    ZOrder		    18
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -7356,14 +7414,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    15
+		    ZOrder		    19
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    16
+		    ZOrder		    20
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -7618,7 +7676,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -7630,20 +7688,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3408::3694"
+		    SID			    "3408::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    19
+		    ZOrder		    22
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3408::3693"
+		    SID			    "3408::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 24"
 		    Ports		    [1, 2]
 		    Position		    [180, 100, 230, 160]
-		    ZOrder		    18
+		    ZOrder		    21
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[1 2]"
 		    SFunctionDeploymentMode off
@@ -7658,9 +7716,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3408::3695"
+		    SID			    "3408::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    20
+		    ZOrder		    23
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -7671,7 +7729,7 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    13
+		    ZOrder		    17
 		    SrcBlock		    "R"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -7679,7 +7737,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "rollPitchYaw"
-		    ZOrder		    14
+		    ZOrder		    18
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -7687,14 +7745,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    15
+		    ZOrder		    19
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    16
+		    ZOrder		    20
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -7975,7 +8033,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -7987,20 +8045,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3416::3694"
+		    SID			    "3416::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    19
+		    ZOrder		    22
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3416::3693"
+		    SID			    "3416::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 25"
 		    Ports		    [1, 2]
 		    Position		    [180, 100, 230, 160]
-		    ZOrder		    18
+		    ZOrder		    21
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[1 2]"
 		    SFunctionDeploymentMode off
@@ -8015,9 +8073,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3416::3695"
+		    SID			    "3416::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    20
+		    ZOrder		    23
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -8028,7 +8086,7 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    13
+		    ZOrder		    17
 		    SrcBlock		    "R"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -8036,7 +8094,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "rollPitchYaw"
-		    ZOrder		    14
+		    ZOrder		    18
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -8044,14 +8102,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    15
+		    ZOrder		    19
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    16
+		    ZOrder		    20
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -8224,7 +8282,7 @@ Model {
 		  }
 		  System {
 		    Name		    "l_sole_H_root_link2"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1440, 900]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -8502,7 +8560,7 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, 20, 295, 80]
 		    ZOrder		    569
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
@@ -8519,11 +8577,11 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, 105, 295, 165]
 		    ZOrder		    572
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
-		    frameName		    "'root_link'"
+		    frameName		    "root_link_name"
 		    robotName		    "WBT_robotName"
 		    localName		    "WBT_modelName"
 		    wbiFile		    "WBT_wbiFilename"
@@ -8637,7 +8695,7 @@ Model {
 		  }
 		  System {
 		    Name		    "l_sole_H_root_link3"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1440, 900]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -8915,7 +8973,7 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, 20, 295, 80]
 		    ZOrder		    569
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
@@ -8932,11 +8990,11 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, 105, 295, 165]
 		    ZOrder		    572
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
-		    frameName		    "'root_link'"
+		    frameName		    "root_link_name"
 		    robotName		    "WBT_robotName"
 		    localName		    "WBT_modelName"
 		    wbiFile		    "WBT_wbiFilename"
@@ -9084,7 +9142,7 @@ Model {
 		  }
 		  System {
 		    Name		    "w_H_root_link1"
-		    Location		    [0, 23, 1853, 1076]
+		    Location		    [65, 24, 1440, 900]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -9191,7 +9249,7 @@ Model {
 		    ZOrder		    663
 		    ForegroundColor	    "[0.490196, 0.000000, 0.000000]"
 		    ShowName		    off
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/Utilities/Yarp Read"
 		    SourceType		    "YARP Read"
 		    portName		    "[WBT_robotName, '/head/state:o']"
@@ -9378,7 +9436,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -9436,20 +9494,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3679::3694"
+		    SID			    "3679::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    94
+		    ZOrder		    97
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3679::3693"
+		    SID			    "3679::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 1"
 		    Ports		    [6, 2]
 		    Position		    [180, 102, 230, 243]
-		    ZOrder		    93
+		    ZOrder		    96
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "CONFIG"
 		    PortCounts		    "[6 2]"
@@ -9465,9 +9523,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3679::3695"
+		    SID			    "3679::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    95
+		    ZOrder		    98
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -9478,42 +9536,42 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    37
 		    SrcBlock		    "imu_H_link"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    29
+		    ZOrder		    38
 		    SrcBlock		    "imu_H_link_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    30
+		    ZOrder		    39
 		    SrcBlock		    "link_H_root"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    31
+		    ZOrder		    40
 		    SrcBlock		    "inertial_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    32
+		    ZOrder		    41
 		    SrcBlock		    "inertial"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    5
 		    }
 		    Line {
-		    ZOrder		    33
+		    ZOrder		    42
 		    SrcBlock		    "neck"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -9521,7 +9579,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "w_H_root"
-		    ZOrder		    34
+		    ZOrder		    43
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -9529,14 +9587,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    35
+		    ZOrder		    44
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    36
+		    ZOrder		    45
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -9553,7 +9611,7 @@ Model {
 		    ZOrder		    610
 		    BackgroundColor	    "[0.537255, 0.721569, 1.000000]"
 		    ShowName		    off
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/Utilities/holder\n"
 		    SourceType		    "Holder"
 		    ContentPreviewEnabled   off
@@ -9567,7 +9625,7 @@ Model {
 		    ZOrder		    611
 		    BackgroundColor	    "[0.537255, 0.721569, 1.000000]"
 		    ShowName		    off
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/Utilities/holder\n"
 		    SourceType		    "Holder"
 		    ContentPreviewEnabled   off
@@ -9579,11 +9637,11 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, -75, 295, -15]
 		    ZOrder		    569
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
-		    frameName		    "'imu_frame'"
+		    frameName		    "imu_link_name"
 		    robotName		    "WBT_robotName"
 		    localName		    "WBT_modelName"
 		    wbiFile		    "WBT_wbiFilename"
@@ -9633,7 +9691,7 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, 10, 295, 70]
 		    ZOrder		    572
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
@@ -9656,11 +9714,11 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, 95, 295, 155]
 		    ZOrder		    606
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
-		    frameName		    "'root_link'"
+		    frameName		    "root_link_name"
 		    robotName		    "WBT_robotName"
 		    localName		    "WBT_modelName"
 		    wbiFile		    "WBT_wbiFilename"
@@ -9977,7 +10035,7 @@ Model {
 		  }
 		  System {
 		    Name		    "w_H_root_link4"
-		    Location		    [0, 23, 1853, 1076]
+		    Location		    [65, 24, 1440, 900]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -10084,7 +10142,7 @@ Model {
 		    ZOrder		    663
 		    ForegroundColor	    "[0.490196, 0.000000, 0.000000]"
 		    ShowName		    off
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/Utilities/Yarp Read"
 		    SourceType		    "YARP Read"
 		    portName		    "[WBT_robotName, '/head/state:o']"
@@ -10271,7 +10329,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -10329,20 +10387,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3539::3694"
+		    SID			    "3539::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    94
+		    ZOrder		    97
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3539::3693"
+		    SID			    "3539::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 27"
 		    Ports		    [6, 2]
 		    Position		    [180, 102, 230, 243]
-		    ZOrder		    93
+		    ZOrder		    96
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "CONFIG"
 		    PortCounts		    "[6 2]"
@@ -10358,9 +10416,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3539::3695"
+		    SID			    "3539::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    95
+		    ZOrder		    98
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -10371,42 +10429,42 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    37
 		    SrcBlock		    "imu_H_link"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    29
+		    ZOrder		    38
 		    SrcBlock		    "imu_H_link_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    30
+		    ZOrder		    39
 		    SrcBlock		    "link_H_root"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    31
+		    ZOrder		    40
 		    SrcBlock		    "inertial_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    32
+		    ZOrder		    41
 		    SrcBlock		    "inertial"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    5
 		    }
 		    Line {
-		    ZOrder		    33
+		    ZOrder		    42
 		    SrcBlock		    "neck"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -10414,7 +10472,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "w_H_root"
-		    ZOrder		    34
+		    ZOrder		    43
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -10422,14 +10480,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    35
+		    ZOrder		    44
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    36
+		    ZOrder		    45
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -10446,7 +10504,7 @@ Model {
 		    ZOrder		    610
 		    BackgroundColor	    "[0.537255, 0.721569, 1.000000]"
 		    ShowName		    off
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/Utilities/holder\n"
 		    SourceType		    "Holder"
 		    ContentPreviewEnabled   off
@@ -10460,7 +10518,7 @@ Model {
 		    ZOrder		    611
 		    BackgroundColor	    "[0.537255, 0.721569, 1.000000]"
 		    ShowName		    off
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/Utilities/holder\n"
 		    SourceType		    "Holder"
 		    ContentPreviewEnabled   off
@@ -10472,11 +10530,11 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, -75, 295, -15]
 		    ZOrder		    569
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
-		    frameName		    "'imu_frame'"
+		    frameName		    "imu_link_name"
 		    robotName		    "WBT_robotName"
 		    localName		    "WBT_modelName"
 		    wbiFile		    "WBT_wbiFilename"
@@ -10526,7 +10584,7 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, 10, 295, 70]
 		    ZOrder		    572
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
@@ -10549,11 +10607,11 @@ Model {
 		    Ports		    [2, 1]
 		    Position		    [130, 95, 295, 155]
 		    ZOrder		    606
-		    LibraryVersion	    "1.364"
+		    LibraryVersion	    "1.367"
 		    SourceBlock		    "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		    SourceType		    "Forward Kinematics"
 		    ContentPreviewEnabled   off
-		    frameName		    "'root_link'"
+		    frameName		    "root_link_name"
 		    robotName		    "WBT_robotName"
 		    localName		    "WBT_modelName"
 		    wbiFile		    "WBT_wbiFilename"
@@ -11027,7 +11085,7 @@ Model {
 	      }
 	      System {
 		Name			"w_H_root_link1"
-		Location		[0, 23, 1853, 1076]
+		Location		[65, 24, 1440, 900]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -11134,7 +11192,7 @@ Model {
 		  ZOrder		  663
 		  ForegroundColor	  "[0.490196, 0.000000, 0.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/Yarp Read"
 		  SourceType		  "YARP Read"
 		  portName		  "[WBT_robotName, '/head/state:o']"
@@ -11321,7 +11379,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -11379,20 +11437,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3455::3694"
+		    SID			    "3455::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    94
+		    ZOrder		    97
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3455::3693"
+		    SID			    "3455::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 9"
 		    Ports		    [6, 2]
 		    Position		    [180, 102, 230, 243]
-		    ZOrder		    93
+		    ZOrder		    96
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "CONFIG"
 		    PortCounts		    "[6 2]"
@@ -11408,9 +11466,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3455::3695"
+		    SID			    "3455::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    95
+		    ZOrder		    98
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -11421,42 +11479,42 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    37
 		    SrcBlock		    "imu_H_link"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    29
+		    ZOrder		    38
 		    SrcBlock		    "imu_H_link_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    30
+		    ZOrder		    39
 		    SrcBlock		    "link_H_root"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    31
+		    ZOrder		    40
 		    SrcBlock		    "inertial_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    32
+		    ZOrder		    41
 		    SrcBlock		    "inertial"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    5
 		    }
 		    Line {
-		    ZOrder		    33
+		    ZOrder		    42
 		    SrcBlock		    "neck"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -11464,7 +11522,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "w_H_root"
-		    ZOrder		    34
+		    ZOrder		    43
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -11472,14 +11530,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    35
+		    ZOrder		    44
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    36
+		    ZOrder		    45
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -11496,7 +11554,7 @@ Model {
 		  ZOrder		  610
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -11510,7 +11568,7 @@ Model {
 		  ZOrder		  611
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -11522,11 +11580,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, -75, 295, -15]
 		  ZOrder		  569
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'imu_frame'"
+		  frameName		  "imu_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -11576,7 +11634,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 10, 295, 70]
 		  ZOrder		  572
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -11599,11 +11657,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 95, 295, 155]
 		  ZOrder		  606
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'root_link'"
+		  frameName		  "root_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -11920,7 +11978,7 @@ Model {
 	      }
 	      System {
 		Name			"w_H_root_link4"
-		Location		[0, 23, 1853, 1076]
+		Location		[65, 24, 1440, 900]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -12027,7 +12085,7 @@ Model {
 		  ZOrder		  663
 		  ForegroundColor	  "[0.490196, 0.000000, 0.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/Yarp Read"
 		  SourceType		  "YARP Read"
 		  portName		  "[WBT_robotName, '/head/state:o']"
@@ -12214,7 +12272,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -12272,20 +12330,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "2974::3694"
+		    SID			    "2974::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    94
+		    ZOrder		    97
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "2974::3693"
+		    SID			    "2974::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 8"
 		    Ports		    [6, 2]
 		    Position		    [180, 102, 230, 243]
-		    ZOrder		    93
+		    ZOrder		    96
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "CONFIG"
 		    PortCounts		    "[6 2]"
@@ -12301,9 +12359,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "2974::3695"
+		    SID			    "2974::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    95
+		    ZOrder		    98
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -12314,42 +12372,42 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    37
 		    SrcBlock		    "imu_H_link"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    29
+		    ZOrder		    38
 		    SrcBlock		    "imu_H_link_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    30
+		    ZOrder		    39
 		    SrcBlock		    "link_H_root"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    31
+		    ZOrder		    40
 		    SrcBlock		    "inertial_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    32
+		    ZOrder		    41
 		    SrcBlock		    "inertial"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    5
 		    }
 		    Line {
-		    ZOrder		    33
+		    ZOrder		    42
 		    SrcBlock		    "neck"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -12357,7 +12415,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "w_H_root"
-		    ZOrder		    34
+		    ZOrder		    43
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -12365,14 +12423,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    35
+		    ZOrder		    44
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    36
+		    ZOrder		    45
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -12389,7 +12447,7 @@ Model {
 		  ZOrder		  610
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -12403,7 +12461,7 @@ Model {
 		  ZOrder		  611
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -12415,11 +12473,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, -75, 295, -15]
 		  ZOrder		  569
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'imu_frame'"
+		  frameName		  "imu_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -12469,7 +12527,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 10, 295, 70]
 		  ZOrder		  572
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -12492,11 +12550,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 95, 295, 155]
 		  ZOrder		  606
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'root_link'"
+		  frameName		  "root_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -12848,7 +12906,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [115, 230, 280, 290]
 		  ZOrder		  578
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -12964,7 +13022,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [115, 230, 280, 290]
 		  ZOrder		  578
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -13174,7 +13232,7 @@ Model {
 	      SrcBlock		      "stateMachineFCN"
 	      SrcPort		      3
 	      Points		      [0, 10]
-	      DstBlock		      "qDes"
+	      DstBlock		      "holder\n3"
 	      DstPort		      1
 	    }
 	    Line {
@@ -13519,6 +13577,13 @@ Model {
 	      DstBlock		      "kpCom"
 	      DstPort		      1
 	    }
+	    Line {
+	      ZOrder		      136
+	      SrcBlock		      "holder\n3"
+	      SrcPort		      1
+	      DstBlock		      "qDes"
+	      DstPort		      1
+	    }
 	  }
 	}
 	Block {
@@ -13609,7 +13674,7 @@ Model {
 	      BackgroundColor	      "lightBlue"
 	      DropShadow	      on
 	      Commented		      "on"
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -13771,7 +13836,7 @@ Model {
 	      Position		      [715, 380, 855, 420]
 	      ZOrder		      594
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Minimum Jerk Trajectory Generator"
 	      SourceType	      "Minimum Jerk Trajectory Generator"
 	      externalSettlingTime    off
@@ -13789,7 +13854,7 @@ Model {
 	      Position		      [715, 330, 855, 370]
 	      ZOrder		      595
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Minimum Jerk Trajectory Generator"
 	      SourceType	      "Minimum Jerk Trajectory Generator"
 	      externalSettlingTime    off
@@ -14053,7 +14118,7 @@ Model {
 	      ZOrder		      667
 	      BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
 	      SourceType	      "Holder"
 	      ContentPreviewEnabled   off
@@ -14067,7 +14132,7 @@ Model {
 	      ZOrder		      584
 	      BackgroundColor	      "[0.537255, 0.721569, 1.000000]"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/holder\n"
 	      SourceType	      "Holder"
 	      ContentPreviewEnabled   off
@@ -14080,7 +14145,7 @@ Model {
 	      Position		      [-485, 443, -435, 457]
 	      ZOrder		      654
 	      ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
 	      SourceType	      "YARP Read"
 	      portName		      "PORTS.IMU"
@@ -14107,7 +14172,7 @@ Model {
 	      Position		      [-390, -94, -330, -46]
 	      ZOrder		      681
 	      ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
 	      SourceType	      "YARP Read"
 	      portName		      "PORTS.WBDT_LEFTLEG_EE"
@@ -14182,7 +14247,7 @@ Model {
 		  Position		  [-65, 42, 15, 78]
 		  ZOrder		  563
 		  BackgroundColor	  "[0.513700, 0.674500, 1.000000]"
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyStates/Get Estimate"
 		  SourceType		  "Get Estimate"
 		  ContentPreviewEnabled	  off
@@ -14199,7 +14264,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [-230, -120, -65, -65]
 		  ZOrder		  558
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 		  SourceType		  "Jacobian"
 		  ContentPreviewEnabled	  off
@@ -14216,7 +14281,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [-230, -55, -65, 0]
 		  ZOrder		  559
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 		  SourceType		  "Jacobian"
 		  ContentPreviewEnabled	  off
@@ -14255,7 +14320,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "JcLeftFoot"
@@ -14294,20 +14359,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "2806::3694"
+		    SID			    "2806::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    63
+		    ZOrder		    66
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "2806::3693"
+		    SID			    "2806::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 5"
 		    Ports		    [4, 2]
 		    Position		    [180, 102, 230, 203]
-		    ZOrder		    62
+		    ZOrder		    65
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "reg"
 		    PortCounts		    "[4 2]"
@@ -14323,9 +14388,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "2806::3695"
+		    SID			    "2806::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    64
+		    ZOrder		    67
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -14336,28 +14401,28 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    22
+		    ZOrder		    29
 		    SrcBlock		    "JcLeftFoot"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    23
+		    ZOrder		    30
 		    SrcBlock		    "JcRightFoot"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    24
+		    ZOrder		    31
 		    SrcBlock		    "activeFeetConstraints"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    25
+		    ZOrder		    32
 		    SrcBlock		    "qD"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -14365,7 +14430,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "y"
-		    ZOrder		    26
+		    ZOrder		    33
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -14373,14 +14438,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    27
+		    ZOrder		    34
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    35
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -14504,7 +14569,7 @@ Model {
 	      Position		      [-390, 6, -330, 54]
 	      ZOrder		      682
 	      ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Yarp Read"
 	      SourceType	      "YARP Read"
 	      portName		      "PORTS.WBDT_RIGHTLEG_EE"
@@ -14608,7 +14673,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3695"
+		SIDHighWatermark	"3698"
 		SIDPrevWatermark	"9"
 		Block {
 		  BlockType		  Inport
@@ -14711,20 +14776,20 @@ Model {
 		Block {
 		  BlockType		  Demux
 		  Name			  " Demux "
-		  SID			  "2812::3694"
+		  SID			  "2812::3697"
 		  Ports			  [1, 1]
 		  Position		  [270, 350, 320, 390]
-		  ZOrder		  92
+		  ZOrder		  95
 		  Outputs		  "1"
 		}
 		Block {
 		  BlockType		  S-Function
 		  Name			  " SFunction "
-		  SID			  "2812::3693"
+		  SID			  "2812::3696"
 		  Tag			  "Stateflow S-Function torqueBalancing 6"
 		  Ports			  [11, 7]
 		  Position		  [180, 95, 230, 335]
-		  ZOrder		  91
+		  ZOrder		  94
 		  FunctionName		  "sf_sfun"
 		  Parameters		  "gain,sm"
 		  PortCounts		  "[11 7]"
@@ -14770,9 +14835,9 @@ Model {
 		Block {
 		  BlockType		  Terminator
 		  Name			  " Terminator "
-		  SID			  "2812::3695"
+		  SID			  "2812::3698"
 		  Position		  [460, 361, 480, 379]
-		  ZOrder		  93
+		  ZOrder		  96
 		}
 		Block {
 		  BlockType		  Outport
@@ -14828,77 +14893,77 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  58
+		  ZOrder		  77
 		  SrcBlock		  "connection"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  59
+		  ZOrder		  78
 		  SrcBlock		  "wrench_rightFoot"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  60
+		  ZOrder		  79
 		  SrcBlock		  "wrench_leftFoot"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  3
 		}
 		Line {
-		  ZOrder		  61
+		  ZOrder		  80
 		  SrcBlock		  "CoM_0"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  4
 		}
 		Line {
-		  ZOrder		  62
+		  ZOrder		  81
 		  SrcBlock		  "q0"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  5
 		}
 		Line {
-		  ZOrder		  63
+		  ZOrder		  82
 		  SrcBlock		  "w_CoM"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  6
 		}
 		Line {
-		  ZOrder		  64
+		  ZOrder		  83
 		  SrcBlock		  "CoMIn"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  7
 		}
 		Line {
-		  ZOrder		  65
+		  ZOrder		  84
 		  SrcBlock		  "qIn"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  8
 		}
 		Line {
-		  ZOrder		  66
+		  ZOrder		  85
 		  SrcBlock		  "constraintsIn"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  9
 		}
 		Line {
-		  ZOrder		  67
+		  ZOrder		  86
 		  SrcBlock		  "l_sole_H_b"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  10
 		}
 		Line {
-		  ZOrder		  68
+		  ZOrder		  87
 		  SrcBlock		  "r_sole_H_b"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
@@ -14906,7 +14971,7 @@ Model {
 		}
 		Line {
 		  Name			  "w_H_b"
-		  ZOrder		  69
+		  ZOrder		  88
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  2
@@ -14916,7 +14981,7 @@ Model {
 		}
 		Line {
 		  Name			  "CoMDes"
-		  ZOrder		  70
+		  ZOrder		  89
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  3
@@ -14925,7 +14990,7 @@ Model {
 		}
 		Line {
 		  Name			  "qDes"
-		  ZOrder		  71
+		  ZOrder		  90
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  4
@@ -14934,7 +14999,7 @@ Model {
 		}
 		Line {
 		  Name			  "constraints"
-		  ZOrder		  72
+		  ZOrder		  91
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  5
@@ -14943,7 +15008,7 @@ Model {
 		}
 		Line {
 		  Name			  "impedances"
-		  ZOrder		  73
+		  ZOrder		  92
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  6
@@ -14952,7 +15017,7 @@ Model {
 		}
 		Line {
 		  Name			  "currentState"
-		  ZOrder		  74
+		  ZOrder		  93
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  7
@@ -14960,14 +15025,14 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  75
+		  ZOrder		  94
 		  SrcBlock		  " Demux "
 		  SrcPort		  1
 		  DstBlock		  " Terminator "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  76
+		  ZOrder		  95
 		  SrcBlock		  " SFunction "
 		  SrcPort		  1
 		  DstBlock		  " Demux "
@@ -15121,7 +15186,7 @@ Model {
 	      }
 	      System {
 		Name			"w_H_root_link1"
-		Location		[0, 23, 1920, 1076]
+		Location		[65, 24, 1440, 900]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -15228,7 +15293,7 @@ Model {
 		  ZOrder		  663
 		  ForegroundColor	  "[0.490196, 0.000000, 0.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/Yarp Read"
 		  SourceType		  "YARP Read"
 		  portName		  "[WBT_robotName, '/head/state:o']"
@@ -15415,7 +15480,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -15473,20 +15538,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3651::3694"
+		    SID			    "3651::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    94
+		    ZOrder		    97
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3651::3693"
+		    SID			    "3651::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 14"
 		    Ports		    [6, 2]
 		    Position		    [180, 102, 230, 243]
-		    ZOrder		    93
+		    ZOrder		    96
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "CONFIG"
 		    PortCounts		    "[6 2]"
@@ -15502,9 +15567,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3651::3695"
+		    SID			    "3651::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    95
+		    ZOrder		    98
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -15515,42 +15580,42 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    37
 		    SrcBlock		    "imu_H_link"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    29
+		    ZOrder		    38
 		    SrcBlock		    "imu_H_link_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    30
+		    ZOrder		    39
 		    SrcBlock		    "link_H_root"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    31
+		    ZOrder		    40
 		    SrcBlock		    "inertial_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    32
+		    ZOrder		    41
 		    SrcBlock		    "inertial"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    5
 		    }
 		    Line {
-		    ZOrder		    33
+		    ZOrder		    42
 		    SrcBlock		    "neck"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -15558,7 +15623,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "w_H_root"
-		    ZOrder		    34
+		    ZOrder		    43
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -15566,14 +15631,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    35
+		    ZOrder		    44
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    36
+		    ZOrder		    45
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -15590,7 +15655,7 @@ Model {
 		  ZOrder		  610
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -15604,7 +15669,7 @@ Model {
 		  ZOrder		  611
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -15616,11 +15681,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, -75, 295, -15]
 		  ZOrder		  569
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'imu_frame'"
+		  frameName		  "imu_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -15670,7 +15735,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 10, 295, 70]
 		  ZOrder		  572
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -15693,11 +15758,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 95, 295, 155]
 		  ZOrder		  606
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'root_link'"
+		  frameName		  "root_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -16014,7 +16079,7 @@ Model {
 	      }
 	      System {
 		Name			"w_H_root_link4"
-		Location		[0, 23, 1920, 1076]
+		Location		[65, 24, 1440, 900]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -16121,7 +16186,7 @@ Model {
 		  ZOrder		  663
 		  ForegroundColor	  "[0.490196, 0.000000, 0.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/Yarp Read"
 		  SourceType		  "YARP Read"
 		  portName		  "[WBT_robotName, '/head/state:o']"
@@ -16308,7 +16373,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3695"
+		    SIDHighWatermark	    "3698"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -16366,20 +16431,20 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    "3623::3694"
+		    SID			    "3623::3697"
 		    Ports		    [1, 1]
 		    Position		    [270, 230, 320, 270]
-		    ZOrder		    94
+		    ZOrder		    97
 		    Outputs		    "1"
 		    }
 		    Block {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    "3623::3693"
+		    SID			    "3623::3696"
 		    Tag			    "Stateflow S-Function torqueBalancing 11"
 		    Ports		    [6, 2]
 		    Position		    [180, 102, 230, 243]
-		    ZOrder		    93
+		    ZOrder		    96
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "CONFIG"
 		    PortCounts		    "[6 2]"
@@ -16395,9 +16460,9 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    "3623::3695"
+		    SID			    "3623::3698"
 		    Position		    [460, 241, 480, 259]
-		    ZOrder		    95
+		    ZOrder		    98
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -16408,42 +16473,42 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    37
 		    SrcBlock		    "imu_H_link"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    29
+		    ZOrder		    38
 		    SrcBlock		    "imu_H_link_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    30
+		    ZOrder		    39
 		    SrcBlock		    "link_H_root"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    31
+		    ZOrder		    40
 		    SrcBlock		    "inertial_0"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    32
+		    ZOrder		    41
 		    SrcBlock		    "inertial"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    5
 		    }
 		    Line {
-		    ZOrder		    33
+		    ZOrder		    42
 		    SrcBlock		    "neck"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -16451,7 +16516,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "w_H_root"
-		    ZOrder		    34
+		    ZOrder		    43
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -16459,14 +16524,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    35
+		    ZOrder		    44
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    36
+		    ZOrder		    45
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -16483,7 +16548,7 @@ Model {
 		  ZOrder		  610
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -16497,7 +16562,7 @@ Model {
 		  ZOrder		  611
 		  BackgroundColor	  "[0.537255, 0.721569, 1.000000]"
 		  ShowName		  off
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/Utilities/holder\n"
 		  SourceType		  "Holder"
 		  ContentPreviewEnabled	  off
@@ -16509,11 +16574,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, -75, 295, -15]
 		  ZOrder		  569
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'imu_frame'"
+		  frameName		  "imu_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -16563,7 +16628,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 10, 295, 70]
 		  ZOrder		  572
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -16586,11 +16651,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 95, 295, 155]
 		  ZOrder		  606
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'root_link'"
+		  frameName		  "root_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -16949,7 +17014,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [115, 230, 280, 290]
 		  ZOrder		  578
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -17066,7 +17131,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [115, 230, 280, 290]
 		  ZOrder		  578
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -17801,7 +17866,7 @@ Model {
 	      Position		      [95, 267, 145, 303]
 	      ZOrder		      616
 	      ShowName		      off
-	      LibraryVersion	      "1.358"
+	      LibraryVersion	      "1.386"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
 	      SourceType	      "Compare To Zero"
 	      ContentPreviewEnabled   off
@@ -17817,7 +17882,7 @@ Model {
 	      Position		      [95, 377, 145, 413]
 	      ZOrder		      618
 	      ShowName		      off
-	      LibraryVersion	      "1.358"
+	      LibraryVersion	      "1.386"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
 	      SourceType	      "Compare To Zero"
 	      ContentPreviewEnabled   off
@@ -17833,7 +17898,7 @@ Model {
 	      Position		      [95, 327, 145, 363]
 	      ZOrder		      619
 	      ShowName		      off
-	      LibraryVersion	      "1.358"
+	      LibraryVersion	      "1.386"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
 	      SourceType	      "Compare To Zero"
 	      ContentPreviewEnabled   off
@@ -17979,7 +18044,7 @@ Model {
 	  Position		  [-315, 3101, -255, 3129]
 	  ZOrder		  607
 	  ShowName		  off
-	  LibraryVersion	  "1.358"
+	  LibraryVersion	  "1.386"
 	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
 	  SourceType		  "Bitwise Operator"
 	  logicop		  "AND"
@@ -17997,7 +18062,7 @@ Model {
 	  ZOrder		  621
 	  ForegroundColor	  "[0.490196, 0.000000, 0.000000]"
 	  Commented		  "on"
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/Yarp Read"
 	  SourceType		  "YARP Read"
 	  portName		  "[baseToWorldRotationPort]"
@@ -18015,7 +18080,7 @@ Model {
 	  Position		  [-315, 2571, -255, 2599]
 	  ZOrder		  606
 	  ShowName		  off
-	  LibraryVersion	  "1.358"
+	  LibraryVersion	  "1.386"
 	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
 	  SourceType		  "Bitwise Operator"
 	  logicop		  "AND"
@@ -18033,7 +18098,7 @@ Model {
 	  ZOrder		  601
 	  ForegroundColor	  "[0.490196, 0.000000, 0.000000]"
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/Yarp Read"
 	  SourceType		  "YARP Read"
 	  portName		  "['/' WBT_modelName '/constraints:i']"
@@ -18933,7 +18998,7 @@ Model {
       Variant		      off
       System {
 	Name			"Dump and visualize"
-	Location		[0, 23, 1280, 796]
+	Location		[65, 24, 1440, 900]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -18945,7 +19010,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"73"
+	ZoomFactor		"90"
 	Block {
 	  BlockType		  Inport
 	  Name			  "tauDesired"
@@ -19063,7 +19128,7 @@ Model {
 	  ZOrder		  512
 	  BackgroundColor	  "lightBlue"
 	  DropShadow		  on
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19111,7 +19176,7 @@ Model {
 	  ZOrder		  513
 	  BackgroundColor	  "lightBlue"
 	  DropShadow		  on
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19159,7 +19224,7 @@ Model {
 	  ZOrder		  514
 	  BackgroundColor	  "lightBlue"
 	  DropShadow		  on
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19207,7 +19272,7 @@ Model {
 	  ZOrder		  515
 	  BackgroundColor	  "lightBlue"
 	  DropShadow		  on
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19255,7 +19320,7 @@ Model {
 	  ZOrder		  516
 	  BackgroundColor	  "lightBlue"
 	  DropShadow		  on
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19303,7 +19368,7 @@ Model {
 	  ZOrder		  511
 	  BackgroundColor	  "lightBlue"
 	  DropShadow		  on
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19353,64 +19418,62 @@ Model {
 	  "Configuration('Core','General UI',true,'FigureColor',[0.156862745098039 0.156862745098039 0.156862745098039]),extmg"
 	  "r.Configuration('Core','Source UI',true),extmgr.Configuration('Sources','WiredSimulink',true,'DataLoggingVariableNa"
 	  "me','CoM_data','DataLoggingSaveFormat','StructureWithTime','DataLoggingDecimation','1','DataLoggingDecimateData',tr"
-	  "ue),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('MinYLimReal','-0.24275','MaxYLi"
-	  "mReal','0.62134','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',tr"
-	  "ue,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922]"
-	  ",'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0"
-	  ".392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;"
-	  "1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'Li"
-	  "neStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5"
-	  ",'Marker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','"
-	  "on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],"
-	  "'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',"
-	  "0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',3,'LineNames',{{'CoM_Measured:1','C"
-	  "oM_Measured:2','CoM_Measured:3'}},'ShowContent',true,'Placement',1),struct('MinYLimReal','-0.24275','MaxYLimReal','"
-	  "0.62134','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'Plot"
-	  "MagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorO"
-	  "rder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.3921568"
-	  "62745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745"
-	  "098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle'"
-	  ",'-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker"
-	  "','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),str"
-	  "uct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineSty"
-	  "le','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Mar"
-	  "ker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',3,'LineNames',{{'CoM_Desired:1','CoM_Desire"
-	  "d:2','CoM_Desired:3'}},'ShowContent',true,'Placement',2),struct('MinYLimReal','-0.24275','MaxYLimReal','0.62134','Y"
-	  "LabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',f"
-	  "alse,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 "
-	  "0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0."
-	  "831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.074509803921568"
-	  "6 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineW"
-	  "idth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','V"
-	  "isible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color'"
-	  ",[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','Li"
-	  "neWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none'"
-	  ",'Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',3,'LineNames',{{'CoM_Error:1','CoM_Error:2','CoM_Error"
-	  ":3'}},'ShowContent',true,'Placement',3),struct('MinYLimReal','-0.24275','MaxYLimReal','0.62134','YLabelReal','','Mi"
-	  "nYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',"
-	  "[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066666666666666"
-	  "7;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0"
-	  ".0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509803921568"
-	  "63],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker"
-	  "','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),str"
-	  "uct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineSty"
-	  "le','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Mar"
-	  "ker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}"
-	  "},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'state'}},'ShowContent',true,'Placement',4)},'DisplayPr"
-	  "opertyDefaults',struct('MinYLimReal','-0.24275','MaxYLimReal','0.62134','YLabelReal','','MinYLimMag','0','MaxYLimMa"
-	  "g','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',"
-	  "[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6"
-	  "23529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.7176"
-	  "47058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLab"
-	  "el>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')"
-	  ",struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 1],'Lin"
-	  "eStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,"
-	  "'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','o"
-	  "n'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNam"
-	  "es',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1),'TimeRangeSamples','400','TimeRangeFrame"
-	  "s','400','DisplayLayoutDimensions',[4 1]),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'P"
-	  "reviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version','2015b','Loc"
-	  "ation',[1 95 1281 743])"
+	  "ue),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('MinYLimReal','-0.89345','MaxYLi"
+	  "mReal','1.44665','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.44665','LegendVisibility','on','XGrid',true"
+	  ",'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.68627"
+	  "4509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078"
+	  "431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294"
+	  "117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',"
+	  "[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','Lin"
+	  "eWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none',"
+	  "'Visible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Colo"
+	  "r',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','"
+	  "LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'Sh"
+	  "owContent',true,'Placement',1),struct('MinYLimReal','-0.34739','MaxYLimReal','1.31967','YLabelReal','','MinYLimMag'"
+	  ",'0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'"
+	  "AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.07450"
+	  "98039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.07450980"
+	  "39215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Titl"
+	  "e','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none',"
+	  "'Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Colo"
+	  "r',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','"
+	  "LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','non"
+	  "e','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDe"
+	  "finedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',2),struct('MinYLimReal','-1."
+	  "03525','MaxYLimReal','1.03732','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',t"
+	  "rue,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.68"
+	  "6274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16"
+	  "078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235"
+	  "294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Colo"
+	  "r',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','"
+	  "LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','non"
+	  "e','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('C"
+	  "olor',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-"
+	  "','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},"
+	  "'ShowContent',true,'Placement',3),struct('MinYLimReal','0.625','MaxYLimReal','4.375','YLabelReal','','MinYLimMag','"
+	  "0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'Ax"
+	  "esTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098"
+	  "039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039"
+	  "215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title'"
+	  ",'%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','V"
+	  "isible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color'"
+	  ",[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','Li"
+	  "neWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none'"
+	  ",'Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefi"
+	  "nedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',4)},'DisplayPropertyDefaults',"
+	  "struct('YLabelReal','','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'"
+	  "AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.07450"
+	  "98039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.07450980"
+	  "39215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Titl"
+	  "e','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none',"
+	  "'Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Colo"
+	  "r',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','"
+	  "LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','non"
+	  "e','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDe"
+	  "finedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1),'TimeRangeSamples','400',"
+	  "'TimeRangeFrames','400','DisplayLayoutDimensions',[4 1]),extmgr.Configuration('Tools','Plot Navigation',true,'OnceA"
+	  "tStop',false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2016a')),'Versio"
+	  "n','2016a','Location',[66 78 1441 899])"
 	  NumInputPorts		  "4"
 	}
 	Block {
@@ -19551,7 +19614,7 @@ Model {
 	  ZOrder		  509
 	  BackgroundColor	  "[0.827500, 0.576500, 0.603900]"
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyStates/Get Estimate"
 	  SourceType		  "Get Estimate"
 	  ContentPreviewEnabled	  off
@@ -19570,7 +19633,7 @@ Model {
 	  ZOrder		  510
 	  BackgroundColor	  "[0.513700, 0.851000, 0.670600]"
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyStates/Get Estimate"
 	  SourceType		  "Get Estimate"
 	  ContentPreviewEnabled	  off
@@ -19681,7 +19744,7 @@ Model {
 	  Position		  [1050, 435, 1080, 475]
 	  ZOrder		  479
 	  Commented		  "on"
-	  LibraryVersion	  "1.358"
+	  LibraryVersion	  "1.386"
 	  SourceBlock		  "simulink/Sinks/XY Graph"
 	  SourceType		  "XY scope."
 	  ContentPreviewEnabled	  off
@@ -19699,7 +19762,7 @@ Model {
 	  Position		  [1050, 515, 1080, 555]
 	  ZOrder		  480
 	  Commented		  "on"
-	  LibraryVersion	  "1.358"
+	  LibraryVersion	  "1.386"
 	  SourceBlock		  "simulink/Sinks/XY Graph"
 	  SourceType		  "XY scope."
 	  ContentPreviewEnabled	  off
@@ -20351,7 +20414,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3695"
+		SIDHighWatermark	"3698"
 		Block {
 		  BlockType		  Inport
 		  Name			  "u"
@@ -20363,20 +20426,20 @@ Model {
 		Block {
 		  BlockType		  Demux
 		  Name			  " Demux "
-		  SID			  "2330::3694"
+		  SID			  "2330::3697"
 		  Ports			  [1, 1]
 		  Position		  [270, 230, 320, 270]
-		  ZOrder		  17
+		  ZOrder		  20
 		  Outputs		  "1"
 		}
 		Block {
 		  BlockType		  S-Function
 		  Name			  " SFunction "
-		  SID			  "2330::3693"
+		  SID			  "2330::3696"
 		  Tag			  "Stateflow S-Function torqueBalancing 15"
 		  Ports			  [1, 2]
 		  Position		  [180, 100, 230, 160]
-		  ZOrder		  16
+		  ZOrder		  19
 		  FunctionName		  "sf_sfun"
 		  PortCounts		  "[1 2]"
 		  SFunctionDeploymentMode off
@@ -20391,9 +20454,9 @@ Model {
 		Block {
 		  BlockType		  Terminator
 		  Name			  " Terminator "
-		  SID			  "2330::3695"
+		  SID			  "2330::3698"
 		  Position		  [460, 241, 480, 259]
-		  ZOrder		  18
+		  ZOrder		  21
 		}
 		Block {
 		  BlockType		  Outport
@@ -20404,7 +20467,7 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  13
+		  ZOrder		  17
 		  SrcBlock		  "u"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
@@ -20412,7 +20475,7 @@ Model {
 		}
 		Line {
 		  Name			  "normU"
-		  ZOrder		  14
+		  ZOrder		  18
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  2
@@ -20420,14 +20483,14 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  15
+		  ZOrder		  19
 		  SrcBlock		  " Demux "
 		  SrcPort		  1
 		  DstBlock		  " Terminator "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  16
+		  ZOrder		  20
 		  SrcBlock		  " SFunction "
 		  SrcPort		  1
 		  DstBlock		  " Demux "
@@ -20532,7 +20595,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3695"
+		SIDHighWatermark	"3698"
 		Block {
 		  BlockType		  Inport
 		  Name			  "u"
@@ -20544,20 +20607,20 @@ Model {
 		Block {
 		  BlockType		  Demux
 		  Name			  " Demux "
-		  SID			  "2332::3694"
+		  SID			  "2332::3697"
 		  Ports			  [1, 1]
 		  Position		  [270, 230, 320, 270]
-		  ZOrder		  17
+		  ZOrder		  20
 		  Outputs		  "1"
 		}
 		Block {
 		  BlockType		  S-Function
 		  Name			  " SFunction "
-		  SID			  "2332::3693"
+		  SID			  "2332::3696"
 		  Tag			  "Stateflow S-Function torqueBalancing 16"
 		  Ports			  [1, 2]
 		  Position		  [180, 100, 230, 160]
-		  ZOrder		  16
+		  ZOrder		  19
 		  FunctionName		  "sf_sfun"
 		  PortCounts		  "[1 2]"
 		  SFunctionDeploymentMode off
@@ -20572,9 +20635,9 @@ Model {
 		Block {
 		  BlockType		  Terminator
 		  Name			  " Terminator "
-		  SID			  "2332::3695"
+		  SID			  "2332::3698"
 		  Position		  [460, 241, 480, 259]
-		  ZOrder		  18
+		  ZOrder		  21
 		}
 		Block {
 		  BlockType		  Outport
@@ -20585,7 +20648,7 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  13
+		  ZOrder		  17
 		  SrcBlock		  "u"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
@@ -20593,7 +20656,7 @@ Model {
 		}
 		Line {
 		  Name			  "normU"
-		  ZOrder		  14
+		  ZOrder		  18
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  2
@@ -20601,14 +20664,14 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  15
+		  ZOrder		  19
 		  SrcBlock		  " Demux "
 		  SrcPort		  1
 		  DstBlock		  " Terminator "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  16
+		  ZOrder		  20
 		  SrcBlock		  " SFunction "
 		  SrcPort		  1
 		  DstBlock		  " Demux "
@@ -22056,7 +22119,7 @@ Model {
 	Annotation {
 	  SID			  "2339"
 	  Name			  " "
-	  Position		  [175, 356, 179, 368]
+	  Position		  [175, 356, 179, 370]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
@@ -22136,7 +22199,7 @@ Model {
 	  Ports			  [4, 1]
 	  Position		  [295, 451, 480, 514]
 	  ZOrder		  223
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Dynamics/Centroidal Momentum"
 	  SourceType		  "Centroidal Momentum"
 	  ContentPreviewEnabled	  off
@@ -22178,7 +22241,7 @@ Model {
 	  Ports			  [4, 1]
 	  Position		  [295, 302, 435, 403]
 	  ZOrder		  222
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Dynamics/Get Bias Forces"
 	  SourceType		  "Get Generalized Bias Forces"
 	  ContentPreviewEnabled	  off
@@ -22195,7 +22258,7 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [295, 189, 435, 256]
 	  ZOrder		  221
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Dynamics/Mass Matrix"
 	  SourceType		  "Mass Matrix"
 	  ContentPreviewEnabled	  off
@@ -22400,6 +22463,36 @@ Model {
       LowerLimit	      "-sat.torque"
     }
     Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      SID		      "3697"
+      Ports		      [1]
+      Position		      [1870, 349, 1900, 381]
+      ZOrder		      692
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1','DataLoggingLimitDataPoints',true,'DataLoggi"
+      "ngSaveFormat','Array','DataLoggingDecimation','1','DataLoggingDecimateData',true),extmgr.Configuration('Visuals'"
+      ",'Time Domain',true,'SerializedDisplays',{struct('MinYLimReal','-75.00000','MaxYLimReal','75.00000','YLabelReal'"
+      ",'','MinYLimMag','0.00000','MaxYLimMag','75.00000','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPh"
+      "ase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrd"
+      "er',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156"
+      "862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0."
+      "0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames"
+      "',{{}},'NumLines',25,'LineNames',{{'Saturation:1','Saturation:2','Saturation:3','Saturation:4','Saturation:5','S"
+      "aturation:6','Saturation:7','Saturation:8','Saturation:9','Saturation:10','Saturation:11','Saturation:12','Satur"
+      "ation:13','Saturation:14','Saturation:15','Saturation:16','Saturation:17','Saturation:18','Saturation:19','Satur"
+      "ation:20','Saturation:21','Saturation:22','Saturation:23','Saturation:24','Saturation:25'}},'ShowContent',true,'"
+      "Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-75.00000','MaxYLimReal','75.00000','YLabelReal',"
+      "'','MinYLimMag','0.00000','MaxYLimMag','75.00000','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPha"
+      "se',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrde"
+      "r',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.7176470"
+      "58823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0"
+      "745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true,'PreviousAutoscale','XY"
+      "'),extmgr.Configuration('Tools','Measurements',true,'Version','2016a')),'Version','2016a','Position',[66 1 1375 "
+      "821])"
+    }
+    Block {
       BlockType		      Reference
       Name		      "Set References"
       SID		      "2354"
@@ -22408,7 +22501,7 @@ Model {
       ZOrder		      549
       BackgroundColor	      "[0.827500, 0.576500, 0.603900]"
       ShowName		      off
-      LibraryVersion	      "1.364"
+      LibraryVersion	      "1.367"
       SourceBlock	      "WBToolboxLibrary/wholeBodyActuators/Set References"
       SourceType	      "Set References"
       ContentPreviewEnabled   off
@@ -22429,7 +22522,7 @@ Model {
       Variant		      off
       System {
 	Name			"controller_QP"
-	Location		[0, 23, 1920, 1076]
+	Location		[65, 24, 1440, 900]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -22441,7 +22534,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"52"
+	ZoomFactor		"43"
 	Block {
 	  BlockType		  Inport
 	  Name			  "impedances"
@@ -22722,7 +22815,7 @@ Model {
 	  Position		  [1230, 900, 1395, 995]
 	  ZOrder		  545
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/DotJ Nu"
 	  SourceType		  "DotJ Nu"
 	  ContentPreviewEnabled	  off
@@ -22739,7 +22832,7 @@ Model {
 	  Ports			  [4, 1]
 	  Position		  [1230, 1009, 1395, 1076]
 	  ZOrder		  547
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/DotJ Nu"
 	  SourceType		  "DotJ Nu"
 	  ContentPreviewEnabled	  off
@@ -22770,7 +22863,7 @@ Model {
 	  Position		  [1005, 1220, 1170, 1275]
 	  ZOrder		  549
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 	  SourceType		  "Jacobian"
 	  ContentPreviewEnabled	  off
@@ -22788,7 +22881,7 @@ Model {
 	  Position		  [1230, 785, 1395, 840]
 	  ZOrder		  544
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 	  SourceType		  "Jacobian"
 	  ContentPreviewEnabled	  off
@@ -22806,7 +22899,7 @@ Model {
 	  Position		  [1230, 850, 1395, 890]
 	  ZOrder		  546
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 	  SourceType		  "Jacobian"
 	  ContentPreviewEnabled	  off
@@ -22868,7 +22961,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "QP"
-	    Location		    [0, 23, 1936, 1131]
+	    Location		    [65, 24, 1440, 900]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -23386,7 +23479,7 @@ Model {
 	      Ports		      [4, 1]
 	      Position		      [915, 71, 1100, 134]
 	      ZOrder		      73
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/wholeBodyModel/Dynamics/Centroidal Momentum"
 	      SourceType	      "Centroidal Momentum"
 	      ContentPreviewEnabled   off
@@ -23402,7 +23495,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [360, 285, 520, 340]
 	      ZOrder		      40
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/wholeBodyModel/Jacobians/Jacobian"
 	      SourceType	      "Jacobian"
 	      ContentPreviewEnabled   off
@@ -23441,7 +23534,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3695"
+		SIDHighWatermark	"3698"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qjErr"
@@ -23462,20 +23555,20 @@ Model {
 		Block {
 		  BlockType		  Demux
 		  Name			  " Demux "
-		  SID			  "3092::3694"
+		  SID			  "3092::3697"
 		  Ports			  [1, 1]
 		  Position		  [270, 230, 320, 270]
-		  ZOrder		  21
+		  ZOrder		  24
 		  Outputs		  "1"
 		}
 		Block {
 		  BlockType		  S-Function
 		  Name			  " SFunction "
-		  SID			  "3092::3693"
+		  SID			  "3092::3696"
 		  Tag			  "Stateflow S-Function torqueBalancing 4"
 		  Ports			  [2, 2]
 		  Position		  [180, 100, 230, 160]
-		  ZOrder		  20
+		  ZOrder		  23
 		  FunctionName		  "sf_sfun"
 		  PortCounts		  "[2 2]"
 		  SFunctionDeploymentMode off
@@ -23490,9 +23583,9 @@ Model {
 		Block {
 		  BlockType		  Terminator
 		  Name			  " Terminator "
-		  SID			  "3092::3695"
+		  SID			  "3092::3698"
 		  Position		  [460, 241, 480, 259]
-		  ZOrder		  22
+		  ZOrder		  25
 		}
 		Block {
 		  BlockType		  Outport
@@ -23503,14 +23596,15 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  25
+		  ZOrder		  30
 		  SrcBlock		  "qjErr"
 		  SrcPort		  1
+		  Points		  [120, 0]
 		  DstBlock		  " SFunction "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  26
+		  ZOrder		  31
 		  SrcBlock		  "Jc"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
@@ -23518,7 +23612,7 @@ Model {
 		}
 		Line {
 		  Name			  "vbEquivalent"
-		  ZOrder		  27
+		  ZOrder		  32
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  2
@@ -23526,14 +23620,14 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  28
+		  ZOrder		  33
 		  SrcBlock		  " Demux "
 		  SrcPort		  1
 		  DstBlock		  " Terminator "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  29
+		  ZOrder		  34
 		  SrcBlock		  " SFunction "
 		  SrcPort		  1
 		  DstBlock		  " Demux "
@@ -23580,7 +23674,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"l_sole_H_root_link"
-		Location		[55, -14, 1376, 778]
+		Location		[65, 24, 1440, 900]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -23647,7 +23741,7 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 20, 295, 80]
 		  ZOrder		  569
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
@@ -23664,11 +23758,11 @@ Model {
 		  Ports			  [2, 1]
 		  Position		  [130, 105, 295, 165]
 		  ZOrder		  572
-		  LibraryVersion	  "1.364"
+		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
 		  ContentPreviewEnabled	  off
-		  frameName		  "'root_link'"
+		  frameName		  "root_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -23866,7 +23960,7 @@ Model {
 	  Position		  [1230, 683, 1390, 727]
 	  ZOrder		  541
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 	  SourceType		  "Forward Kinematics"
 	  ContentPreviewEnabled	  off
@@ -23884,7 +23978,7 @@ Model {
 	  Position		  [1230, 740, 1390, 780]
 	  ZOrder		  543
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 	  SourceType		  "Forward Kinematics"
 	  ContentPreviewEnabled	  off
@@ -23943,7 +24037,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "3695"
+	    SIDHighWatermark	    "3698"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "constraints"
@@ -24171,20 +24265,20 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "2407::3694"
+	      SID		      "2407::3697"
 	      Ports		      [1, 1]
 	      Position		      [270, 675, 320, 715]
-	      ZOrder		      97
+	      ZOrder		      100
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "2407::3693"
+	      SID		      "2407::3696"
 	      Tag		      "Stateflow S-Function torqueBalancing 17"
 	      Ports		      [25, 16]
 	      Position		      [180, 60, 230, 580]
-	      ZOrder		      96
+	      ZOrder		      99
 	      FunctionName	      "sf_sfun"
 	      Parameters	      "gain,reg"
 	      PortCounts	      "[25 16]"
@@ -24284,9 +24378,9 @@ Model {
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "2407::3695"
+	      SID		      "2407::3698"
 	      Position		      [460, 686, 480, 704]
-	      ZOrder		      98
+	      ZOrder		      101
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -24423,175 +24517,175 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      127
+	      ZOrder		      169
 	      SrcBlock		      "constraints"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      128
+	      ZOrder		      170
 	      SrcBlock		      "ROBOT_DOF_FOR_SIMULINK"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      129
+	      ZOrder		      171
 	      SrcBlock		      "ConstraintsMatrix"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      130
+	      ZOrder		      172
 	      SrcBlock		      "bVectorConstraints"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      4
 	    }
 	    Line {
-	      ZOrder		      131
+	      ZOrder		      173
 	      SrcBlock		      "q"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      5
 	    }
 	    Line {
-	      ZOrder		      132
+	      ZOrder		      174
 	      SrcBlock		      "qDes"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      6
 	    }
 	    Line {
-	      ZOrder		      133
+	      ZOrder		      175
 	      SrcBlock		      "v"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      7
 	    }
 	    Line {
-	      ZOrder		      134
+	      ZOrder		      176
 	      SrcBlock		      "M"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      8
 	    }
 	    Line {
-	      ZOrder		      135
+	      ZOrder		      177
 	      SrcBlock		      "h"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      9
 	    }
 	    Line {
-	      ZOrder		      136
+	      ZOrder		      178
 	      SrcBlock		      "H"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      10
 	    }
 	    Line {
-	      ZOrder		      137
+	      ZOrder		      179
 	      SrcBlock		      "intHw"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      11
 	    }
 	    Line {
-	      ZOrder		      138
+	      ZOrder		      180
 	      SrcBlock		      "w_H_l_sole"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      12
 	    }
 	    Line {
-	      ZOrder		      139
+	      ZOrder		      181
 	      SrcBlock		      "w_H_r_sole"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      13
 	    }
 	    Line {
-	      ZOrder		      140
+	      ZOrder		      182
 	      SrcBlock		      "JL"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      14
 	    }
 	    Line {
-	      ZOrder		      141
+	      ZOrder		      183
 	      SrcBlock		      "JR"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      15
 	    }
 	    Line {
-	      ZOrder		      142
+	      ZOrder		      184
 	      SrcBlock		      "dJLv"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      16
 	    }
 	    Line {
-	      ZOrder		      143
+	      ZOrder		      185
 	      SrcBlock		      "dJRv"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      17
 	    }
 	    Line {
-	      ZOrder		      144
+	      ZOrder		      186
 	      SrcBlock		      "xcom"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      18
 	    }
 	    Line {
-	      ZOrder		      145
+	      ZOrder		      187
 	      SrcBlock		      "J_CoM"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      19
 	    }
 	    Line {
-	      ZOrder		      146
+	      ZOrder		      188
 	      SrcBlock		      "desired_x_dx_ddx_CoM"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      20
 	    }
 	    Line {
-	      ZOrder		      147
+	      ZOrder		      189
 	      SrcBlock		      "gainsPCOM"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      21
 	    }
 	    Line {
-	      ZOrder		      148
+	      ZOrder		      190
 	      SrcBlock		      "gainsDCOM"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      22
 	    }
 	    Line {
-	      ZOrder		      149
+	      ZOrder		      191
 	      SrcBlock		      "impedances"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      23
 	    }
 	    Line {
-	      ZOrder		      150
+	      ZOrder		      192
 	      SrcBlock		      "intErrorCoM"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      24
 	    }
 	    Line {
-	      ZOrder		      151
+	      ZOrder		      193
 	      SrcBlock		      "ki_int_qtilde"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -24599,7 +24693,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "tauModel"
-	      ZOrder		      152
+	      ZOrder		      194
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -24608,7 +24702,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "Sigma"
-	      ZOrder		      153
+	      ZOrder		      195
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      3
@@ -24617,7 +24711,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "NA"
-	      ZOrder		      154
+	      ZOrder		      196
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      4
@@ -24626,7 +24720,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "fHdotDesC1C2"
-	      ZOrder		      155
+	      ZOrder		      197
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      5
@@ -24635,7 +24729,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "HessianMatrixQP1Foot"
-	      ZOrder		      156
+	      ZOrder		      198
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      6
@@ -24644,7 +24738,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "gradientQP1Foot"
-	      ZOrder		      157
+	      ZOrder		      199
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      7
@@ -24653,7 +24747,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "ConstraintsMatrixQP1Foot"
-	      ZOrder		      158
+	      ZOrder		      200
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      8
@@ -24662,7 +24756,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "bVectorConstraintsQp1Foot"
-	      ZOrder		      159
+	      ZOrder		      201
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      9
@@ -24671,7 +24765,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "HessianMatrixQP2Feet"
-	      ZOrder		      160
+	      ZOrder		      202
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      10
@@ -24680,7 +24774,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "gradientQP2Feet"
-	      ZOrder		      161
+	      ZOrder		      203
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      11
@@ -24689,7 +24783,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "ConstraintsMatrixQP2Feet"
-	      ZOrder		      162
+	      ZOrder		      204
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      12
@@ -24698,7 +24792,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "bVectorConstraintsQp2Feet"
-	      ZOrder		      163
+	      ZOrder		      205
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      13
@@ -24707,7 +24801,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "errorCoM"
-	      ZOrder		      164
+	      ZOrder		      206
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      14
@@ -24716,7 +24810,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "qTilde"
-	      ZOrder		      165
+	      ZOrder		      207
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      15
@@ -24725,7 +24819,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "f"
-	      ZOrder		      166
+	      ZOrder		      208
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      16
@@ -24733,14 +24827,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      167
+	      ZOrder		      209
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      168
+	      ZOrder		      210
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -24814,7 +24908,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [115, 230, 280, 290]
 	      ZOrder		      578
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 	      SourceType	      "Forward Kinematics"
 	      ContentPreviewEnabled   off
@@ -25624,7 +25718,7 @@ Model {
 	  ZOrder		  551
 	  BackgroundColor	  "[0.513725, 0.850980, 0.670588]"
 	  ShowName		  off
-	  LibraryVersion	  "1.364"
+	  LibraryVersion	  "1.367"
 	  SourceBlock		  "WBToolboxLibrary/wholeBodyStates/Get Limits"
 	  SourceType		  "Get Estimate"
 	  ContentPreviewEnabled	  off
@@ -25664,7 +25758,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "3695"
+	    SIDHighWatermark	    "3698"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "umin"
@@ -25703,20 +25797,20 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "2421::3694"
+	      SID		      "2421::3697"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      44
+	      ZOrder		      47
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "2421::3693"
+	      SID		      "2421::3696"
 	      Tag		      "Stateflow S-Function torqueBalancing 18"
 	      Ports		      [4, 2]
 	      Position		      [180, 102, 230, 203]
-	      ZOrder		      43
+	      ZOrder		      46
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[4 2]"
 	      SFunctionDeploymentMode off
@@ -25731,9 +25825,9 @@ Model {
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "2421::3695"
+	      SID		      "2421::3698"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      45
+	      ZOrder		      48
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -25744,28 +25838,28 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      22
+	      ZOrder		      29
 	      SrcBlock		      "umin"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      23
+	      ZOrder		      30
 	      SrcBlock		      "umax"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      24
+	      ZOrder		      31
 	      SrcBlock		      "u"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      25
+	      ZOrder		      32
 	      SrcBlock		      "tol"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -25773,7 +25867,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "inRange"
-	      ZOrder		      26
+	      ZOrder		      33
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -25781,14 +25875,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      27
+	      ZOrder		      34
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      28
+	      ZOrder		      35
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -25848,7 +25942,7 @@ Model {
       Name		      "synchronizer"
       SID		      "2423"
       Ports		      []
-      Position		      [1507, 173, 1627, 223]
+      Position		      [1642, 173, 1762, 223]
       ZOrder		      546
       ForegroundColor	      "red"
       BackgroundColor	      "green"
@@ -25863,7 +25957,7 @@ Model {
       }
       System {
 	Name			"synchronizer"
-	Location		[0, 23, 1280, 796]
+	Location		[65, 24, 1440, 900]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -25875,7 +25969,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"237"
+	ZoomFactor		"255"
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "GAZEBO_SYNCHRONIZER"
@@ -25887,7 +25981,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "GAZEBO_SYNCHRONIZER"
-	    Location		    [1328, 33, 2547, 1436]
+	    Location		    [65, 24, 1440, 900]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -25913,11 +26007,11 @@ Model {
 	      Name		      "Simulator Synchronizer"
 	      SID		      "2426"
 	      Ports		      []
-	      Position		      [120, 24, 250, 61]
+	      Position		      [120, 34, 250, 71]
 	      ZOrder		      539
 	      ForegroundColor	      "[0.490196, 0.000000, 0.000000]"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Simulator Synchronizer"
 	      SourceType	      "Simulator Synchronizer"
 	      period		      "CONFIG.Ts"
@@ -25993,7 +26087,7 @@ Model {
 	      ForegroundColor	      "[0.916667, 0.916667, 0.916667]"
 	      BackgroundColor	      "gray"
 	      ShowName		      off
-	      LibraryVersion	      "1.364"
+	      LibraryVersion	      "1.367"
 	      SourceBlock	      "WBToolboxLibrary/Utilities/Real Time Synchronizer"
 	      SourceType	      "Real Time Synchronizer"
 	      period		      "CONFIG.Ts"
@@ -26148,8 +26242,18 @@ Model {
       ZOrder		      20
       SrcBlock		      "Saturation"
       SrcPort		      1
-      DstBlock		      "Set References"
-      DstPort		      1
+      Points		      [71, 0]
+      Branch {
+	ZOrder			53
+	Points			[0, 80]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			52
+	DstBlock		"Set References"
+	DstPort			1
+      }
     }
     Line {
       ZOrder		      21
@@ -26265,7 +26369,7 @@ Model {
 }
 #Finite State Machines
 #
-#   Stateflow 80000006
+#   Stateflow 80000009
 #
 #
 Stateflow {
@@ -26275,7 +26379,7 @@ Stateflow {
     created		    "18-Feb-2014 10:14:40"
     isLibrary		    0
     firstTarget		    317
-    sfVersion		    80000006
+    sfVersion		    80000009
   }
   chart {
     id			    2
@@ -26337,6 +26441,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26359,6 +26466,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26381,6 +26491,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26403,6 +26516,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26425,6 +26541,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26447,6 +26566,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26469,6 +26591,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26491,6 +26616,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26593,6 +26721,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26615,6 +26746,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26637,6 +26771,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26659,6 +26796,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26681,6 +26821,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26703,6 +26846,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26725,6 +26871,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26747,6 +26896,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26847,6 +26999,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26867,6 +27022,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26889,6 +27047,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -26911,6 +27072,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27009,6 +27173,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27031,6 +27198,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27053,6 +27223,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27152,6 +27325,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27174,6 +27350,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27196,6 +27375,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27216,6 +27398,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27238,6 +27423,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27260,6 +27448,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27364,6 +27555,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27386,6 +27580,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27408,6 +27605,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27430,6 +27630,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27452,6 +27655,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27474,6 +27680,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27496,6 +27705,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27518,6 +27730,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27540,6 +27755,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27562,6 +27780,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27584,6 +27805,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27606,6 +27830,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27628,6 +27855,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27650,6 +27880,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27672,6 +27905,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27695,6 +27931,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27717,6 +27956,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27739,6 +27981,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27761,6 +28006,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27860,6 +28108,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27882,6 +28133,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27904,6 +28158,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27924,6 +28181,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27946,6 +28206,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -27968,6 +28231,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28070,6 +28336,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28092,6 +28361,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28114,6 +28386,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28136,6 +28411,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28158,6 +28436,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28180,6 +28461,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28202,6 +28486,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28224,6 +28511,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28326,6 +28616,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28348,6 +28641,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28370,6 +28666,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28392,6 +28691,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28414,6 +28716,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28436,6 +28741,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28458,6 +28766,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28480,6 +28791,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28586,6 +28900,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28608,6 +28925,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28630,6 +28950,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28652,6 +28975,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28674,6 +29000,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28696,6 +29025,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28798,6 +29130,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28820,6 +29155,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28842,6 +29180,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28864,6 +29205,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28886,6 +29230,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28908,6 +29255,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28930,6 +29280,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -28952,6 +29305,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29051,6 +29407,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29073,6 +29432,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29095,6 +29457,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29115,6 +29480,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29137,6 +29505,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29159,6 +29530,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29263,6 +29637,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29285,6 +29662,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29307,6 +29687,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29329,6 +29712,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29351,6 +29737,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29373,6 +29762,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29395,6 +29787,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29417,6 +29812,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29439,6 +29837,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29461,6 +29862,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29483,6 +29887,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29505,6 +29912,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29527,6 +29937,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29549,6 +29962,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29572,6 +29988,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29594,6 +30013,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29616,6 +30038,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29638,6 +30063,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29660,6 +30088,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29682,6 +30113,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29704,6 +30138,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29806,6 +30243,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29828,6 +30268,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29850,6 +30293,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29872,6 +30318,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29894,6 +30343,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29916,6 +30368,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29938,6 +30393,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -29960,6 +30418,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30057,6 +30518,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30077,6 +30541,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30174,6 +30641,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30194,6 +30664,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30305,6 +30778,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30327,6 +30803,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30349,6 +30828,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30371,6 +30853,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30391,6 +30876,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30413,6 +30901,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30435,6 +30926,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30457,6 +30951,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30479,6 +30976,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30501,6 +31001,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30523,6 +31026,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30545,6 +31051,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30567,6 +31076,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30589,6 +31101,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30611,6 +31126,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30633,6 +31151,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30652,6 +31173,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30674,6 +31198,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30696,6 +31223,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30718,6 +31248,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30740,6 +31273,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30762,6 +31298,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30784,6 +31323,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30806,6 +31348,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30828,6 +31373,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30850,6 +31398,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30872,6 +31423,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30894,6 +31448,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30916,6 +31473,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30938,6 +31498,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30960,6 +31523,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -30982,6 +31548,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31004,6 +31573,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31026,6 +31598,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31048,6 +31623,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31070,6 +31648,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31092,6 +31673,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31115,6 +31699,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31137,6 +31724,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31159,6 +31749,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31181,6 +31774,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31203,6 +31799,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31310,6 +31909,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31332,6 +31934,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31351,6 +31956,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31371,6 +31979,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31393,6 +32004,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31491,6 +32105,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31513,6 +32130,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31611,6 +32231,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31633,6 +32256,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31731,6 +32357,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31753,6 +32382,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31851,6 +32483,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31873,6 +32508,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31971,6 +32609,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -31993,6 +32634,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32091,6 +32735,9 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32113,6 +32760,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32215,6 +32865,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32237,6 +32890,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32259,6 +32915,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32281,6 +32940,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32303,6 +32965,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32325,6 +32990,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32347,6 +33015,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
@@ -32369,6 +33040,9 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
     }
     dataType		    "Inherit: Same as Simulink"
   }
