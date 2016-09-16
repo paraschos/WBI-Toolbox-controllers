@@ -32,7 +32,7 @@ gain.SmoothingTimeGainScheduling = 0.02;
 
 %% PARAMETERS FOR TWO FEET ON GROUND
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
-    gain.PCOM                 = diag([50    50  50]);
+    gain.PCOM                 = diag([60    60  60]);
     gain.ICOM                 = diag([  0    0   0]);
     gain.DCOM                 = 0*sqrt(gain.PCOM);
 
@@ -44,14 +44,14 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
     impTorso            = [10   10   20
                             0    0    0]; 
                         
-    impArms             = [10   10    10    8  8 
-                            0    0     0    0  0 ];
+    impArms             = [10   10    10    10  10 
+                            0    0     0     0   0 ];
                         
-    impLeftLeg          = [ 30   30   30    60     10  10
-                             0    0    0     0      0   0]; 
+    impLeftLeg          = [ 30   30   30    60   10  10
+                             0    0    0     0    0   0]; 
 
-    impRightLeg         = [ 30   30   30    60     10  10
-                             0    0    0     0      0   0]; 
+    impRightLeg         = [ 30   30   30    60   10  10
+                             0    0    0     0    0   0]; 
     
                          
     intTorso            = [0   0    0]; 
@@ -72,7 +72,7 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 1)
     gain.DCOM                 = diag([  0    0   0]);
 
     gain.PAngularMomentum     = 1 ;
-    gain.DAngularMomentum     = 1 ;
+    gain.DAngularMomentum     = 2*sqrt(gain.PAngularMomentum);
 
     % Impedances acting in the null space of the desired contact forces 
     
@@ -89,14 +89,14 @@ if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 1)
     impTorso            = [20   20   30
                             0    0    0]*scalingImp;
                         
-    impArms             = [15   15    15    8   8
+    impArms             = [15   15    15   10  10
                             0    0     0    0   0 ]*scalingImp;
                         
-    impLeftLeg          = [ 30   30   30   120     10  10
-                             0    0    0     0      0   0]*scalingImp; 
+    impLeftLeg          = [ 30   30   30   120   10  10
+                             0    0    0     0    0   0]*scalingImp; 
 
-    impRightLeg         = [ 30   30   30    60     10  10
-                             0    0    0     0      0   0]*scalingImp; 
+    impRightLeg         = [ 30   30   30    60   10  10
+                             0    0    0     0    0   0]*scalingImp; 
                             
 end
 
@@ -121,10 +121,10 @@ forceFrictionCoefficient     = 1;%1/3;
 torsionalFrictionCoefficient = 2/150;
 
 %physical size of foot
-phys.footSize                = [ -0.16  0.16  ;   % xMin, xMax
+phys.footSize                = [ -0.16  0.16   ;   % xMin, xMax
                                  -0.075 0.075 ];   % yMin, yMax    
                              
-gain.footSize                = [ -0.16  0.16  ;   % xMin, xMax
+gain.footSize                = [ -0.16  0.16   ;   % xMin, xMax
                                  -0.075 0.075 ];   % yMin, yMax    
 
 fZmin                        = 10;

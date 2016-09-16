@@ -10,8 +10,7 @@ function [CoMDes,qDes,constraints, currentState,impedances,w_H_b] = ...
         state         = sm.stateAt0;
         fixedLink     = 1;
         w_H_fixedLink = eye(4);
-    end
-    
+    end    
     
 %     w_H_fixedLink  = eye(4);
 %     

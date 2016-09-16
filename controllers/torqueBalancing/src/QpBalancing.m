@@ -36,7 +36,6 @@ block.SetPreCompOutPortInfoToDynamic;
 % %3 % [Aeq,beq]                   
 % %4 % [x0;lb;ub]                  
 
-
 % Definition of port sizes for QP 2 feet
 block.InputPort(1).Dimensions        = [ 1  2];   % LEFT_RIGHT_FOOT_IN_CONTACT
 block.InputPort(2).Dimensions        = [12 12];   % HessianMatrixQP2Feet               
@@ -68,7 +67,6 @@ for i =1:block.NumOutputPorts
     block.OutputPort(i).Complexity  = 'Real';
 end
 
-
 % Register parameters
 block.NumDialogPrms     = 0;
 
@@ -79,7 +77,6 @@ block.NumDialogPrms     = 0;
 %  [-1, 0]               : Inherited sample time
 %  [-2, 0]               : Variable sample time
 block.SampleTimes = [-1 0];
-
 
 % Specify the block simStateCompliance. The allowed values are:
 %    'UnknownSimState', < The default setting; warn and assume DefaultSimState
@@ -135,9 +132,7 @@ function SetInputPortSamplingMode(block, idx, fd)
 %%
 % function InitializeConditions(block)
 
-
 % end InitializeConditions
-
 
 %%
 %% Start:

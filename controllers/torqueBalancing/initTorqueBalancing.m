@@ -23,7 +23,7 @@ clear; clc;
 % gazebo -slibgazebo_yarp_clock.so
 % 
 % and set the environmental variable YARP_ROBOT_NAME = icubGazeboSim.
-% To do this, you can uncomment the 
+% To do this, you can uncomment the following line:
 
 % setenv('YARP_ROBOT_NAME','iCubGenova01');
 % setenv('YARP_ROBOT_NAME','iCubGenova02');
@@ -41,17 +41,17 @@ CONFIG.SIMULATION_TIME     = inf;
 % 'YOGA': the robot will perform the YOGA++ demo. The associated
 %         configuration parameters can be found under the folder
 %
-%         robots/YARP_ROBOT_NAME/initStateMachine.m
+%         app/robots/YARP_ROBOT_NAME/initStateMachine.m
 %   
 % 'COORDINATOR': the robot can either stay still, or follow a
 %                center-of-mass trajectory, or follow references for the
 %                joints. The associated configuration parameters can be 
 %                found under the folder
 %
-%               robots/YARP_ROBOT_NAME/initRegGen.m
+%         app/robots/YARP_ROBOT_NAME/initRegGen.m
 % 
 % 'WALKING': under development.
-SM.SM_TYPE                    = 'COORDINATOR';
+SM.SM_TYPE                    = 'YOGA';
 
 % CONFIG.SCOPES: if set to true, all visualizers for debugging are active
 CONFIG.SCOPES.ALL             = true;
@@ -105,27 +105,24 @@ CONFIG.CORRECT_NECK_IMU    = true;
 % loaded for the postural and CoM.
 CONFIG.ONSOFTCARPET        = false;
 
+PORTS.IMU                  = '/icub/inertial';
+PORTS.COM_DES              = ['/' WBT_modelName '/comDes:i'];
+PORTS.Q_DES                = ['/' WBT_modelName '/qDes:i'];
+PORTS.WBDT_LEFTLEG_EE      = '/wholeBodyDynamicsTree/left_leg/cartesianEndEffectorWrench:o';
+PORTS.WBDT_RIGHTLEG_EE     = '/wholeBodyDynamicsTree/right_leg/cartesianEndEffectorWrench:o';
+
 % CONFIG.USE_QP_SOLVER: if set to true, a QP solver is used to account for 
 % inequality constraints of contact wrenches
-PORTS.IMU       = '/icub/inertial';
+CONFIG.USE_QP_SOLVER       = true; 
 
-PORTS.COM_DES   = ['/' WBT_modelName '/comDes:i'];
-PORTS.Q_DES     = ['/' WBT_modelName '/qDes:i'];
+CONFIG.Ts                  = 0.01;  % Controller period [s]
 
-PORTS.WBDT_LEFTLEG_EE  = '/wholeBodyDynamicsTree/left_leg/cartesianEndEffectorWrench:o';
-PORTS.WBDT_RIGHTLEG_EE = '/wholeBodyDynamicsTree/right_leg/cartesianEndEffectorWrench:o';
+CONFIG.ON_GAZEBO           = false;
+baseToWorldRotationPort    = ['/' WBT_modelName '/floatingBaseRotationMatrix:i'];
 
-CONFIG.USE_QP_SOLVER     = true; 
-
-CONFIG.Ts                = 0.01;  %Controller period [s]
-
-CONFIG.ON_GAZEBO         = false;
-baseToWorldRotationPort  = ['/' WBT_modelName '/floatingBaseRotationMatrix:i'];
-
-run(strcat('app/robots/',getenv('YARP_ROBOT_NAME'),'/gains.m')); 
 addpath('./src/')
 addpath('../utilityMatlabFunctions/')
-
+run(strcat('app/robots/',getenv('YARP_ROBOT_NAME'),'/gains.m')); 
 
 robotSpecificReferences  = fullfile('app/robots',getenv('YARP_ROBOT_NAME'),'initRefGen.m');
 run(robotSpecificReferences);
@@ -134,8 +131,7 @@ SM.SM.MASK.COORDINATOR   = bin2dec('001');
 SM.SM.MASK.YOGA          = bin2dec('010');
 SM.SM.MASK.WALKING       = bin2dec('100');
 
-
-SM.SM_TYPE_BIN = SM.SM.MASK.COORDINATOR;
+SM.SM_TYPE_BIN   = SM.SM.MASK.COORDINATOR;
 robotSpecificFSM = fullfile('app/robots',getenv('YARP_ROBOT_NAME'),'initStateMachine.m');
 run(robotSpecificFSM);
 
@@ -149,6 +145,6 @@ elseif strcmpi(SM.SM_TYPE, 'WALKING')
     run(robotSpecificFSM);
 end
 
-[ConstraintsMatrix,bVectorConstraints]= constraints(forceFrictionCoefficient,numberOfPoints,torsionalFrictionCoefficient,gain.footSize,fZmin);
+[ConstraintsMatrix,bVectorConstraints] = constraints(forceFrictionCoefficient,numberOfPoints,torsionalFrictionCoefficient,gain.footSize,fZmin);
 
 

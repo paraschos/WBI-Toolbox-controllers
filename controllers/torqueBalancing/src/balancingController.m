@@ -24,15 +24,14 @@ function [tauModel,Sigma,NA,f_HDot, ...
               q,qDes,v, M, h , H,intHw,w_H_l_sole, w_H_r_sole, JL,JR, dJLv,dJRv, xcom,J_CoM, desired_x_dx_ddx_CoM,...
               gainsPCOM,gainsDCOM,impedances,intErrorCoM,ki_int_qtilde,reg,gain)
     %BALANCING CONTROLLER
-
+    
     %% DEFINITION OF CONTROL AND DYNAMIC VARIABLES
-    pos_leftFoot   = w_H_l_sole(1:3,4);
-    w_R_l_sole     = w_H_l_sole(1:3,1:3);
+    pos_leftFoot    = w_H_l_sole(1:3,4);
+    w_R_l_sole      = w_H_l_sole(1:3,1:3);
 
     pos_rightFoot   = w_H_r_sole(1:3,4);
     w_R_r_sole      = w_H_r_sole(1:3,1:3);
 
-    
     gainsICOM       = zeros(3,1);
     dampings        = gain.dampings;
 
@@ -108,7 +107,6 @@ function [tauModel,Sigma,NA,f_HDot, ...
     JcMinvSt        = JcMinv*St;
     JcMinvJct       = JcMinv*transpose(Jc);
     JBar            = transpose(Jc(:,7:end)) - Mbj'/Mb*transpose(Jc(:,1:6)); % multiplier of f in tau0
-
     
     PInv_JcMinvSt   = pinvDamped(JcMinvSt,reg.pinvDamp); 
     % nullJcMinvSt  = null space of PInv_JcMinvSt
@@ -116,7 +114,6 @@ function [tauModel,Sigma,NA,f_HDot, ...
 
     % Mbar is the mass matrix associated with the joint dynamics, i.e.
     Mbar            = Mj-Mbj'/Mb*Mbj;
-
     NLMbar          = nullJcMinvSt*Mbar;
     
     % Adaptation of control gains for back compatibility with older
@@ -225,7 +222,7 @@ function [tauModel,Sigma,NA,f_HDot, ...
 
     %% DEBUG DIAGNOSTICS
     % Unconstrained solution for the problem 1)
-    f0                        = -pinvDamped(SigmaNA,reg.pinvDamp*1e-5)*(tauModel + Sigma*f_HDot);
+    %f0                       = -pinvDamped(SigmaNA,reg.pinvDamp*1e-5)*(tauModel + Sigma*f_HDot);
     % Unconstrained contact wrenches
     f                         = zeros(12,1);%pinvA*(HDotDes - gravityWrench) + NA*f0*constraints(1)*constraints(2); 
     % Error on the center of mass

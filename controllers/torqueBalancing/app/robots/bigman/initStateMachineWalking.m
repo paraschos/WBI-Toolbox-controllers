@@ -1,7 +1,7 @@
 %% OVERWRITING SOME OF THE PARAMETERS CONTAINED IN gains.m WHEN USING FSM
 if CONFIG.USE_SM
     reg.pinvDamp    = 0.0001;
-    sat.torque = 50;
+    sat.torque      = 50;
 
     references.joints.smoothingTime    = 5;
     references.com.smoothingTime       = references.joints.smoothingTime;
@@ -17,10 +17,10 @@ if CONFIG.USE_SM
     gain.PAngularMomentum  = 1 ;
 
     %                   %   TORSO  %%      LEFT ARM   %%      RIGHT ARM   %%         LEFT LEG            %%         RIGHT LEG           %% 
-    gain.impedances  = [10   10   20, 10   10    10    8, 10   10    10    8, 30   30   20    20     10  10, 30   50   30    60      5   5    % state ==  1  WATING FOR REFERENCES
-                        10   10   20, 10   10    10    8, 10   10    10    8, 30   30   20    20     10  10, 30   50   30    60      5   5    % state ==  2  TWO FEET BALANCING
-                        10   10   20, 10   10    10    8, 10   10    10    8, 30   30   20    20     10  10, 30   50   30    60      5   5    % state ==  3  LEFT FOOT BALANCING
-                        10   10   20, 10   10    10    8, 10   10    10    8, 30   50   30    60      5   5, 30   30   20    20     10  10];  % state ==  4  RIGHT FOOT BALANCING
+    gain.impedances  = [10   10   20, 10   10    10    8 8, 10   10    10    8 8, 30   30   20    20     10  10, 30   50   30    60      5   5    % state ==  1  WATING FOR REFERENCES
+                        10   10   20, 10   10    10    8 8, 10   10    10    8 8, 30   30   20    20     10  10, 30   50   30    60      5   5    % state ==  2  TWO FEET BALANCING
+                        10   10   20, 10   10    10    8 8, 10   10    10    8 8, 30   30   20    20     10  10, 30   50   30    60      5   5    % state ==  3  LEFT FOOT BALANCING
+                        10   10   20, 10   10    10    8 8, 10   10    10    8 8, 30   50   30    60      5   5, 30   30   20    20     10  10];  % state ==  4  RIGHT FOOT BALANCING
                         
 
 gain.dampings           = 0.0*sqrt(gain.impedances(4,:));
