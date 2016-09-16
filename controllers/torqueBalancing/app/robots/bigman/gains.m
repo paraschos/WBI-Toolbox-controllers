@@ -121,11 +121,11 @@ forceFrictionCoefficient     = 1;%1/3;
 torsionalFrictionCoefficient = 2/150;
 
 %physical size of foot
-phys.footSize                = [ -0.07 0.07   ;   % xMin, xMax
-                                 -0.03 0.03 ]*2.5;  % yMin, yMax    
+phys.footSize                = [ -0.16  0.16  ;   % xMin, xMax
+                                 -0.075 0.075 ];   % yMin, yMax    
                              
-gain.footSize                = [ -0.07 0.07   ;   % xMin, xMax
-                                 -0.03 0.03 ]*2.5;  % yMin, yMax    
+gain.footSize                = [ -0.16  0.16  ;   % xMin, xMax
+                                 -0.075 0.075 ];   % yMin, yMax    
 
 fZmin                        = 10;
 
