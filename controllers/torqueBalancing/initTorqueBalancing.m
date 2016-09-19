@@ -51,7 +51,8 @@ CONFIG.SIMULATION_TIME     = inf;
 %         app/robots/YARP_ROBOT_NAME/initRegGen.m
 % 
 % 'WALKING': under development.
-SM.SM_TYPE                    = 'YOGA';
+% SM.SM_TYPE                    = 'COORDINATOR';
+SM.SM_TYPE                   = 'YOGA';
 
 % CONFIG.SCOPES: if set to true, all visualizers for debugging are active
 CONFIG.SCOPES.ALL             = true;

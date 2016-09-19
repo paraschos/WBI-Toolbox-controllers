@@ -8,7 +8,7 @@ references.joints.points               = 0;
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2 )
     if (CONFIG.DEMO_MOVEMENTS)
         references.com.directionOfOscillation  = [0;1;0];
-        references.com.amplitudeOfOscillation  = 0.04;
+        references.com.amplitudeOfOscillation  = 0.035;
         references.com.frequencyOfOscillation  = 0.3;
     else
         references.com.directionOfOscillation  = [0;0;0];

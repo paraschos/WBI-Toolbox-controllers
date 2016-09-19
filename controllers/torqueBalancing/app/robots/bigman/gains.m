@@ -20,7 +20,7 @@ dump.left_wrench_port  = '/bigman/left_leg_ft/analog:o/forceTorque';
 dump.right_wrench_port = '/bigman/right_leg_ft/analog:o/forceTorque';
 
 references.smoothingTimeMinJerkComDesQDes    = 3.0;
-sat.torque                                   = 200;
+sat.torque                                   = 2000;
 CONFIG.smoothingTimeTranDynamics             = 0.05;
 
 ROBOT_DOF_FOR_SIMULINK  = eye(ROBOT_DOF);
@@ -32,7 +32,7 @@ gain.SmoothingTimeGainScheduling = 0.02;
 
 %% PARAMETERS FOR TWO FEET ON GROUND
 if (sum(CONFIG.LEFT_RIGHT_FOOT_IN_CONTACT) == 2)
-    gain.PCOM                 = diag([60    60  60]);
+    gain.PCOM                 = diag([50  50  50]);
     gain.ICOM                 = diag([  0    0   0]);
     gain.DCOM                 = 0*sqrt(gain.PCOM);
 

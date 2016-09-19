@@ -160,7 +160,13 @@ function Outputs(block)
 
 
     CONTACT_THRESHOLD = 0.1;
-    
+    persistent f02F;
+    persistent f01F;
+
+    if isempty(f02F) || isempty(f01F) 
+        f02F       = zeros(12,1);
+        f01F       = zeros(6,1);
+    end 
     LEFT_RIGHT_FOOT_IN_CONTACT = block.InputPort(1).Data;
     exitFlagQP                 = 0;
     f0OneFoot                  = zeros(6,1);
@@ -175,12 +181,14 @@ function Outputs(block)
         if USE_QPO_SOLVER 
             [f02Feet,~,exitFlagQP,~,~,~] = qpOASES(HessianMatrixQP2Feet,gradientQP2Feet',ConstraintsMatrixQP2Feet,[],[],[],bVectorConstraintsQp2Feet');           
             if exitFlagQP ~= 0
-                f02Feet = - inv(HessianMatrixQP2Feet)*gradientQP2Feet';
+                %f02Feet = - inv(HessianMatrixQP2Feet)*gradientQP2Feet';
+                f02Feet = f02F;
             end
         else
             exitFlagQP                 = 1;
             f02Feet = - inv(HessianMatrixQP2Feet)*gradientQP2Feet';
         end
+        f02F = f02Feet;
             
     elseif sum(LEFT_RIGHT_FOOT_IN_CONTACT) > (1 - CONTACT_THRESHOLD) 
         HessianMatrixQP1Foot       = block.InputPort(7).Data;
@@ -192,8 +200,10 @@ function Outputs(block)
             [f0OneFoot,~,exitFlagQP,~,~,~] = qpOASES(HessianMatrixQP1Foot,gradientQP1Foot',ConstraintsMatrixQP1Foot,[],[],[],bVectorConstraintsQP1Foot');           
 
            if exitFlagQP ~= 0
-                f0OneFoot = - inv(HessianMatrixQP1Foot)*gradientQP1Foot';
+                %f0OneFoot = - inv(HessianMatrixQP1Foot)*gradientQP1Foot';
+                f0OneFoot = f01F;
            end
+           f01F = f0OneFoot;
         else
             exitFlagQP= 1;
             f0OneFoot = - inv(HessianMatrixQP1Foot)*gradientQP1Foot';

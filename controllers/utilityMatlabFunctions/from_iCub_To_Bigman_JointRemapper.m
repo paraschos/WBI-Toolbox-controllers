@@ -1,13 +1,14 @@
-function qjRemapped = fromBigmanToiCubRemapper(qj,ndof)
-% fromBigmanToiCubRemapper maps the joints conventions from the bigman model 
-%                          to the iCub model. This is then used to set the 
-%                          correct joints references while performing the 
-%                          YOGA++ demo.
+function qjRemapped = from_iCub_To_Bigman_JointRemapper(qj,ndof)
+% from_iCub_To_Bigman_JointRemapper maps the joints conventions from the
+%                                   bigman model to the iCub model. This is
+%                                   then used to set the correct joints 
+%                                   references while performing the YOGA++ 
+%                                   demo.
 %
-% [qjRemapped] = fromBigmanToiCubRemapper(qj,ndof) takes as input the joint
-% position qj and the number of DoF used for controlling the robot. The 
-% output is a vector of the same size, where some signs
-% have been changed according to the iCub conventions.
+% [qjRemapped] = from_iCub_To_Bigman_JointRemapper(qj,ndof) takes as input 
+% the joint position qj and the number of DoF used for controlling the 
+% robot. The output is a vector of the same size, where some signs have been 
+% changed according to the iCub conventions.
 %
 % Author : Gabriele Nava (gabriele.nava@iit.it)
 % Genova, May 2016
@@ -34,9 +35,10 @@ elseif ndof == 25
 end
 
 %% Remapping according to the iCub conventions
-% torso: [yaw roll pitch]
-torso(1) = -torso(1);
+% torso: [pitch roll yaw]
+% torso(1) = -torso(1);
 torso(2) = -torso(2);
+torso(3) = -torso(3);
 
 % lArm: [sh_pitch sh_roll sh_yaw elbow forearm]
 lArm(3)  = -lArm(3);
