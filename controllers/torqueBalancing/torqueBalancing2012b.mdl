@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.3116"
+    ComputedModelVersion    "1.3124"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [65.0, 24.0, 1375.0, 876.0]
+      Location		      [65.0, 24.0, 1301.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -53,9 +53,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1341.0, 731.0]
-	ZoomFactor		[0.70795568982880164]
-	Offset			[195.40682788051208, 115.22475106685636]
+	Extents			[1267.0, 599.0]
+	ZoomFactor		[0.57502517623363547]
+	Offset			[-51.690893169877427, 110.65323992994752]
       }
     }
   }
@@ -63,11 +63,11 @@ Model {
   Creator		  "daniele"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "DanielePucci"
+  LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Sep 16 10:51:58 2016"
-  RTWModifiedTimeStamp	  395923917
-  ModelVersionFormat	  "1.%<AutoIncrement:3116>"
+  LastModifiedDate	  "Tue Sep 20 17:02:49 2016"
+  RTWModifiedTimeStamp	  396291768
+  ModelVersionFormat	  "1.%<AutoIncrement:3124>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -989,7 +989,7 @@ Model {
   }
   System {
     Name		    "torqueBalancing2012b"
-    Location		    [65, 24, 1440, 900]
+    Location		    [65, 24, 1366, 768]
     Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1001,15 +1001,15 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "71"
+    ZoomFactor		    "58"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "3739"
+    SIDHighWatermark	    "3750"
     Block {
       BlockType		      SubSystem
       Name		      "DesValues"
       SID		      "2087"
       Ports		      [0, 10]
-      Position		      [320, 188, 510, 827]
+      Position		      [135, 188, 325, 827]
       ZOrder		      548
       BackgroundColor	      "orange"
       Priority		      "-10"
@@ -1017,7 +1017,7 @@ Model {
       Variant		      off
       System {
 	Name			"DesValues"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1029,7 +1029,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"52"
+	ZoomFactor		"49"
 	Block {
 	  BlockType		  Reference
 	  Name			  "Compare\nTo Zero"
@@ -1201,7 +1201,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Internal coordinator"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1213,7 +1213,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "97"
+	    ZoomFactor		    "91"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "jointAngles"
@@ -1391,7 +1391,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"nu"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -1403,7 +1403,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"157"
+		ZoomFactor		"160"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -1520,7 +1520,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "JcLeftFoot"
@@ -1763,7 +1763,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"refGen"
-		Location		[357, 110, 2276, 1165]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -1775,7 +1775,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"307"
+		ZoomFactor		"204"
 		Block {
 		  BlockType		  Inport
 		  Name			  "xCom(0)"
@@ -1850,7 +1850,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "xCom0"
@@ -2383,7 +2383,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -2923,7 +2923,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"xCom"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -2935,7 +2935,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"305"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "w_H_b"
@@ -3396,7 +3396,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "3739"
+	    SIDHighWatermark	    "3750"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "w_H_b_vectorised"
@@ -3721,7 +3721,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Scopes  "
-	    Location		    [0, 23, 1936, 1131]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -3733,7 +3733,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "153"
+	    ZoomFactor		    "96"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "smoothingTimeComAndJoints"
@@ -3815,17 +3815,15 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "23-DoFs WBI to YARP1"
-	      SID		      "3299"
+	      Name		      "25-DoFs WBI to yarp"
+	      SID		      "3743"
 	      Ports		      [1, 5]
-	      Position		      [485, 513, 595, 617]
-	      ZOrder		      651
-	      BackgroundColor	      "lightBlue"
-	      DropShadow	      on
-	      ShowName		      off
+	      Position		      [470, 218, 590, 312]
+	      ZOrder		      659
+	      BackgroundColor	      "[0.180000, 0.348000, 0.600000]"
 	      LibraryVersion	      "1.367"
-	      SourceBlock	      "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	      SourceType	      ""
+	      SourceBlock	      "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	      SourceType	      "WBI to YARP"
 	      Port {
 		PortNumber		1
 		Name			"torso"
@@ -3835,44 +3833,39 @@ Model {
 	      Port {
 		PortNumber		2
 		Name			"left_arm"
-		PropagatedSignals	"leftArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		3
 		Name			"right_arm"
-		PropagatedSignals	"rightArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		4
 		Name			"left_leg"
-		PropagatedSignals	"leftLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		5
 		Name			"right_leg"
-		PropagatedSignals	"rightLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "23-DoFs WBI to YARP5"
-	      SID		      "3174"
+	      Name		      "25-DoFs WBI to yarp1"
+	      SID		      "3744"
 	      Ports		      [1, 5]
-	      Position		      [485, 213, 595, 317]
-	      ZOrder		      640
-	      BackgroundColor	      "lightBlue"
-	      DropShadow	      on
+	      Position		      [470, 518, 590, 612]
+	      ZOrder		      660
+	      BackgroundColor	      "[0.180000, 0.348000, 0.600000]"
 	      LibraryVersion	      "1.367"
-	      SourceBlock	      "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	      SourceType	      ""
+	      SourceBlock	      "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	      SourceType	      "WBI to YARP"
 	      Port {
 		PortNumber		1
 		Name			"torso"
@@ -3882,28 +3875,24 @@ Model {
 	      Port {
 		PortNumber		2
 		Name			"left_arm"
-		PropagatedSignals	"leftArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		3
 		Name			"right_arm"
-		PropagatedSignals	"rightArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		4
 		Name			"left_leg"
-		PropagatedSignals	"leftLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		5
 		Name			"right_leg"
-		PropagatedSignals	"rightLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -4238,7 +4227,7 @@ Model {
 	      SrcBlock		      "impedances"
 	      SrcPort		      1
 	      Points		      [0, 45]
-	      DstBlock		      "23-DoFs WBI to YARP5"
+	      DstBlock		      "25-DoFs WBI to yarp"
 	      DstPort		      1
 	    }
 	    Line {
@@ -4253,7 +4242,7 @@ Model {
 	    Line {
 	      Name		      "left_leg"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      4
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      4
@@ -4261,7 +4250,7 @@ Model {
 	    Line {
 	      Name		      "right_leg"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      5
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      5
@@ -4269,7 +4258,7 @@ Model {
 	    Line {
 	      Name		      "right_arm"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      3
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      3
@@ -4277,7 +4266,7 @@ Model {
 	    Line {
 	      Name		      "torso"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      1
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      1
@@ -4285,7 +4274,7 @@ Model {
 	    Line {
 	      Name		      "left_arm"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      2
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      2
@@ -4300,7 +4289,7 @@ Model {
 	    Line {
 	      Name		      "left_leg"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      4
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      4
@@ -4308,7 +4297,7 @@ Model {
 	    Line {
 	      Name		      "right_leg"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      5
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      5
@@ -4316,7 +4305,7 @@ Model {
 	    Line {
 	      Name		      "right_arm"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      3
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      3
@@ -4324,7 +4313,7 @@ Model {
 	    Line {
 	      Name		      "torso"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      1
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      1
@@ -4332,7 +4321,7 @@ Model {
 	    Line {
 	      Name		      "left_arm"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      2
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      2
@@ -4377,7 +4366,7 @@ Model {
 	    Line {
 	      SrcBlock		      "Gain"
 	      SrcPort		      1
-	      DstBlock		      "23-DoFs WBI to YARP1"
+	      DstBlock		      "25-DoFs WBI to yarp1"
 	      DstPort		      1
 	    }
 	    Line {
@@ -4447,7 +4436,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "State Machine"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -4459,7 +4448,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "85"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "jointAngles"
@@ -4616,7 +4605,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"Visualise extrnal wrenches  "
-		Location		[0, 23, 1853, 1076]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -4628,7 +4617,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"303"
+		ZoomFactor		"202"
 		Block {
 		  BlockType		  Inport
 		  Name			  "wL_WBDT"
@@ -4918,7 +4907,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"nu"
-		Location		[0, 23, 1936, 1131]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -4930,7 +4919,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"241"
+		ZoomFactor		"160"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -5047,7 +5036,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "JcLeftFoot"
@@ -5354,7 +5343,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3739"
+		SIDHighWatermark	"3750"
 		SIDPrevWatermark	"9"
 		Block {
 		  BlockType		  Inport
@@ -5773,7 +5762,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"visualise inertial"
-		Location		[0, 23, 1936, 1131]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -5785,7 +5774,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"178"
+		ZoomFactor		"119"
 		Block {
 		  BlockType		  Inport
 		  Name			  "jointAngles"
@@ -5855,7 +5844,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf1"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -5867,7 +5856,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -5986,7 +5975,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -6207,7 +6196,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf2"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -6219,7 +6208,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -6338,7 +6327,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -6559,7 +6548,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf3"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -6571,7 +6560,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -6690,7 +6679,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -6911,7 +6900,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf4"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -6923,7 +6912,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -7042,7 +7031,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -7263,7 +7252,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf5"
-		    Location		    [0, 23, 1853, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -7275,7 +7264,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "300"
+		    ZoomFactor		    "237"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -7393,7 +7382,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -7639,7 +7628,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf6"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -7651,7 +7640,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -7770,7 +7759,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
@@ -9194,7 +9183,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -10060,7 +10049,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -11062,7 +11051,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -11928,7 +11917,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -12468,7 +12457,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"xCom"
-		Location		[0, 23, 1920, 1076]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -12480,7 +12469,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"464"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -12585,7 +12574,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"xCom1"
-		Location		[0, 23, 1920, 1076]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -12597,7 +12586,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"464"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -13148,7 +13137,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "State Machine Walking"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -13160,7 +13149,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "71"
+	    ZoomFactor		    "67"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Com desired (input)"
@@ -13216,17 +13205,16 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "23-DoFs WBI to YARP7"
-	      SID		      "2681"
+	      Name		      "25-DoFs WBI to yarp"
+	      SID		      "3742"
 	      Ports		      [1, 5]
-	      Position		      [1060, 35, 1175, 115]
-	      ZOrder		      605
-	      BackgroundColor	      "lightBlue"
-	      DropShadow	      on
+	      Position		      [1060, 36, 1170, 114]
+	      ZOrder		      702
+	      BackgroundColor	      "[0.180000, 0.348000, 0.600000]"
 	      Commented		      "on"
 	      LibraryVersion	      "1.367"
-	      SourceBlock	      "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	      SourceType	      ""
+	      SourceBlock	      "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	      SourceType	      "WBI to YARP"
 	      Port {
 		PortNumber		1
 		Name			"torso"
@@ -13236,28 +13224,24 @@ Model {
 	      Port {
 		PortNumber		2
 		Name			"left arm"
-		PropagatedSignals	"leftArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		3
 		Name			"right arm"
-		PropagatedSignals	"rightArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		4
 		Name			"left leg"
-		PropagatedSignals	"leftLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		5
 		Name			"right leg"
-		PropagatedSignals	"rightLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -13512,7 +13496,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"Visualise extrnal wrenches  "
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -13524,7 +13508,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"204"
+		ZoomFactor		"202"
 		Block {
 		  BlockType		  Inport
 		  Name			  "wL_WBDT"
@@ -13756,7 +13740,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"nu"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -13768,7 +13752,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"157"
+		ZoomFactor		"160"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -13885,7 +13869,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "JcLeftFoot"
@@ -14233,7 +14217,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3739"
+		SIDHighWatermark	"3750"
 		SIDPrevWatermark	"9"
 		Block {
 		  BlockType		  Inport
@@ -14971,7 +14955,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -15837,7 +15821,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -16384,7 +16368,7 @@ Model {
 	      }
 	      System {
 		Name			"xCom"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -16396,7 +16380,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"293"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -16502,7 +16486,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"xCom1"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -16514,7 +16498,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"293"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -16873,7 +16857,7 @@ Model {
 	    Line {
 	      Name		      "torso"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      1
 	      DstBlock		      "velocities"
 	      DstPort		      2
@@ -16881,7 +16865,7 @@ Model {
 	    Line {
 	      Name		      "left arm"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      2
 	      DstBlock		      "velocities"
 	      DstPort		      3
@@ -16889,7 +16873,7 @@ Model {
 	    Line {
 	      Name		      "right arm"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      3
 	      DstBlock		      "velocities"
 	      DstPort		      4
@@ -16897,7 +16881,7 @@ Model {
 	    Line {
 	      Name		      "left leg"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      4
 	      DstBlock		      "velocities"
 	      DstPort		      5
@@ -16905,7 +16889,7 @@ Model {
 	    Line {
 	      Name		      "right leg"
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      5
 	      DstBlock		      "velocities"
 	      DstPort		      6
@@ -16914,7 +16898,7 @@ Model {
 	      SrcBlock		      "Gain"
 	      SrcPort		      1
 	      Points		      [15, 0; 0, 85]
-	      DstBlock		      "23-DoFs WBI to YARP7"
+	      DstBlock		      "25-DoFs WBI to yarp"
 	      DstPort		      1
 	    }
 	    Line {
@@ -17167,7 +17151,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Subsystem"
-	    Location		    [0, 23, 1280, 796]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -18236,7 +18220,7 @@ Model {
       Variant		      off
       System {
 	Name			"Dump and visualize"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -18248,7 +18232,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"90"
+	ZoomFactor		"73"
 	Block {
 	  BlockType		  Inport
 	  Name			  "tauDesired"
@@ -18359,16 +18343,15 @@ Model {
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP1"
-	  SID			  "2280"
+	  Name			  "25-DoFs WBI to yarp"
+	  SID			  "3745"
 	  Ports			  [1, 5]
-	  Position		  [345, 148, 455, 252]
-	  ZOrder		  512
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [350, -2, 470, 92]
+	  ZOrder		  660
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  Port {
 	    PortNumber		    1
 	    Name		    "torso"
@@ -18378,44 +18361,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP2"
-	  SID			  "2281"
+	  Name			  "25-DoFs WBI to yarp1"
+	  SID			  "3746"
 	  Ports			  [1, 5]
-	  Position		  [345, 283, 455, 387]
-	  ZOrder		  513
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [350, 153, 470, 247]
+	  ZOrder		  661
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  Port {
 	    PortNumber		    1
 	    Name		    "torso"
@@ -18425,44 +18403,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP3"
-	  SID			  "2282"
+	  Name			  "25-DoFs WBI to yarp2"
+	  SID			  "3747"
 	  Ports			  [1, 5]
-	  Position		  [970, 13, 1080, 117]
-	  ZOrder		  514
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [350, 288, 470, 382]
+	  ZOrder		  662
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  Port {
 	    PortNumber		    1
 	    Name		    "torso"
@@ -18472,44 +18445,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP5"
-	  SID			  "2283"
+	  Name			  "25-DoFs WBI to yarp3"
+	  SID			  "3748"
 	  Ports			  [1, 5]
-	  Position		  [970, 148, 1080, 252]
-	  ZOrder		  515
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [975, 18, 1095, 112]
+	  ZOrder		  663
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  Port {
 	    PortNumber		    1
 	    Name		    "torso"
@@ -18519,44 +18487,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP6"
-	  SID			  "2284"
+	  Name			  "25-DoFs WBI to yarp4"
+	  SID			  "3749"
 	  Ports			  [1, 5]
-	  Position		  [970, 283, 1080, 387]
-	  ZOrder		  516
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [975, 153, 1095, 247]
+	  ZOrder		  664
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  Port {
 	    PortNumber		    1
 	    Name		    "torso"
@@ -18566,44 +18529,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP7"
-	  SID			  "2285"
+	  Name			  "25-DoFs WBI to yarp5"
+	  SID			  "3750"
 	  Ports			  [1, 5]
-	  Position		  [345, -7, 455, 97]
-	  ZOrder		  511
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [975, 288, 1095, 382]
+	  ZOrder		  665
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  Port {
 	    PortNumber		    1
 	    Name		    "torso"
@@ -18613,28 +18571,24 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -18655,8 +18609,8 @@ Model {
 	  MaxDataPoints		  5000
 	  SaveToWorkspace	  off
 	  SaveName		  CoM_data
-	  YMin			  -0.39446~-0.39237~-0.00975~1.00000
-	  YMax			  1.32632~1.32497~0.00845~3.00000
+	  YMin			  -0.77443~-0.34736~-0.64752~0.625
+	  YMax			  1.75858~1.31965~0.61549~4.375
 	  SampleInput		  off
 	  SampleTime		  -1
 	  ZoomMode		  on
@@ -19401,7 +19355,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "plotNorms"
-	    Location		    [0, 23, 1853, 1076]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -19413,7 +19367,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "168"
+	    ZoomFactor		    "152"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "qTile_LeftLeg"
@@ -19546,7 +19500,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3739"
+		SIDHighWatermark	"3750"
 		Block {
 		  BlockType		  Inport
 		  Name			  "u"
@@ -19723,7 +19677,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3739"
+		SIDHighWatermark	"3750"
 		Block {
 		  BlockType		  Inport
 		  Name			  "u"
@@ -20005,8 +19959,8 @@ Model {
 	  MaxDataPoints		  5000
 	  SaveToWorkspace	  off
 	  SaveName		  qj_and_v4
-	  YMin			  -10.43193~-5.1086~-3.26283~-15.44571~-15.32026~1.00000
-	  YMax			  10.65706~3.90993~4.7158~15.29813~15.41684~3.00000
+	  YMin			  -11.13553~-7.83568~-2.96697~-16.52082~-16.38702~1.00000
+	  YMax			  12.24519~4.2137~5.91495~17.75778~17.92619~3.00000
 	  SampleInput		  off
 	  SampleTime		  -1
 	  ZoomMode		  on
@@ -20077,7 +20031,7 @@ Model {
 	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
 	    MarkerStyles	    "none|none|none|none|none|none"
 	  }
-	  Location		  [66 106 1356 836]
+	  Location		  [66 78 1367 767]
 	}
 	Block {
 	  BlockType		  Scope
@@ -20140,8 +20094,8 @@ Model {
 	  MaxDataPoints		  5000
 	  SaveToWorkspace	  off
 	  SaveName		  tauMeasured
-	  YMin			  -29.68802~-2.19579~-14.62143~-30.36215~-32.42293~1.00000
-	  YMax			  11.05124~14.29548~6.24114~70.23919~91.75994~3.00000
+	  YMin			  -35.13178~-3.44336~-14.30679~-35.98151~-40.07746~1.00000
+	  YMax			  13.16848~14.39654~8.09971~82.8283~124.47713~3.00000
 	  SampleInput		  off
 	  SampleTime		  -1
 	  ZoomMode		  on
@@ -20167,7 +20121,7 @@ Model {
 	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
 	    MarkerStyles	    "none|none|none|none|none|none"
 	  }
-	  Location		  [66 106 1356 836]
+	  Location		  [66 78 1441 899]
 	}
 	Line {
 	  Name			  "CoM_Error"
@@ -20219,13 +20173,13 @@ Model {
 	Line {
 	  SrcBlock		  "Gain"
 	  SrcPort		  1
-	  DstBlock		  "23-DoFs WBI to YARP3"
+	  DstBlock		  "25-DoFs WBI to yarp3"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "right_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  5
 	  DstBlock		  "qj"
 	  DstPort		  5
@@ -20233,7 +20187,7 @@ Model {
 	Line {
 	  Name			  "torso"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  1
 	  DstBlock		  "qj"
 	  DstPort		  1
@@ -20241,7 +20195,7 @@ Model {
 	Line {
 	  Name			  "left_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  2
 	  DstBlock		  "qj"
 	  DstPort		  2
@@ -20249,7 +20203,7 @@ Model {
 	Line {
 	  Name			  "left_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  4
 	  DstBlock		  "qj"
 	  DstPort		  4
@@ -20257,7 +20211,7 @@ Model {
 	Line {
 	  Name			  "right_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  3
 	  DstBlock		  "qj"
 	  DstPort		  3
@@ -20348,7 +20302,7 @@ Model {
 	  SrcPort		  1
 	  Points		  [31, 0]
 	  Branch {
-	    DstBlock		    "23-DoFs WBI to YARP7"
+	    DstBlock		    "25-DoFs WBI to yarp"
 	    DstPort		    1
 	  }
 	  Branch {
@@ -20363,7 +20317,7 @@ Model {
 	  Points		  [40, 0]
 	  Branch {
 	    Points		    [0, 95]
-	    DstBlock		    "23-DoFs WBI to YARP2"
+	    DstBlock		    "25-DoFs WBI to yarp2"
 	    DstPort		    1
 	  }
 	  Branch {
@@ -20374,7 +20328,7 @@ Model {
 	Line {
 	  Name			  "right_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  5
 	  DstBlock		  "tauDes"
 	  DstPort		  5
@@ -20382,7 +20336,7 @@ Model {
 	Line {
 	  Name			  "torso"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  1
 	  DstBlock		  "tauDes"
 	  DstPort		  1
@@ -20390,7 +20344,7 @@ Model {
 	Line {
 	  Name			  "left_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  2
 	  DstBlock		  "tauDes"
 	  DstPort		  2
@@ -20398,7 +20352,7 @@ Model {
 	Line {
 	  Name			  "left_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  4
 	  DstBlock		  "tauDes"
 	  DstPort		  4
@@ -20406,7 +20360,7 @@ Model {
 	Line {
 	  Name			  "right_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  3
 	  DstBlock		  "tauDes"
 	  DstPort		  3
@@ -20414,7 +20368,7 @@ Model {
 	Line {
 	  Name			  "right_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  5
 	  DstBlock		  "tauError"
 	  DstPort		  5
@@ -20422,7 +20376,7 @@ Model {
 	Line {
 	  Name			  "torso"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  1
 	  DstBlock		  "tauError"
 	  DstPort		  1
@@ -20430,7 +20384,7 @@ Model {
 	Line {
 	  Name			  "left_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  2
 	  DstBlock		  "tauError"
 	  DstPort		  2
@@ -20438,7 +20392,7 @@ Model {
 	Line {
 	  Name			  "left_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  4
 	  DstBlock		  "tauError"
 	  DstPort		  4
@@ -20446,7 +20400,7 @@ Model {
 	Line {
 	  Name			  "right_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  3
 	  DstBlock		  "tauError"
 	  DstPort		  3
@@ -20457,13 +20411,13 @@ Model {
 	  SrcBlock		  "Sum"
 	  SrcPort		  1
 	  Points		  [54, 0; 0, 85]
-	  DstBlock		  "23-DoFs WBI to YARP1"
+	  DstBlock		  "25-DoFs WBI to yarp1"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "right_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  5
 	  DstBlock		  "tauMeasured"
 	  DstPort		  5
@@ -20471,7 +20425,7 @@ Model {
 	Line {
 	  Name			  "torso"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  1
 	  DstBlock		  "tauMeasured"
 	  DstPort		  1
@@ -20479,7 +20433,7 @@ Model {
 	Line {
 	  Name			  "left_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  2
 	  DstBlock		  "tauMeasured"
 	  DstPort		  2
@@ -20487,7 +20441,7 @@ Model {
 	Line {
 	  Name			  "left_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  4
 	  DstBlock		  "tauMeasured"
 	  DstPort		  4
@@ -20495,7 +20449,7 @@ Model {
 	Line {
 	  Name			  "right_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  3
 	  DstBlock		  "tauMeasured"
 	  DstPort		  3
@@ -20519,13 +20473,13 @@ Model {
 	Line {
 	  SrcBlock		  "Gain3"
 	  SrcPort		  1
-	  DstBlock		  "23-DoFs WBI to YARP5"
+	  DstBlock		  "25-DoFs WBI to yarp4"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "right_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  5
 	  DstBlock		  "qjDes"
 	  DstPort		  5
@@ -20533,7 +20487,7 @@ Model {
 	Line {
 	  Name			  "torso"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  1
 	  DstBlock		  "qjDes"
 	  DstPort		  1
@@ -20541,7 +20495,7 @@ Model {
 	Line {
 	  Name			  "left_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  2
 	  DstBlock		  "qjDes"
 	  DstPort		  2
@@ -20549,7 +20503,7 @@ Model {
 	Line {
 	  Name			  "left_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  4
 	  DstBlock		  "qjDes"
 	  DstPort		  4
@@ -20557,7 +20511,7 @@ Model {
 	Line {
 	  Name			  "right_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  3
 	  DstBlock		  "qjDes"
 	  DstPort		  3
@@ -20565,15 +20519,15 @@ Model {
 	Line {
 	  SrcBlock		  "Gain4"
 	  SrcPort		  1
-	  DstBlock		  "23-DoFs WBI to YARP6"
+	  DstBlock		  "25-DoFs WBI to yarp5"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "right_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  5
-	  Points		  [208, 0]
+	  Points		  [193, 0]
 	  Branch {
 	    Points		    [0, 80]
 	    DstBlock		    "plotNorms"
@@ -20587,7 +20541,7 @@ Model {
 	Line {
 	  Name			  "torso"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  1
 	  DstBlock		  "qj_err"
 	  DstPort		  1
@@ -20595,7 +20549,7 @@ Model {
 	Line {
 	  Name			  "left_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  2
 	  DstBlock		  "qj_err"
 	  DstPort		  2
@@ -20603,9 +20557,9 @@ Model {
 	Line {
 	  Name			  "left_leg"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  4
-	  Points		  [232, 0]
+	  Points		  [217, 0]
 	  Branch {
 	    Points		    [0, 90]
 	    DstBlock		    "plotNorms"
@@ -20619,7 +20573,7 @@ Model {
 	Line {
 	  Name			  "right_arm"
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  3
 	  DstBlock		  "qj_err"
 	  DstPort		  3
@@ -20805,7 +20759,7 @@ Model {
       Variant		      off
       System {
 	Name			"M(q) h(q,dq) g(q)"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -20817,7 +20771,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"206"
+	ZoomFactor		"167"
 	Block {
 	  BlockType		  Inport
 	  Name			  "w_H_b"
@@ -21124,7 +21078,7 @@ Model {
       Variant		      off
       System {
 	Name			"controller_QP"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -21136,7 +21090,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"43"
+	ZoomFactor		"35"
 	Block {
 	  BlockType		  Inport
 	  Name			  "impedances"
@@ -21561,7 +21515,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "QP"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -21573,7 +21527,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "189"
+	    ZoomFactor		    "125"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "LEFT_RIGHT_FOOT_IN_CONTACT"
@@ -21737,7 +21691,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"Visualize eventual QP failures"
-		Location		[0, 23, 1936, 1131]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -21749,7 +21703,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"506"
+		ZoomFactor		"335"
 		Block {
 		  BlockType		  Inport
 		  Name			  "exitFlagQP"
@@ -22026,7 +21980,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "integralOf Hw1"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -22038,7 +21992,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "107"
+	    ZoomFactor		    "101"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "qjDes"
@@ -22153,7 +22107,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"3739"
+		SIDHighWatermark	"3750"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qjErr"
@@ -22362,7 +22316,7 @@ Model {
 	      }
 	      System {
 		Name			"w_H_root_link4"
-		Location		[0, 23, 1920, 1076]
+		Location		[65, 24, 1440, 900]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -22669,7 +22623,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "3739"
+		    SIDHighWatermark	    "3750"
 		    SIDPrevWatermark	    "9"
 		    Block {
 		    BlockType		    Inport
@@ -22868,7 +22822,7 @@ Model {
 		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
-		  frameName		  "'imu_frame'"
+		  frameName		  "imu_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -22945,7 +22899,7 @@ Model {
 		  LibraryVersion	  "1.367"
 		  SourceBlock		  "WBToolboxLibrary/wholeBodyModel/Kinematics/Forward Kinematics"
 		  SourceType		  "Forward Kinematics"
-		  frameName		  "'root_link'"
+		  frameName		  "root_link_name"
 		  robotName		  "WBT_robotName"
 		  localName		  "WBT_modelName"
 		  wbiFile		  "WBT_wbiFilename"
@@ -23429,7 +23383,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "3739"
+	    SIDHighWatermark	    "3750"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "constraints"
@@ -24210,7 +24164,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "xCom"
-	    Location		    [38, 36, 1884, 1051]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -24222,7 +24176,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "446"
+	    ZoomFactor		    "310"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "w_H_b"
@@ -24938,7 +24892,7 @@ Model {
       Variant		      off
       System {
 	Name			"emergency stop: joint limits"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -24950,7 +24904,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"319"
+	ZoomFactor		"339"
 	Block {
 	  BlockType		  Inport
 	  Name			  "qj   EMERGENCY STOP"
@@ -25034,7 +24988,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "3739"
+	    SIDHighWatermark	    "3750"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "umin"
@@ -25233,7 +25187,7 @@ Model {
       }
       System {
 	Name			"synchronizer"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -25245,7 +25199,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"255"
+	ZoomFactor		"245"
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "GAZEBO_SYNCHRONIZER"
@@ -25257,7 +25211,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "GAZEBO_SYNCHRONIZER"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -25269,7 +25223,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "440"
+	    ZoomFactor		    "468"
 	    Block {
 	      BlockType		      EnablePort
 	      Name		      "Enable"
@@ -25338,7 +25292,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "REAL_TIME_SYNC"
-	    Location		    [0, 23, 1280, 796]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -25350,7 +25304,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "307"
+	    ZoomFactor		    "656"
 	    Block {
 	      BlockType		      EnablePort
 	      Name		      "Enable"
@@ -25419,7 +25373,7 @@ Model {
     Line {
       SrcBlock		      "DesValues"
       SrcPort		      5
-      Points		      [266, 0]
+      Points		      [451, 0]
       Branch {
 	Points			[0, -290]
 	DstBlock		"emergency stop: joint limits"
@@ -25471,7 +25425,7 @@ Model {
     Line {
       SrcBlock		      "DesValues"
       SrcPort		      9
-      Points		      [91, 0; 0, 130]
+      Points		      [276, 0; 0, 130]
       Branch {
 	Points			[0, 220]
 	DstBlock		"Dump and visualize"
@@ -25485,14 +25439,14 @@ Model {
     Line {
       SrcBlock		      "DesValues"
       SrcPort		      7
-      Points		      [223, 0; 0, 195]
+      Points		      [408, 0; 0, 195]
       DstBlock		      "controller_QP"
       DstPort		      10
     }
     Line {
       SrcBlock		      "DesValues"
       SrcPort		      8
-      Points		      [185, 0; 0, 260]
+      Points		      [370, 0; 0, 260]
       Branch {
 	Points			[0, 135]
 	DstBlock		"Dump and visualize"
@@ -25518,7 +25472,7 @@ Model {
     Line {
       SrcBlock		      "DesValues"
       SrcPort		      4
-      Points		      [333, 0]
+      Points		      [518, 0]
       Branch {
 	Points			[0, 195]
 	DstBlock		"M(q) h(q,dq) g(q)"
@@ -25532,7 +25486,7 @@ Model {
     Line {
       SrcBlock		      "DesValues"
       SrcPort		      6
-      Points		      [244, 0]
+      Points		      [429, 0]
       Branch {
 	DstBlock		"controller_QP"
 	DstPort			6
@@ -25553,7 +25507,7 @@ Model {
     Line {
       SrcBlock		      "DesValues"
       SrcPort		      10
-      Points		      [42, 0; 0, 195]
+      Points		      [227, 0; 0, 195]
       Branch {
 	Points			[0, 110]
 	DstBlock		"Dump and visualize"

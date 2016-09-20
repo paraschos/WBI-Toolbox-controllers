@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.3121"
+    ComputedModelVersion    "1.3123"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -33,7 +33,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [65.0, 24.0, 1375.0, 876.0]
+      Location		      [65.0, 24.0, 1301.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -55,11 +55,11 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"2275"
-	Extents			[1341.0, 731.0]
-	ZoomFactor		[0.8970242678092254]
-	Offset			[39.224872667555246, -22.958318705969191]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1267.0, 599.0]
+	ZoomFactor		[0.57502517623363547]
+	Offset			[-51.690893169877427, 110.65323992994752]
       }
     }
   }
@@ -67,11 +67,11 @@ Model {
   Creator		  "daniele"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "DanielePucci"
+  LastModifiedBy	  "gnava"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Sep 19 13:18:03 2016"
-  RTWModifiedTimeStamp	  396186355
-  ModelVersionFormat	  "1.%<AutoIncrement:3121>"
+  LastModifiedDate	  "Tue Sep 20 17:02:19 2016"
+  RTWModifiedTimeStamp	  396291708
+  ModelVersionFormat	  "1.%<AutoIncrement:3123>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1084,8 +1084,8 @@ Model {
   }
   System {
     Name		    "torqueBalancing"
-    Location		    [65, 24, 1440, 900]
-    Open		    off
+    Location		    [65, 24, 1366, 768]
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1096,15 +1096,15 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "71"
+    ZoomFactor		    "58"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "3740"
+    SIDHighWatermark	    "3750"
     Block {
       BlockType		      SubSystem
       Name		      "DesValues"
       SID		      "2087"
       Ports		      [0, 10]
-      Position		      [320, 188, 510, 827]
+      Position		      [135, 188, 325, 827]
       ZOrder		      548
       BackgroundColor	      "orange"
       Priority		      "-10"
@@ -1112,7 +1112,7 @@ Model {
       Variant		      off
       System {
 	Name			"DesValues"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1124,7 +1124,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"52"
+	ZoomFactor		"49"
 	Block {
 	  BlockType		  Reference
 	  Name			  "Compare\nTo Zero"
@@ -1300,7 +1300,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Internal coordinator"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1312,7 +1312,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "97"
+	    ZoomFactor		    "91"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "jointAngles"
@@ -1492,7 +1492,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"nu"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -1504,7 +1504,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"157"
+		ZoomFactor		"160"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -1864,7 +1864,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"refGen"
-		Location		[357, 110, 2276, 1165]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -1876,7 +1876,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"307"
+		ZoomFactor		"204"
 		Block {
 		  BlockType		  Inport
 		  Name			  "xCom(0)"
@@ -3039,7 +3039,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"xCom"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -3051,7 +3051,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"305"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "w_H_b"
@@ -3859,7 +3859,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Scopes  "
-	    Location		    [0, 23, 1936, 1131]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -3871,7 +3871,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "153"
+	    ZoomFactor		    "96"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "smoothingTimeComAndJoints"
@@ -3953,17 +3953,15 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "23-DoFs WBI to YARP1"
-	      SID		      "3299"
+	      Name		      "25-DoFs WBI to yarp"
+	      SID		      "3743"
 	      Ports		      [1, 5]
-	      Position		      [485, 513, 595, 617]
-	      ZOrder		      651
-	      BackgroundColor	      "lightBlue"
-	      DropShadow	      on
-	      ShowName		      off
+	      Position		      [470, 218, 590, 312]
+	      ZOrder		      659
+	      BackgroundColor	      "[0.180000, 0.348000, 0.600000]"
 	      LibraryVersion	      "1.367"
-	      SourceBlock	      "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	      SourceType	      ""
+	      SourceBlock	      "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	      SourceType	      "WBI to YARP"
 	      ContentPreviewEnabled   off
 	      Port {
 		PortNumber		1
@@ -3974,44 +3972,39 @@ Model {
 	      Port {
 		PortNumber		2
 		Name			"left_arm"
-		PropagatedSignals	"leftArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		3
 		Name			"right_arm"
-		PropagatedSignals	"rightArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		4
 		Name			"left_leg"
-		PropagatedSignals	"leftLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		5
 		Name			"right_leg"
-		PropagatedSignals	"rightLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "23-DoFs WBI to YARP5"
-	      SID		      "3174"
+	      Name		      "25-DoFs WBI to yarp1"
+	      SID		      "3744"
 	      Ports		      [1, 5]
-	      Position		      [485, 213, 595, 317]
-	      ZOrder		      640
-	      BackgroundColor	      "lightBlue"
-	      DropShadow	      on
+	      Position		      [470, 518, 590, 612]
+	      ZOrder		      660
+	      BackgroundColor	      "[0.180000, 0.348000, 0.600000]"
 	      LibraryVersion	      "1.367"
-	      SourceBlock	      "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	      SourceType	      ""
+	      SourceBlock	      "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	      SourceType	      "WBI to YARP"
 	      ContentPreviewEnabled   off
 	      Port {
 		PortNumber		1
@@ -4022,28 +4015,24 @@ Model {
 	      Port {
 		PortNumber		2
 		Name			"left_arm"
-		PropagatedSignals	"leftArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		3
 		Name			"right_arm"
-		PropagatedSignals	"rightArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		4
 		Name			"left_leg"
-		PropagatedSignals	"leftLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		5
 		Name			"right_leg"
-		PropagatedSignals	"rightLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -4526,11 +4515,11 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      9
+	      ZOrder		      35
 	      SrcBlock		      "impedances"
 	      SrcPort		      1
 	      Points		      [0, 45]
-	      DstBlock		      "23-DoFs WBI to YARP5"
+	      DstBlock		      "25-DoFs WBI to yarp"
 	      DstPort		      1
 	    }
 	    Line {
@@ -4545,45 +4534,45 @@ Model {
 	    }
 	    Line {
 	      Name		      "left_leg"
-	      ZOrder		      11
+	      ZOrder		      31
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      4
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      4
 	    }
 	    Line {
 	      Name		      "right_leg"
-	      ZOrder		      12
+	      ZOrder		      34
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      5
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      5
 	    }
 	    Line {
 	      Name		      "right_arm"
-	      ZOrder		      13
+	      ZOrder		      32
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      3
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      3
 	    }
 	    Line {
 	      Name		      "torso"
-	      ZOrder		      14
+	      ZOrder		      30
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      1
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      1
 	    }
 	    Line {
 	      Name		      "left_arm"
-	      ZOrder		      15
+	      ZOrder		      33
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP5"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      2
 	      DstBlock		      "Impedances(t)"
 	      DstPort		      2
@@ -4598,45 +4587,45 @@ Model {
 	    }
 	    Line {
 	      Name		      "left_leg"
-	      ZOrder		      17
+	      ZOrder		      37
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      4
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      4
 	    }
 	    Line {
 	      Name		      "right_leg"
-	      ZOrder		      18
+	      ZOrder		      38
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      5
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      5
 	    }
 	    Line {
 	      Name		      "right_arm"
-	      ZOrder		      19
+	      ZOrder		      36
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      3
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      3
 	    }
 	    Line {
 	      Name		      "torso"
-	      ZOrder		      20
+	      ZOrder		      39
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      1
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      1
 	    }
 	    Line {
 	      Name		      "left_arm"
-	      ZOrder		      21
+	      ZOrder		      40
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP1"
+	      SrcBlock		      "25-DoFs WBI to yarp1"
 	      SrcPort		      2
 	      DstBlock		      "qjDot(t) "
 	      DstPort		      2
@@ -4685,10 +4674,10 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      28
+	      ZOrder		      41
 	      SrcBlock		      "Gain"
 	      SrcPort		      1
-	      DstBlock		      "23-DoFs WBI to YARP1"
+	      DstBlock		      "25-DoFs WBI to yarp1"
 	      DstPort		      1
 	    }
 	    Line {
@@ -4753,7 +4742,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "State Machine"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -4765,7 +4754,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "85"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "jointAngles"
@@ -4922,7 +4911,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"Visualise extrnal wrenches  "
-		Location		[0, 23, 1853, 1076]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -4934,7 +4923,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"303"
+		ZoomFactor		"202"
 		Block {
 		  BlockType		  Inport
 		  Name			  "wL_WBDT"
@@ -5262,7 +5251,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"nu"
-		Location		[0, 23, 1936, 1131]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -5274,7 +5263,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"241"
+		ZoomFactor		"160"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -6120,7 +6109,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"visualise inertial"
-		Location		[0, 23, 1936, 1131]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -6132,7 +6121,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"178"
+		ZoomFactor		"119"
 		Block {
 		  BlockType		  Inport
 		  Name			  "jointAngles"
@@ -6202,7 +6191,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf1"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -6214,7 +6203,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -6534,7 +6523,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf2"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -6546,7 +6535,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -6866,7 +6855,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf3"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -6878,7 +6867,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -7198,7 +7187,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf4"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -7210,7 +7199,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -7530,7 +7519,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf5"
-		    Location		    [0, 23, 1853, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -7542,7 +7531,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "300"
+		    ZoomFactor		    "237"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -7886,7 +7875,7 @@ Model {
 		  Variant		  off
 		  System {
 		    Name		    "Visualize\nhom transf6"
-		    Location		    [0, 23, 1920, 1076]
+		    Location		    [65, 24, 1366, 768]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -7898,7 +7887,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "389"
+		    ZoomFactor		    "259"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "H"
@@ -12821,7 +12810,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"xCom"
-		Location		[0, 23, 1920, 1076]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -12833,7 +12822,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"464"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -12937,7 +12926,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"xCom1"
-		Location		[0, 23, 1920, 1076]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -12949,7 +12938,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"464"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -13560,7 +13549,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "State Machine Walking"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -13572,7 +13561,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "71"
+	    ZoomFactor		    "67"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Com desired (input)"
@@ -13628,17 +13617,16 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "23-DoFs WBI to YARP7"
-	      SID		      "2681"
+	      Name		      "25-DoFs WBI to yarp"
+	      SID		      "3742"
 	      Ports		      [1, 5]
-	      Position		      [1060, 35, 1175, 115]
-	      ZOrder		      605
-	      BackgroundColor	      "lightBlue"
-	      DropShadow	      on
+	      Position		      [1060, 36, 1170, 114]
+	      ZOrder		      702
+	      BackgroundColor	      "[0.180000, 0.348000, 0.600000]"
 	      Commented		      "on"
 	      LibraryVersion	      "1.367"
-	      SourceBlock	      "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	      SourceType	      ""
+	      SourceBlock	      "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	      SourceType	      "WBI to YARP"
 	      ContentPreviewEnabled   off
 	      Port {
 		PortNumber		1
@@ -13649,28 +13637,24 @@ Model {
 	      Port {
 		PortNumber		2
 		Name			"left arm"
-		PropagatedSignals	"leftArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		3
 		Name			"right arm"
-		PropagatedSignals	"rightArm"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		4
 		Name			"left leg"
-		PropagatedSignals	"leftLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		5
 		Name			"right leg"
-		PropagatedSignals	"rightLeg"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -13925,7 +13909,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"Visualise extrnal wrenches  "
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -13937,7 +13921,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"204"
+		ZoomFactor		"202"
 		Block {
 		  BlockType		  Inport
 		  Name			  "wL_WBDT"
@@ -14162,7 +14146,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"nu"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -14174,7 +14158,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"157"
+		ZoomFactor		"160"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -16922,7 +16906,7 @@ Model {
 	      }
 	      System {
 		Name			"xCom"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -16934,7 +16918,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"293"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -17039,7 +17023,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"xCom1"
-		Location		[0, 23, 1280, 796]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -17051,7 +17035,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"293"
+		ZoomFactor		"310"
 		Block {
 		  BlockType		  Inport
 		  Name			  "qj"
@@ -17437,55 +17421,55 @@ Model {
 	    }
 	    Line {
 	      Name		      "torso"
-	      ZOrder		      30
+	      ZOrder		      80
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      1
 	      DstBlock		      "velocities"
 	      DstPort		      2
 	    }
 	    Line {
 	      Name		      "left arm"
-	      ZOrder		      31
+	      ZOrder		      82
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      2
 	      DstBlock		      "velocities"
 	      DstPort		      3
 	    }
 	    Line {
 	      Name		      "right arm"
-	      ZOrder		      32
+	      ZOrder		      84
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      3
 	      DstBlock		      "velocities"
 	      DstPort		      4
 	    }
 	    Line {
 	      Name		      "left leg"
-	      ZOrder		      33
+	      ZOrder		      83
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      4
 	      DstBlock		      "velocities"
 	      DstPort		      5
 	    }
 	    Line {
 	      Name		      "right leg"
-	      ZOrder		      34
+	      ZOrder		      79
 	      Labels		      [1, 1]
-	      SrcBlock		      "23-DoFs WBI to YARP7"
+	      SrcBlock		      "25-DoFs WBI to yarp"
 	      SrcPort		      5
 	      DstBlock		      "velocities"
 	      DstPort		      6
 	    }
 	    Line {
-	      ZOrder		      35
+	      ZOrder		      81
 	      SrcBlock		      "Gain"
 	      SrcPort		      1
 	      Points		      [15, 0; 0, 85]
-	      DstBlock		      "23-DoFs WBI to YARP7"
+	      DstBlock		      "25-DoFs WBI to yarp"
 	      DstPort		      1
 	    }
 	    Line {
@@ -17775,7 +17759,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Subsystem"
-	    Location		    [0, 23, 1280, 796]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -18959,8 +18943,8 @@ Model {
       Variant		      off
       System {
 	Name			"Dump and visualize"
-	Location		[65, 24, 1440, 900]
-	Open			on
+	Location		[65, 24, 1366, 768]
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -18971,7 +18955,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"90"
+	ZoomFactor		"73"
 	Block {
 	  BlockType		  Inport
 	  Name			  "tauDesired"
@@ -19082,16 +19066,15 @@ Model {
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP1"
-	  SID			  "2280"
+	  Name			  "25-DoFs WBI to yarp"
+	  SID			  "3745"
 	  Ports			  [1, 5]
-	  Position		  [345, 148, 455, 252]
-	  ZOrder		  512
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [350, -2, 470, 92]
+	  ZOrder		  660
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  ContentPreviewEnabled	  off
 	  Port {
 	    PortNumber		    1
@@ -19102,44 +19085,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP2"
-	  SID			  "2281"
+	  Name			  "25-DoFs WBI to yarp1"
+	  SID			  "3746"
 	  Ports			  [1, 5]
-	  Position		  [345, 283, 455, 387]
-	  ZOrder		  513
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [350, 153, 470, 247]
+	  ZOrder		  661
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  ContentPreviewEnabled	  off
 	  Port {
 	    PortNumber		    1
@@ -19150,44 +19128,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP3"
-	  SID			  "2282"
+	  Name			  "25-DoFs WBI to yarp2"
+	  SID			  "3747"
 	  Ports			  [1, 5]
-	  Position		  [970, 13, 1080, 117]
-	  ZOrder		  514
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [350, 288, 470, 382]
+	  ZOrder		  662
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  ContentPreviewEnabled	  off
 	  Port {
 	    PortNumber		    1
@@ -19198,44 +19171,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP5"
-	  SID			  "2283"
+	  Name			  "25-DoFs WBI to yarp3"
+	  SID			  "3748"
 	  Ports			  [1, 5]
-	  Position		  [970, 148, 1080, 252]
-	  ZOrder		  515
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [975, 18, 1095, 112]
+	  ZOrder		  663
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  ContentPreviewEnabled	  off
 	  Port {
 	    PortNumber		    1
@@ -19246,44 +19214,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP6"
-	  SID			  "2284"
+	  Name			  "25-DoFs WBI to yarp4"
+	  SID			  "3749"
 	  Ports			  [1, 5]
-	  Position		  [970, 283, 1080, 387]
-	  ZOrder		  516
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [975, 153, 1095, 247]
+	  ZOrder		  664
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  ContentPreviewEnabled	  off
 	  Port {
 	    PortNumber		    1
@@ -19294,44 +19257,39 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "23-DoFs WBI to YARP7"
-	  SID			  "2285"
+	  Name			  "25-DoFs WBI to yarp5"
+	  SID			  "3750"
 	  Ports			  [1, 5]
-	  Position		  [345, -7, 455, 97]
-	  ZOrder		  511
-	  BackgroundColor	  "lightBlue"
-	  DropShadow		  on
+	  Position		  [975, 288, 1095, 382]
+	  ZOrder		  665
+	  BackgroundColor	  "[0.180000, 0.348000, 0.600000]"
 	  LibraryVersion	  "1.367"
-	  SourceBlock		  "WBToolboxLibrary/Utilities/23-DoFs WBI to YARP"
-	  SourceType		  ""
+	  SourceBlock		  "WBToolboxLibrary/Utilities/25-DoFs WBI to yarp"
+	  SourceType		  "WBI to YARP"
 	  ContentPreviewEnabled	  off
 	  Port {
 	    PortNumber		    1
@@ -19342,28 +19300,24 @@ Model {
 	  Port {
 	    PortNumber		    2
 	    Name		    "left_arm"
-	    PropagatedSignals	    "leftArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    3
 	    Name		    "right_arm"
-	    PropagatedSignals	    "rightArm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    4
 	    Name		    "left_leg"
-	    PropagatedSignals	    "leftLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  Port {
 	    PortNumber		    5
 	    Name		    "right_leg"
-	    PropagatedSignals	    "rightLeg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -20247,7 +20201,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "plotNorms"
-	    Location		    [0, 23, 1853, 1076]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -20259,7 +20213,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "168"
+	    ZoomFactor		    "152"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "qTile_LeftLeg"
@@ -21098,97 +21052,94 @@ Model {
 	  "'Marker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','o"
 	  "n'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'"
 	  "LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0"
-	  ".5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',3,'LineNames',{{'torso:1','torso:2',"
-	  "'torso:3'}},'ShowContent',true,'Placement',1),struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242','YLabelReal'"
-	  ",'','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axes"
-	  "Color',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666666"
-	  "66666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.8313725490"
-	  "19608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980"
-	  "392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,"
-	  "'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','o"
-	  "n'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'"
-	  "LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0"
-	  ".5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible'"
-	  ",'on')}},'UserDefinedChannelNames',{{}},'NumLines',4,'LineNames',{{'left_arm:1','left_arm:2','left_arm:3','left_arm"
-	  ":4'}},'ShowContent',true,'Placement',2),struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242','YLabelReal','','M"
-	  "inYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor'"
-	  ",[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666666666666"
-	  "67;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 "
-	  "0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156"
-	  "863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marke"
-	  "r','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),st"
-	  "ruct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineSt"
-	  "yle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Ma"
-	  "rker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')"
-	  "}},'UserDefinedChannelNames',{{}},'NumLines',4,'LineNames',{{'right_arm:1','right_arm:2','right_arm:3','right_arm:4"
-	  "'}},'ShowContent',true,'Placement',3),struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242','YLabelReal','','Min"
-	  "YLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',["
-	  "0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667"
-	  ";0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0."
-	  "0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.65098039215686"
-	  "3],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker'"
-	  ",'none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),stru"
-	  "ct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyl"
-	  "e','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Mark"
-	  "er','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}}"
-	  ",'UserDefinedChannelNames',{{}},'NumLines',6,'LineNames',{{'left_leg:1','left_leg:2','left_leg:3','left_leg:4','lef"
-	  "t_leg:5','left_leg:6'}},'ShowContent',true,'Placement',4),struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242',"
-	  "'YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase'"
-	  ",false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 "
-	  "1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 "
-	  "0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215"
-	  "686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','Lin"
-	  "eWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none',"
-	  "'Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Colo"
-	  "r',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','"
-	  "LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','non"
-	  "e','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',6,'LineNames',{{'right_leg:1','right_leg:2','right_l"
-	  "eg:3','right_leg:4','right_leg:5','right_leg:6'}},'ShowContent',true,'Placement',5),struct('MinYLimReal','-11.78546"
+	  ".5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',t"
+	  "rue,'Placement',1),struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242','YLabelReal','','MinYLimMag','0','MaxYL"
+	  "imMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickCol"
+	  "or',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686"
+	  " 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0."
+	  "717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<Signa"
+	  "lLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','"
+	  "on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 1],"
+	  "'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',"
+	  "0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible"
+	  "','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedChanne"
+	  "lNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',2),struct('MinYLimReal','-11.78546','Ma"
+	  "xYLimReal','8.52242','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid"
+	  "',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803"
+	  "922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.160784313725"
+	  "49;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 "
+	  "1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0]"
+	  ",'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth'"
+	  ",0.5,'Marker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visibl"
+	  "e','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1"
+	  " 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWid"
+	  "th',0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowConte"
+	  "nt',true,'Placement',3),struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242','YLabelReal','','MinYLimMag','0','"
+	  "MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTi"
+	  "ckColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.07450980392"
+	  "15686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.07450980392156"
+	  "86;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<"
+	  "SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visib"
+	  "le','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 "
+	  "1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWi"
+	  "dth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Vi"
+	  "sible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedC"
+	  "hannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',4),struct('MinYLimReal','-11.78546"
 	  "','MaxYLimReal','8.52242','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'"
 	  "YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.6862745"
 	  "09803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.1607843"
 	  "1372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.058823529411"
-	  "7647 1 1;1 0.0745098039215686 0.650980392156863],'Title','','LinePropertiesCache',{{struct('Color',[1 1 0],'LineSty"
-	  "le','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Mar"
-	  "ker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),"
-	  "struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'Line"
-	  "Style','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'"
-	  "Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'state'}},'ShowContent',"
-	  "true,'Placement',6),struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242','YLabelReal','','MinYLimMag','0','MaxY"
-	  "LimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickCo"
-	  "lor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.074509803921568"
-	  "6 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0"
-	  ".717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','','Lin"
-	  "ePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('"
-	  "Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','"
-	  "-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker',"
-	  "'none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struc"
-	  "t('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},"
-	  "'NumLines',0,'LineNames',{{}},'ShowContent',false,'Placement',7),struct('MinYLimReal','-11.78546','MaxYLimReal','8."
-	  "52242','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMa"
-	  "gPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrd"
-	  "er',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862"
-	  "745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.074509"
-	  "8039215686 0.650980392156863],'Title','','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth'"
-	  ",0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visibl"
-	  "e','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0"
-	  " 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWid"
-	  "th',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Vis"
-	  "ible','on')}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{}},'ShowContent',false,'Placement',8)},'Dis"
-	  "playPropertyDefaults',struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242','YLabelReal','','MinYLimMag','0','Ma"
-	  "xYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTick"
-	  "Color',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215"
-	  "686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686"
-	  ";0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<Si"
-	  "gnalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible"
-	  "','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 "
-	  "1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidt"
-	  "h',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visi"
-	  "ble','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedCha"
-	  "nnelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1),'TimeRangeSamples','14','TimeRang"
-	  "eFrames','14','DisplayLayoutDimensions',[4 2]),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',fal"
-	  "se),extmgr.Configuration('Tools','Measurements',true,'Version','2016a')),'Version','2016a','Location',[66 78 1441 8"
-	  "99])"
+	  "7647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1"
+	  " 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineW"
+	  "idth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','V"
+	  "isible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color'"
+	  ",[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','Li"
+	  "neWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'Show"
+	  "Content',true,'Placement',5),struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242','YLabelReal','','MinYLimMag',"
+	  "'0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'A"
+	  "xesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.074509"
+	  "8039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.074509803"
+	  "9215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title"
+	  "','','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')"
+	  ",struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 1],'Lin"
+	  "eStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,"
+	  "'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','o"
+	  "n'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNam"
+	  "es',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',6),struct('MinYLimReal','-11.78546','MaxYLi"
+	  "mReal','8.52242','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',tr"
+	  "ue,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922]"
+	  ",'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0"
+	  ".392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;"
+	  "1 0.0745098039215686 0.650980392156863],'Title','','LinePropertiesCache',{{struct('Color',[1 1 0],'LineStyle','-','"
+	  "LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0.5,'Marker','non"
+	  "e','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('C"
+	  "olor',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0],'LineStyle','-"
+	  "','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth',0.5,'Marker','"
+	  "none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{}},'ShowContent',false,'Placement"
+	  "',7),struct('MinYLimReal','-11.78546','MaxYLimReal','8.52242','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','L"
+	  "egendVisibility','on','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6862745"
+	  "09803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.62352941176"
+	  "4706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.71764705882352"
+	  "9 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','','LinePropertiesCach"
+	  "e',{{struct('Color',[1 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],"
+	  "'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',"
+	  "0.5,'Marker','none','Visible','on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible"
+	  "','on'),struct('Color',[0 1 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 "
+	  "1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',0,'L"
+	  "ineNames',{{}},'ShowContent',false,'Placement',8)},'DisplayPropertyDefaults',struct('MinYLimReal','-11.78546','MaxY"
+	  "LimReal','8.52242','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','on','XGrid',true,'YGrid',"
+	  "true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.68627450980392"
+	  "2],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549"
+	  ";0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 "
+	  "1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{struct('Color',[1 1 0],'"
+	  "LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[1 0 1],'LineStyle','-','LineWidth',0"
+	  ".5,'Marker','none','Visible','on'),struct('Color',[0 1 1],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible'"
+	  ",'on'),struct('Color',[1 0 0],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 1 0"
+	  "],'LineStyle','-','LineWidth',0.5,'Marker','none','Visible','on'),struct('Color',[0 0 1],'LineStyle','-','LineWidth"
+	  "',0.5,'Marker','none','Visible','on')}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent"
+	  "',true,'Placement',1),'TimeRangeSamples','14','TimeRangeFrames','14','DisplayLayoutDimensions',[4 2]),extmgr.Config"
+	  "uration('Tools','Plot Navigation',true,'OnceAtStop',false),extmgr.Configuration('Tools','Measurements',true,'Versio"
+	  "n','2016a')),'Version','2016a','Location',[66 78 1367 767])"
 	  NumInputPorts		  "6"
 	}
 	Block {
@@ -21452,53 +21403,53 @@ Model {
 	  }
 	}
 	Line {
-	  ZOrder		  9
+	  ZOrder		  120
 	  SrcBlock		  "Gain"
 	  SrcPort		  1
-	  DstBlock		  "23-DoFs WBI to YARP3"
+	  DstBlock		  "25-DoFs WBI to yarp3"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "right_leg"
-	  ZOrder		  10
+	  ZOrder		  118
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  5
 	  DstBlock		  "qj"
 	  DstPort		  5
 	}
 	Line {
 	  Name			  "torso"
-	  ZOrder		  11
+	  ZOrder		  115
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  1
 	  DstBlock		  "qj"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "left_arm"
-	  ZOrder		  12
+	  ZOrder		  116
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  2
 	  DstBlock		  "qj"
 	  DstPort		  2
 	}
 	Line {
 	  Name			  "left_leg"
-	  ZOrder		  13
+	  ZOrder		  119
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  4
 	  DstBlock		  "qj"
 	  DstPort		  4
 	}
 	Line {
 	  Name			  "right_arm"
-	  ZOrder		  14
+	  ZOrder		  117
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP3"
+	  SrcBlock		  "25-DoFs WBI to yarp3"
 	  SrcPort		  3
 	  DstBlock		  "qj"
 	  DstPort		  3
@@ -21604,8 +21555,8 @@ Model {
 	  SrcPort		  1
 	  Points		  [31, 0]
 	  Branch {
-	    ZOrder		    30
-	    DstBlock		    "23-DoFs WBI to YARP7"
+	    ZOrder		    102
+	    DstBlock		    "25-DoFs WBI to yarp"
 	    DstPort		    1
 	  }
 	  Branch {
@@ -21621,9 +21572,9 @@ Model {
 	  SrcPort		  1
 	  Points		  [40, 0]
 	  Branch {
-	    ZOrder		    33
+	    ZOrder		    109
 	    Points		    [0, 95]
-	    DstBlock		    "23-DoFs WBI to YARP2"
+	    DstBlock		    "25-DoFs WBI to yarp2"
 	    DstPort		    1
 	  }
 	  Branch {
@@ -21634,145 +21585,145 @@ Model {
 	}
 	Line {
 	  Name			  "right_leg"
-	  ZOrder		  35
+	  ZOrder		  99
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  5
 	  DstBlock		  "tauDes"
 	  DstPort		  5
 	}
 	Line {
 	  Name			  "torso"
-	  ZOrder		  36
+	  ZOrder		  101
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  1
 	  DstBlock		  "tauDes"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "left_arm"
-	  ZOrder		  37
+	  ZOrder		  100
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  2
 	  DstBlock		  "tauDes"
 	  DstPort		  2
 	}
 	Line {
 	  Name			  "left_leg"
-	  ZOrder		  38
+	  ZOrder		  98
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  4
 	  DstBlock		  "tauDes"
 	  DstPort		  4
 	}
 	Line {
 	  Name			  "right_arm"
-	  ZOrder		  39
+	  ZOrder		  97
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP7"
+	  SrcBlock		  "25-DoFs WBI to yarp"
 	  SrcPort		  3
 	  DstBlock		  "tauDes"
 	  DstPort		  3
 	}
 	Line {
 	  Name			  "right_leg"
-	  ZOrder		  40
+	  ZOrder		  107
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  5
 	  DstBlock		  "tauError"
 	  DstPort		  5
 	}
 	Line {
 	  Name			  "torso"
-	  ZOrder		  41
+	  ZOrder		  103
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  1
 	  DstBlock		  "tauError"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "left_arm"
-	  ZOrder		  42
+	  ZOrder		  104
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  2
 	  DstBlock		  "tauError"
 	  DstPort		  2
 	}
 	Line {
 	  Name			  "left_leg"
-	  ZOrder		  43
+	  ZOrder		  106
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  4
 	  DstBlock		  "tauError"
 	  DstPort		  4
 	}
 	Line {
 	  Name			  "right_arm"
-	  ZOrder		  44
+	  ZOrder		  105
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP1"
+	  SrcBlock		  "25-DoFs WBI to yarp1"
 	  SrcPort		  3
 	  DstBlock		  "tauError"
 	  DstPort		  3
 	}
 	Line {
 	  Name			  "torqueError"
-	  ZOrder		  45
+	  ZOrder		  108
 	  Labels		  [0, 0]
 	  SrcBlock		  "Sum"
 	  SrcPort		  1
 	  Points		  [54, 0; 0, 85]
-	  DstBlock		  "23-DoFs WBI to YARP1"
+	  DstBlock		  "25-DoFs WBI to yarp1"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "right_leg"
-	  ZOrder		  46
+	  ZOrder		  114
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  5
 	  DstBlock		  "tauMeasured"
 	  DstPort		  5
 	}
 	Line {
 	  Name			  "torso"
-	  ZOrder		  47
+	  ZOrder		  110
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  1
 	  DstBlock		  "tauMeasured"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "left_arm"
-	  ZOrder		  48
+	  ZOrder		  111
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  2
 	  DstBlock		  "tauMeasured"
 	  DstPort		  2
 	}
 	Line {
 	  Name			  "left_leg"
-	  ZOrder		  49
+	  ZOrder		  113
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  4
 	  DstBlock		  "tauMeasured"
 	  DstPort		  4
 	}
 	Line {
 	  Name			  "right_arm"
-	  ZOrder		  50
+	  ZOrder		  112
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP2"
+	  SrcBlock		  "25-DoFs WBI to yarp2"
 	  SrcPort		  3
 	  DstBlock		  "tauMeasured"
 	  DstPort		  3
@@ -21797,71 +21748,71 @@ Model {
 	  }
 	}
 	Line {
-	  ZOrder		  54
+	  ZOrder		  126
 	  SrcBlock		  "Gain3"
 	  SrcPort		  1
-	  DstBlock		  "23-DoFs WBI to YARP5"
+	  DstBlock		  "25-DoFs WBI to yarp4"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "right_leg"
-	  ZOrder		  55
+	  ZOrder		  125
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  5
 	  DstBlock		  "qjDes"
 	  DstPort		  5
 	}
 	Line {
 	  Name			  "torso"
-	  ZOrder		  56
+	  ZOrder		  123
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  1
 	  DstBlock		  "qjDes"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "left_arm"
-	  ZOrder		  57
+	  ZOrder		  124
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  2
 	  DstBlock		  "qjDes"
 	  DstPort		  2
 	}
 	Line {
 	  Name			  "left_leg"
-	  ZOrder		  58
+	  ZOrder		  121
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  4
 	  DstBlock		  "qjDes"
 	  DstPort		  4
 	}
 	Line {
 	  Name			  "right_arm"
-	  ZOrder		  59
+	  ZOrder		  122
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP5"
+	  SrcBlock		  "25-DoFs WBI to yarp4"
 	  SrcPort		  3
 	  DstBlock		  "qjDes"
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  60
+	  ZOrder		  132
 	  SrcBlock		  "Gain4"
 	  SrcPort		  1
-	  DstBlock		  "23-DoFs WBI to YARP6"
+	  DstBlock		  "25-DoFs WBI to yarp5"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "right_leg"
-	  ZOrder		  61
+	  ZOrder		  131
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  5
-	  Points		  [208, 0]
+	  Points		  [193, 0]
 	  Branch {
 	    ZOrder		    62
 	    Points		    [0, 80]
@@ -21876,29 +21827,29 @@ Model {
 	}
 	Line {
 	  Name			  "torso"
-	  ZOrder		  64
+	  ZOrder		  127
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  1
 	  DstBlock		  "qj_err"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "left_arm"
-	  ZOrder		  65
+	  ZOrder		  128
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  2
 	  DstBlock		  "qj_err"
 	  DstPort		  2
 	}
 	Line {
 	  Name			  "left_leg"
-	  ZOrder		  66
+	  ZOrder		  130
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  4
-	  Points		  [232, 0]
+	  Points		  [217, 0]
 	  Branch {
 	    ZOrder		    67
 	    Points		    [0, 90]
@@ -21913,9 +21864,9 @@ Model {
 	}
 	Line {
 	  Name			  "right_arm"
-	  ZOrder		  69
+	  ZOrder		  129
 	  Labels		  [1, 1]
-	  SrcBlock		  "23-DoFs WBI to YARP6"
+	  SrcBlock		  "25-DoFs WBI to yarp5"
 	  SrcPort		  3
 	  DstBlock		  "qj_err"
 	  DstPort		  3
@@ -22126,7 +22077,7 @@ Model {
       Variant		      off
       System {
 	Name			"M(q) h(q,dq) g(q)"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -22138,7 +22089,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"206"
+	ZoomFactor		"167"
 	Block {
 	  BlockType		  Inport
 	  Name			  "w_H_b"
@@ -22465,7 +22416,7 @@ Model {
       Variant		      off
       System {
 	Name			"controller_QP"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -22477,7 +22428,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"43"
+	ZoomFactor		"35"
 	Block {
 	  BlockType		  Inport
 	  Name			  "impedances"
@@ -22904,7 +22855,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "QP"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -22916,7 +22867,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "189"
+	    ZoomFactor		    "125"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "LEFT_RIGHT_FOOT_IN_CONTACT"
@@ -23080,7 +23031,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"Visualize eventual QP failures"
-		Location		[0, 23, 1936, 1131]
+		Location		[65, 24, 1366, 768]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -23092,7 +23043,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"506"
+		ZoomFactor		"335"
 		Block {
 		  BlockType		  Inport
 		  Name			  "exitFlagQP"
@@ -23385,7 +23336,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "integralOf Hw1"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -23397,7 +23348,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "107"
+	    ZoomFactor		    "101"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "qjDes"
@@ -25633,7 +25584,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "xCom"
-	    Location		    [38, 36, 1884, 1051]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -25645,7 +25596,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "446"
+	    ZoomFactor		    "310"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "w_H_b"
@@ -26463,7 +26414,7 @@ Model {
       Variant		      off
       System {
 	Name			"emergency stop: joint limits"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -26475,7 +26426,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"319"
+	ZoomFactor		"339"
 	Block {
 	  BlockType		  Inport
 	  Name			  "qj   EMERGENCY STOP"
@@ -26747,7 +26698,7 @@ Model {
       }
       System {
 	Name			"synchronizer"
-	Location		[65, 24, 1440, 900]
+	Location		[65, 24, 1366, 768]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -26759,7 +26710,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"255"
+	ZoomFactor		"245"
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "GAZEBO_SYNCHRONIZER"
@@ -26771,7 +26722,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "GAZEBO_SYNCHRONIZER"
-	    Location		    [65, 24, 1440, 900]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -26783,7 +26734,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "440"
+	    ZoomFactor		    "468"
 	    Block {
 	      BlockType		      EnablePort
 	      Name		      "Enable"
@@ -26846,7 +26797,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "REAL_TIME_SYNC"
-	    Location		    [0, 23, 1280, 796]
+	    Location		    [65, 24, 1366, 768]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -26858,7 +26809,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "307"
+	    ZoomFactor		    "656"
 	    Block {
 	      BlockType		      EnablePort
 	      Name		      "Enable"
@@ -26921,7 +26872,7 @@ Model {
       ZOrder		      2
       SrcBlock		      "DesValues"
       SrcPort		      5
-      Points		      [266, 0]
+      Points		      [451, 0]
       Branch {
 	ZOrder			3
 	Points			[0, -290]
@@ -26983,7 +26934,7 @@ Model {
       ZOrder		      12
       SrcBlock		      "DesValues"
       SrcPort		      9
-      Points		      [91, 0; 0, 130]
+      Points		      [276, 0; 0, 130]
       Branch {
 	ZOrder			13
 	Points			[0, 220]
@@ -27000,7 +26951,7 @@ Model {
       ZOrder		      15
       SrcBlock		      "DesValues"
       SrcPort		      7
-      Points		      [223, 0; 0, 195]
+      Points		      [408, 0; 0, 195]
       DstBlock		      "controller_QP"
       DstPort		      10
     }
@@ -27008,7 +26959,7 @@ Model {
       ZOrder		      16
       SrcBlock		      "DesValues"
       SrcPort		      8
-      Points		      [185, 0; 0, 260]
+      Points		      [370, 0; 0, 260]
       Branch {
 	ZOrder			17
 	Points			[0, 135]
@@ -27039,7 +26990,7 @@ Model {
       ZOrder		      21
       SrcBlock		      "DesValues"
       SrcPort		      4
-      Points		      [333, 0]
+      Points		      [518, 0]
       Branch {
 	ZOrder			22
 	Points			[0, 195]
@@ -27056,7 +27007,7 @@ Model {
       ZOrder		      24
       SrcBlock		      "DesValues"
       SrcPort		      6
-      Points		      [244, 0]
+      Points		      [429, 0]
       Branch {
 	ZOrder			39
 	DstBlock		"controller_QP"
@@ -27081,7 +27032,7 @@ Model {
       ZOrder		      28
       SrcBlock		      "DesValues"
       SrcPort		      10
-      Points		      [42, 0; 0, 195]
+      Points		      [227, 0; 0, 195]
       Branch {
 	ZOrder			38
 	Points			[0, 110]
