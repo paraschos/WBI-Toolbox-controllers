@@ -36,7 +36,6 @@ end
 
 %% Remapping according to the iCub conventions
 % torso: [pitch roll yaw]
-% torso(1) = -torso(1);
 torso(2) = -torso(2);
 torso(3) = -torso(3);
 
