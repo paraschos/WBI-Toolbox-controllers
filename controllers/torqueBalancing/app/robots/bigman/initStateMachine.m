@@ -42,7 +42,7 @@ if strcmpi(SM.SM_TYPE, 'YOGA')
     gain.ICOM  = gain.PCOM*0;
     gain.DCOM  = 2*sqrt(gain.PCOM);
     
-    gain.PAngularMomentum  = 1;
+    gain.PAngularMomentum  = 0.75;
     gain.DAngularMomentum  = 2*sqrt(gain.PAngularMomentum);
 
     % state ==  1  TWO FEET BALANCING
@@ -68,12 +68,12 @@ if strcmpi(SM.SM_TYPE, 'YOGA')
                         80  120   80, 40   40    40   40   40, 40   40    40   40   40, 80   80  250   200     50  50, 70   100  70    70     50  50   % state ==  3  LEFT FOOT BALANCING
                         80  120   80, 40   40    40   40   40, 40   40    40   40   40, 80   80  250   200     50  50, 70   100  70    70     50  50  % state ==  4  YOGA LEFT FOOT 
                         30   30   30, 10   10    10   10   10, 10   10    10   10   10, 30   50  300    60     50  50, 30   50   30    60     50  50  % state ==  5  PREPARING FOR SWITCHING 
-                        10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     150  150  % state ==  6  LOOKING FOR CONTACT
-                        10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     150  150  % state ==  7  TRANSITION TO INITIAL POSITION 
+                        10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state ==  6  LOOKING FOR CONTACT
+                        10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state ==  7  TRANSITION TO INITIAL POSITION 
                         10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state ==  8  COM TRANSITION TO RIGHT FOOT
-                        10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state ==  9  RIGHT FOOT BALANCING
-                        30   30   30, 10   10    10   10   10, 10   10    10   10   10, 50   50   50    50     50  50, 50   50  250   200     50  50  % state == 10  YOGA RIGHT FOOT 
-                        30   30   30, 10   10    10   10   10, 10   10    10   10   10, 30   50   30    60     50  50, 30   50  300    60     50  50  % state == 11  PREPARING FOR SWITCHING 
+                        80  120   80, 40   40    40   40   40, 40   40    40   40   40, 80   80   50    50     50  50, 80   80  250   200     50  50  % state ==  9  RIGHT FOOT BALANCING
+                        80  120   80, 40   40    40   40   40, 40   40    40   40   40, 80   80   50    50     50  50, 80   80  250   200     50  50  % state == 10  YOGA RIGHT FOOT 
+                        10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state == 11  PREPARING FOR SWITCHING 
                         10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state == 12  LOOKING FOR CONTACT
                         10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50];% state == 13  TRANSITION TO INITIAL POSITION
 %     gain.impedances(5,:) = gain.impedances(5,:)/10;
@@ -93,7 +93,7 @@ sm.yogaAlsoOnRightFoot           = false;
 sm.yogaInLoop                    = false;
 sm.com.threshold                 = 0.01;
 sm.wrench.thresholdContactOn     = 10;%25;       % Force threshole above which contact is considered stable
-sm.wrench.thresholdContactOff    = 50;%85;       % Force threshole under which contact is considered off
+sm.wrench.thresholdContactOff    = 40;%85;       % Force threshole under which contact is considered off
 sm.joints                        = struct;
 sm.joints.thresholdNotInContact  = 5;      % Degrees
 sm.joints.thresholdInContact     = 50;     % Degrees
