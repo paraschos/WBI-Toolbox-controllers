@@ -7,6 +7,7 @@ if strcmpi(SM.SM_TYPE, 'YOGA')
                                        % of the postural tasks are smoothed internally 
 
     reg.pinvDamp               = 1;
+    reg.pinvDampVb             = 1e-7;
     reg.impedances             = 0.1;
     reg.dampings               = 0;
     reg.HessianQP              = 1e-7;
@@ -42,7 +43,7 @@ if strcmpi(SM.SM_TYPE, 'YOGA')
     gain.ICOM  = gain.PCOM*0;
     gain.DCOM  = 2*sqrt(gain.PCOM);
     
-    gain.PAngularMomentum  = 0.75;
+    gain.PAngularMomentum  = 0.95;
     gain.DAngularMomentum  = 2*sqrt(gain.PAngularMomentum);
 
     % state ==  1  TWO FEET BALANCING
@@ -70,9 +71,9 @@ if strcmpi(SM.SM_TYPE, 'YOGA')
                         30   30   30, 10   10    10   10   10, 10   10    10   10   10, 30   50  300    60     50  50, 30   50   30    60     50  50  % state ==  5  PREPARING FOR SWITCHING 
                         10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state ==  6  LOOKING FOR CONTACT
                         10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state ==  7  TRANSITION TO INITIAL POSITION 
-                        10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state ==  8  COM TRANSITION TO RIGHT FOOT
-                        80  120   80, 40   40    40   40   40, 40   40    40   40   40, 80   80   50    50     50  50, 80   80  250   200     50  50  % state ==  9  RIGHT FOOT BALANCING
-                        80  120   80, 40   40    40   40   40, 40   40    40   40   40, 80   80   50    50     50  50, 80   80  250   200     50  50  % state == 10  YOGA RIGHT FOOT 
+                        80  120   80, 40   40    40   40   40, 40   40    40   40   40, 80  100   50    50     50  50, 80   80  250   200     50  50  % state ==  8  COM TRANSITION TO RIGHT FOOT
+                        80  120   80, 40   40    40   40   40, 40   40    40   40   40, 80  100   50    50     50  50, 80   80  250   200     50  50  % state ==  9  RIGHT FOOT BALANCING
+                        80   80   80, 40   40    40   40   40, 40   40    40   40   40, 80  100   50    50     50  50, 80   80  250   200     50  50  % state == 10  YOGA RIGHT FOOT 
                         10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state == 11  PREPARING FOR SWITCHING 
                         10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50  % state == 12  LOOKING FOR CONTACT
                         10   30   20, 10   10    10    8   10, 10   10    10    8   10, 30   50   30    60     50  50, 30   50   30    60     50  50];% state == 13  TRANSITION TO INITIAL POSITION
@@ -87,13 +88,13 @@ end
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                      
          
 %% %%%%%%%%%%%%%%%%    FINITE STATE MACHINE SPECIFIC PARAMETERS
-sm.skipYoga                      = false;
+sm.skipYoga                      = true;
 sm.demoOnlyRightFoot             = false;
 sm.yogaAlsoOnRightFoot           = false;
 sm.yogaInLoop                    = false;
 sm.com.threshold                 = 0.01;
-sm.wrench.thresholdContactOn     = 10;%25;       % Force threshole above which contact is considered stable
-sm.wrench.thresholdContactOff    = 40;%85;       % Force threshole under which contact is considered off
+sm.wrench.thresholdContactOn     = 100;%25;       % Force threshole above which contact is considered stable
+sm.wrench.thresholdContactOff    = 25;%85;       % Force threshole under which contact is considered off
 sm.joints                        = struct;
 sm.joints.thresholdNotInContact  = 5;      % Degrees
 sm.joints.thresholdInContact     = 50;     % Degrees
@@ -123,21 +124,21 @@ sm.jointsSmoothingTimes          = [5;   %% state ==  1  TWO FEET BALANCING
                                          %%
                                     4];  %% state == 13  TRANSITION INIT POSITION
 
-sm.com.states      = [0.0,  0.01, 0.0;     %% state ==  1  TWO FEET BALANCING NOT USED
-                      0.0,  0.01, 0.0;     %% state ==  2  COM TRANSITION TO LEFT FOOT: THIS REFERENCE IS USED AS A DELTA W.R.T. THE POSITION OF THE LEFT FOOT
-                      0.0,  0.00, 0.0;     %% state ==  3  LEFT FOOT BALANCING 
-                      0.0,  0.02, 0.02;    %% state ==  4  YOGA LEFT FOOT
-                      0.0,  0.00, 0.02;    %% state ==  5  PREPARING FOR SWITCHING
-                      0.0, -0.15, 0.02;    %% state ==  6  LOOKING FOR CONTACT 
-                      0.0, -0.15, 0.0;     %% state ==  7  TRANSITION INIT POSITION: THIS REFERENCE IS IGNORED
+sm.com.states      = [0.0,  0.01,  0.0;     %% state ==  1  TWO FEET BALANCING NOT USED
+                      0.0,  0.01,  0.0;     %% state ==  2  COM TRANSITION TO LEFT FOOT: THIS REFERENCE IS USED AS A DELTA W.R.T. THE POSITION OF THE LEFT FOOT
+                      0.0,  0.00,  0.0;     %% state ==  3  LEFT FOOT BALANCING 
+                      0.0,  0.02,  0.02;    %% state ==  4  YOGA LEFT FOOT
+                      0.0,  0.00, -0.02;    %% state ==  5  PREPARING FOR SWITCHING
+                      0.0, -0.15, -0.05;    %% state ==  6  LOOKING FOR CONTACT 
+                      0.0, -0.15, -0.05;    %% state ==  7  TRANSITION INIT POSITION
                       % FROM NOW ON, THE REFERENCE ARE ALWAYS DELTAS W.R.T.
                       % THE POSITION OF THE RIGHT FOOT
-                      0.0, -0.01, 0.0;     %% state ==  8  COM TRANSITION TO RIGHT FOOT
-                      0.0,  0.00, 0.0;     %% state ==  9  RIGHT FOOT BALANCING 
-                      0.0, -0.00, 0.0;     %% state == 10  YOGA RIGHT FOOT
-                      0.0, -0.00, 0.0;     %% state == 11  PREPARING FOR SWITCHING
-                      0.0,  0.09, 0.0;     %% state == 12  LOOKING FOR CONTACT 
-                      0.0,  0.00, 0.0];    %% state == 13  TRANSITION INIT POSITION: THIS REFERENCE IS IGNORED
+                      0.0, -0.02, -0.075;     %% state ==  8  COM TRANSITION TO RIGHT FOOT
+                      0.0, -0.02,  0.0;     %% state ==  9  RIGHT FOOT BALANCING 
+                      0.0, -0.00, -0.0;     %% state == 10  YOGA RIGHT FOOT
+                      0.0, -0.00,  0.0;     %% state == 11  PREPARING FOR SWITCHING
+                      0.0,  0.09,  0.0;     %% state == 12  LOOKING FOR CONTACT 
+                      0.0,  0.00,  0.0];    %% state == 13  TRANSITION INIT POSITION: THIS REFERENCE IS IGNORED
 sm.tBalancing      = 0;%inf;%0.5;
 
 
@@ -243,25 +244,6 @@ q8 =        [-0.0852,-0.4273,0.0821,...
              -0.4181, 1.6800,0.7373, 0.3031,0, ...
               0.2092, 0.3473,0.0006,-0.1741,-0.1044, 0.0700,...
               0.3514, 1.3107,1.3253,-0.0189, 0.6374,-0.0614];
-          
-%% Remapping of the references in order to fit the Bigman configuration and the iCub configuration
-addpath('../../../../utilityMatlabFunctions/')
-numOfStates = size(sm.joints.states,1);
-ndof        = size(sm.joints.states,2);
-
-for kk = 1:numOfStates
-    
-    sm.joints.states(kk,:) = from_iCub_To_Bigman_JointRemapper(sm.joints.states(kk,:),ndof);
-end
-
-q1 = from_iCub_To_Bigman_JointRemapper(q1,ndof);
-q2 = from_iCub_To_Bigman_JointRemapper(q2,ndof);
-q3 = from_iCub_To_Bigman_JointRemapper(q3,ndof);
-q4 = from_iCub_To_Bigman_JointRemapper(q4,ndof);
-q5 = from_iCub_To_Bigman_JointRemapper(q5,ndof);
-q6 = from_iCub_To_Bigman_JointRemapper(q6,ndof);
-q7 = from_iCub_To_Bigman_JointRemapper(q7,ndof);
-q8 = from_iCub_To_Bigman_JointRemapper(q8,ndof);
 
 %%          
 sm.joints.pointsL =[ 0,                            q1;
@@ -274,19 +256,47 @@ sm.joints.pointsL =[ 0,                            q1;
                      7*sm.jointsSmoothingTimes(10),q8];
                  
 sm.joints.pointsR = sm.joints.pointsL;
-
 					 
 for i = 1:size(sm.joints.pointsR,1)				
 	sm.joints.pointsR(i,2:4)          = [sm.joints.pointsR(i,2) -sm.joints.pointsR(i,3) -sm.joints.pointsR(i,4)];
 	
-	rightArm                           =  sm.joints.pointsR(i,end-15:end-12);
-	sm.joints.pointsR(i,end-15:end-12) =  sm.joints.pointsR(i,end-19:end-16);
-	sm.joints.pointsR(i,end-19:end-16) =  rightArm;
+	rightArm                           =  sm.joints.pointsR(i,end-16:end-12);
+	sm.joints.pointsR(i,end-16:end-12) =  sm.joints.pointsR(i,end-21:end-17);
+	sm.joints.pointsR(i,end-21:end-17) =  rightArm;
 	
 	rightLeg                          =  sm.joints.pointsR(i,end-5:end);
 	sm.joints.pointsR(i,end-5:end)    =  sm.joints.pointsR(i,end-11:end-6);
 	sm.joints.pointsR(i,end-11:end-6) =  rightLeg;
 end	 
+
+
+%% Remapping of the references in order to fit the Bigman configuration and the iCub configuration
+addpath('../../../../utilityMatlabFunctions/')
+numOfStates     = size(sm.joints.states,1);
+ndof            = size(sm.joints.states,2);
+numOfStatesYoga = 8;
+
+for kk = 1:numOfStates
+    
+    sm.joints.states(kk,:) = from_iCub_To_Bigman_JointRemapper(sm.joints.states(kk,:),ndof);
+end
+
+for kk = 1:numOfStatesYoga
+    
+    qjRemapped                    = from_iCub_To_Bigman_JointRemapper(sm.joints.pointsR(kk,2:end),ndof);
+    sm.joints.pointsR(kk,2:end)   = qjRemapped;
+    qjRemapped                    = from_iCub_To_Bigman_JointRemapper(sm.joints.pointsL(kk,2:end),ndof);
+    sm.joints.pointsL(kk,2:end)   = qjRemapped;
+end
+
+q1 = from_iCub_To_Bigman_JointRemapper(q1,ndof);
+q2 = from_iCub_To_Bigman_JointRemapper(q2,ndof);
+q3 = from_iCub_To_Bigman_JointRemapper(q3,ndof);
+q4 = from_iCub_To_Bigman_JointRemapper(q4,ndof);
+q5 = from_iCub_To_Bigman_JointRemapper(q5,ndof);
+q6 = from_iCub_To_Bigman_JointRemapper(q6,ndof);
+q7 = from_iCub_To_Bigman_JointRemapper(q7,ndof);
+q8 = from_iCub_To_Bigman_JointRemapper(q8,ndof);
 
 
 clear q1 q2 q3 q4;
