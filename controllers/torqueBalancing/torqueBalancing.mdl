@@ -58,8 +58,8 @@ Model {
 	ViewObjType		"SimulinkSubsys"
 	LoadSaveID		"2275"
 	Extents			[1247.0, 551.0]
-	ZoomFactor		[0.73]
-	Offset			[0.0, 0.0]
+	ZoomFactor		[0.6]
+	Offset			[-99.13242009132432, -127.73059360730599]
       }
     }
   }
@@ -69,7 +69,7 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "DanielePucci"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Sep 21 18:22:44 2016"
+  LastModifiedDate	  "Thu Sep 22 16:00:56 2016"
   RTWModifiedTimeStamp	  396382244
   ModelVersionFormat	  "1.%<AutoIncrement:3124>"
   ConfigurationManager	  "none"
@@ -18955,7 +18955,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"73"
+	ZoomFactor		"60"
 	Block {
 	  BlockType		  Inport
 	  Name			  "tauDesired"
