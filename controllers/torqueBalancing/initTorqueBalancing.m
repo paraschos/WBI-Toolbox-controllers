@@ -30,7 +30,8 @@ clear; clc;
 % setenv('YARP_ROBOT_NAME','iCubDarmstadt01');
 % setenv('YARP_ROBOT_NAME','icubGazeboSim');
 % setenv('YARP_ROBOT_NAME','iCubGenova05');
-setenv('YARP_ROBOT_NAME','bigman');
+% setenv('YARP_ROBOT_NAME','bigman');
+setenv('YARP_ROBOT_NAME','bigman_onlyLegs');
 
 % Simulation time in seconds
 CONFIG.SIMULATION_TIME     = inf;   
@@ -52,7 +53,7 @@ CONFIG.SIMULATION_TIME     = inf;
 % 
 % 'WALKING': under development.
 % SM.SM_TYPE                    = 'COORDINATOR';
-SM.SM_TYPE                   = 'YOGA';
+SM.SM_TYPE                   = 'COORDINATOR';
 
 % CONFIG.SCOPES: if set to true, all visualizers for debugging are active
 CONFIG.SCOPES.ALL             = true;
